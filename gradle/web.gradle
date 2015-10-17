@@ -1,0 +1,50 @@
+import org.apache.tools.ant.filters.ExpandProperties
+
+// use gradlew -Penv=${env} to pass
+def environment = hasProperty('env') ? env : null
+
+apply plugin: 'war'
+
+dependencies {
+    providedCompile(
+            'javax.servlet:javax.servlet-api:3.1.0',
+            'javax.servlet.jsp:jsp-api:2.2'
+    )
+}
+
+processResources {
+    // war ant.properties require baseDir of project
+    new File("${rootDir}/${project.name}").mkdirs()
+
+    project.ext.properties.each { key, value ->
+        ant.properties[key] = value
+    }
+    ant.properties['project.build.time'] = new Date().format('yyyyMMdd-HHmmss')
+
+    filesMatching('**/*.properties') {
+        filter ExpandProperties, project: project.ant.project
+    }
+    filesMatching('**/*.xml') {
+        filter ExpandProperties, project: project.ant.project
+    }
+}
+
+war {
+    archiveName = "${baseName}.war"
+
+    duplicatesStrategy = 'FAIL'
+
+    if (environment != null) {
+        def envProperties = "conf/${environment}/resources"
+        assert project.file(envProperties).exists()
+        sourceSets.main.resources.srcDirs envProperties
+    }
+
+    filesMatching('**/*.css') {
+        filter ExpandProperties, project: project.ant.project
+    }
+}
+
+mkdirs << {
+    webAppDir.mkdirs()
+}

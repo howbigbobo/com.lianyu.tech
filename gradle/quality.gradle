@@ -1,0 +1,30 @@
+apply plugin: 'checkstyle'
+apply plugin: 'pmd'
+apply plugin: 'findbugs'
+apply plugin: 'jdepend'
+apply plugin: 'jacoco'
+
+checkstyle {
+    configFile = rootProject.file('gradle/checkstyle/checkstyle.xml')
+    configProperties['configDir'] = configFile.parentFile
+}
+
+pmd {
+    ruleSets = []
+    ruleSetFiles = rootProject.files('gradle/pmd/rule-set.xml')
+    toolVersion = '5.0.5'
+}
+
+findbugs {
+    effort = 'max'
+    reportLevel = 'low'
+    excludeFilter = rootProject.file('gradle/findbugs/exclude-filter.xml')
+    toolVersion = '2.0.3'
+}
+
+tasks.withType(FindBugs) {
+    reports {
+        xml.enabled = false
+        html.enabled = true
+    }
+}
