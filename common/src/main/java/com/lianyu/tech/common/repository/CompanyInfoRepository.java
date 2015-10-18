@@ -13,6 +13,7 @@ import java.util.List;
 public class CompanyInfoRepository extends CommonRepository {
 
     public CompanyInfo get(Integer id) {
+        if (id == null) return null;
         return jpaAccess.get(CompanyInfo.class, id);
     }
 

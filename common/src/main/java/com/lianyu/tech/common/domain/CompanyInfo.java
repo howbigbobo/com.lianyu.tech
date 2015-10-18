@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import java.util.Date;
 
 /**
- * $author bowen.zhang
+ * @author bowen.zhang
  */
 @Entity(name = "company_info")
 public class CompanyInfo {

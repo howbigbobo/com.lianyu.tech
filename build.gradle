@@ -76,6 +76,14 @@ project(':common') {
         compile(
                 project(':core')
         )
+        testCompile(
+                "org.springframework:spring-test:${springVersion}",
+                'javax.el:javax.el-api:3.0.0',
+                'org.hsqldb:hsqldb:2.3.2',
+                'mysql:mysql-connector-java:5.1.33',
+                'com.github.springtestdbunit:spring-test-dbunit:1.2.1',
+                'org.dbunit:dbunit:2.4.8'
+        )
     }
 }
 

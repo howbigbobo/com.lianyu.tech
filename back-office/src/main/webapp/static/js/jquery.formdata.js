@@ -29,13 +29,18 @@
         return data;
     }
 
-    function setFormData(ctrl, data, option) {
+    function setFormData(ctrl, data, option, force) {
         var $ctrl = $(ctrl);
         if (ctrl.length == 0) return;
         option = option || {};
     }
 
-    $.fn.formData = function () {
-        return getFormData(this);
+    $.fn.formData = function (data, force) {
+        if (data) {
+            setFormData(data, force);
+        }
+        else {
+            return getFormData(this);
+        }
     }
 })(jQuery);

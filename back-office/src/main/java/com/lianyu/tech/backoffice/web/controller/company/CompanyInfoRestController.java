@@ -23,7 +23,7 @@ public class CompanyInfoRestController extends BackOfficeRestController {
 
     @ResponseBody
     @RequestMapping(value = "/company/save", method = RequestMethod.POST)
-    public void saveCompanyInfo(@Valid @RequestBody CompanyInfoRequest request) {
+    public Integer saveCompanyInfo(@Valid @RequestBody CompanyInfoRequest request) {
         CompanyInfo companyInfo = new CompanyInfo();
         companyInfo.setId(request.getId());
         companyInfo.setName(request.getName());
@@ -32,5 +32,6 @@ public class CompanyInfoRestController extends BackOfficeRestController {
         companyInfo.setDomain(request.getDomain());
 
         companyInfoService.save(companyInfo);
+        return companyInfo.getId();
     }
 }
