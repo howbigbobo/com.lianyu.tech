@@ -20,11 +20,6 @@ public class CompanyInfoController extends BackOfficeSiteController {
     private CompanyInfoService companyInfoService;
 
     @RequestMapping(value = "/company", method = RequestMethod.GET)
-    public String companyInfo(Map<String, Object> model) {
-        return "company/company.info";
-    }
-
-    @RequestMapping(value = "/company/edit", method = RequestMethod.GET)
     public String companyInfoEdit(Map<String, Object> model) {
         CompanyInfo companyInfo = companyInfoService.get();
         if (companyInfo == null) companyInfo = new CompanyInfo();

@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS address
   province     	VARCHAR(20)  	NOT NULL COMMENT '省',
   city	    	VARCHAR(20) 	NOT NULL COMMENT '市',
   region	  	VARCHAR(20) 	NOT NULL COMMENT '区、县',
-  street 	  	VARCHAR(20) 	NOT NULL COMMENT '街道',
+  street 	  	VARCHAR(20) 	NULL COMMENT '街道',
   address   	VARCHAR(150) 	NOT NULL COMMENT '详细地址',
   create_user  	VARCHAR(50) 	NULL COMMENT '创建者名称',
   create_time  	DATETIME    	NOT NULL DEFAULT now()  COMMENT '创建时间',

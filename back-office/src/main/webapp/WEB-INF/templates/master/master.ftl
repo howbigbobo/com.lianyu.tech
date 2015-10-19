@@ -90,7 +90,9 @@
                 <ul class="nav nav-tabs nav-stacked main-menu">
                     <li><a href="<@url value='/'/>"><i class="icon-bar-chart"></i><span class="hidden-tablet"> 首页</span></a>
                     </li>
-                    <li><a href="/company/edit"><i class="icon-tasks"></i><span class="hidden-tablet"> 公司信息</span></a>
+                    <li><a href="/company"><i class="icon-tasks"></i><span class="hidden-tablet"> 公司信息</span></a>
+                    </li>
+                    <li><a href="/address"><i class="icon-tasks"></i><span class="hidden-tablet"> 地址信息</span></a>
                     </li>
                     <li><a href="file-manager.html"><i class="icon-folder-open"></i><span class="hidden-tablet"> File Manager</span></a>
                     </li>
@@ -214,6 +216,8 @@
 
 <@js src="plugin/custom.js"/>
 <!-- end: JavaScript-->
+<@js src="plugin/template.js"/>
+<@js src="plugin/template-helper.js"/>
 
 <@js src="jquery.formdata.js"/>
 <@js src="jquery.dialog.js"/>
