@@ -16,9 +16,22 @@ function openModal(obj) {
 }
 
 function save() {
-
+    var data = $('#address_form').formData();
+    post('address/save', data, function () {
+        $('#modal-address-edit').modal('hide');
+        $.alert('保存成功', function () {
+            location.reload();
+        });
+    });
 }
 
 function deleteAddress(addressId) {
     if (!addressId) return;
+    $.confirm("确定删除这个地址吗？", function () {
+        post('address/delete/' + addressId, {}, function () {
+            $.alert('删除成功', function () {
+                location.reload();
+            });
+        });
+    });
 }

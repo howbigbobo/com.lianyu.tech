@@ -21,7 +21,7 @@ function getJson(url, data, success) {
 
 function appendRadon(url) {
     var r = "r=" + Math.random();
-    if (url.lastIndex('?') > 0) {
+    if (url.lastIndexOf('?') > 0) {
         return url + "&" + r;
     }
     return url + "?" + r;

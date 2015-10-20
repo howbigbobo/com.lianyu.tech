@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS contact
   company_id	INTEGER			NOT NULL COMMENT '公司id',
   `type`     	VARCHAR(10)  	NOT NULL COMMENT '通讯类型：电话、手机、QQ、微信、微博等',
   `value`	    VARCHAR(50) 	NOT NULL COMMENT '联系方式',
-  `order`		INTEGER		 	NOT NULL DEFAULT 0 COMMENT '排序',
+  `displayOrder`INTEGER		 	NOT NULL DEFAULT 0 COMMENT '排序',
   create_user  	VARCHAR(50) 	NULL COMMENT '创建者名称',
   create_time  	DATETIME    	NOT NULL DEFAULT now()  COMMENT '创建时间',
   update_user  	VARCHAR(50) 	NULL COMMENT '修改者名称',

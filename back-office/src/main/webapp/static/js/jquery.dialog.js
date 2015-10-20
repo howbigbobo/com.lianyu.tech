@@ -9,7 +9,8 @@
         };
         title = title || "";
 
-        var html = '<div class="modal hide fade" id="myModal">'
+        var id = 'myModal' + Math.random().toString().replace('.', '_');
+        var html = '<div class="modal hide fade" id="' + id + '">'
             + '<div class="modal-header">'
             + '<button type="button" class="close" data-dismiss="modal">×</button>'
             + '<h3>' + title + '</h3>'

@@ -28,7 +28,7 @@ public abstract class AddressConverter {
         return ListUtils.convert(addresses, new Converter<Address, AddressView>() {
             @Override
             public AddressView convert(Address address) {
-                return convert(address);
+                return AddressConverter.convert(address);
             }
         });
     }

@@ -5,7 +5,7 @@
             <h3>{{title}}</h3>
         </div>
         <div class="modal-body">
-            <form class="form-horizontal" id="company_form">
+            <form class="form-horizontal" id="address_form">
                 <fieldset>
                     <div class="control-group success">
                         <label class="control-label" for="addressProvince">省</label>
@@ -52,8 +52,8 @@
         </div>
         </form>
         <div class="modal-footer">
-            <a href="#" class="btn" data-dismiss="modal">取消</a>
-            <a href="#" class="btn btn-primary" onclick="save();">保存</a>
+            <a href="javascript:;" class="btn" data-dismiss="modal">取消</a>
+            <a href="javascript:;" class="btn btn-primary" onclick="save();">保存</a>
         </div>
     </div>
 </script>

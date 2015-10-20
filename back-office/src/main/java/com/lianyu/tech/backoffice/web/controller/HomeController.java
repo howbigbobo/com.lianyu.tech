@@ -10,6 +10,6 @@ public class HomeController extends BackOfficeSiteController {
 
     @RequestMapping(value = "/home", method = RequestMethod.GET)
     public String home() {
-        return "401";
+        return "home";
     }
 }

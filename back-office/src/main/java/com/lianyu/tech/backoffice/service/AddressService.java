@@ -1,7 +1,9 @@
 package com.lianyu.tech.backoffice.service;
 
 import com.lianyu.tech.common.domain.Address;
+import com.lianyu.tech.common.domain.CompanyInfo;
 import com.lianyu.tech.common.repository.AddressRepository;
+import com.lianyu.tech.common.repository.CompanyInfoRepository;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
@@ -16,6 +18,8 @@ import java.util.List;
 public class AddressService {
     @Inject
     private AddressRepository addressRepository;
+    @Inject
+    private CompanyInfoRepository companyInfoRepository;
 
     public Address get(Integer id) {
         return addressRepository.get(id);
@@ -56,10 +60,21 @@ public class AddressService {
     }
 
     private void create(Address address) {
+        if (address.getCompanyId() == null) {
+            CompanyInfo companyInfo = companyInfoRepository.get();
+            if (companyInfo != null) address.setCompanyId(companyInfo.getId());
+        }
         address.setCreateTime(new Date());
         address.setCreateUser("");
         address.setUpdateTime(new Date());
         address.setUpdateUser("");
         addressRepository.create(address);
+    }
+
+    @Transactional
+    public void delete(Integer addressId) {
+        if (addressId == null) return;
+        Address address = addressRepository.get(addressId);
+        if (address != null) addressRepository.delete(address);
     }
 }
