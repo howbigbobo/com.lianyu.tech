@@ -1,92 +1,92 @@
-CREATE TABLE IF NOT EXISTS company_info 
+ï»¿CREATE TABLE IF NOT EXISTS company_info 
 (
   id        	INTEGER      	NOT NULL AUTO_INCREMENT,
-  name      	VARCHAR(50)  	NOT NULL COMMENT '¹«Ë¾Ãû³Æ',
-  slogan    	VARCHAR(200) 	NOT NULL COMMENT '¹«Ë¾ÀíÄî',
-  logo_url  	VARCHAR(200) 	NOT NULL COMMENT 'Í¼±êurl',
-  `domain`  	VARCHAR(200) 	NOT NULL DEFAULT 'http://localhost' COMMENT 'ÓòÃûµØÖ·',
-  create_user  	VARCHAR(50) 	NULL COMMENT '´´½¨ÕßÃû³Æ',
-  create_time  	DATETIME    	NOT NULL DEFAULT now()  COMMENT '´´½¨Ê±¼ä',
-  update_user  	VARCHAR(50) 	NULL COMMENT 'ÐÞ¸ÄÕßÃû³Æ',
+  name      	VARCHAR(50)  	NOT NULL COMMENT 'å…¬å¸åç§°',
+  slogan    	VARCHAR(200) 	NOT NULL COMMENT 'å…¬å¸ç†å¿µ',
+  logo_url  	VARCHAR(200) 	NOT NULL COMMENT 'å›¾æ ‡url',
+  `domain`  	VARCHAR(200) 	NOT NULL DEFAULT 'http://localhost' COMMENT 'åŸŸååœ°å€',
+  create_user  	VARCHAR(50) 	NULL COMMENT 'åˆ›å»ºè€…åç§°',
+  create_time  	DATETIME    	NOT NULL DEFAULT now()  COMMENT 'åˆ›å»ºæ—¶é—´',
+  update_user  	VARCHAR(50) 	NULL COMMENT 'ä¿®æ”¹è€…åç§°',
   update_time  	DATETIME    	NOT NULL DEFAULT now(),
   PRIMARY KEY (id)
 )
-COMMENT '¹«Ë¾ÐÅÏ¢±í'  ENGINE = INNODB  DEFAULT CHARSET = utf8;
+COMMENT 'å…¬å¸ä¿¡æ¯è¡¨'  ENGINE = INNODB  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS address 
 (
   id        	INTEGER      	NOT NULL AUTO_INCREMENT,
-  company_id	INTEGER			NOT NULL COMMENT '¹«Ë¾id',
-  province     	VARCHAR(20)  	NOT NULL COMMENT 'Ê¡',
-  city	    	VARCHAR(20) 	NOT NULL COMMENT 'ÊÐ',
-  region	  	VARCHAR(20) 	NOT NULL COMMENT 'Çø¡¢ÏØ',
-  street 	  	VARCHAR(20) 	NULL COMMENT '½ÖµÀ',
-  address   	VARCHAR(150) 	NOT NULL COMMENT 'ÏêÏ¸µØÖ·',
-  create_user  	VARCHAR(50) 	NULL COMMENT '´´½¨ÕßÃû³Æ',
-  create_time  	DATETIME    	NOT NULL DEFAULT now()  COMMENT '´´½¨Ê±¼ä',
-  update_user  	VARCHAR(50) 	NULL COMMENT 'ÐÞ¸ÄÕßÃû³Æ',
+  company_id	INTEGER			NOT NULL COMMENT 'å…¬å¸id',
+  province     	VARCHAR(20)  	NOT NULL COMMENT 'çœ',
+  city	    	VARCHAR(20) 	NOT NULL COMMENT 'å¸‚',
+  region	  	VARCHAR(20) 	NOT NULL COMMENT 'åŒºã€åŽ¿',
+  street 	  	VARCHAR(20) 	NULL COMMENT 'è¡—é“',
+  address   	VARCHAR(150) 	NOT NULL COMMENT 'è¯¦ç»†åœ°å€',
+  create_user  	VARCHAR(50) 	NULL COMMENT 'åˆ›å»ºè€…åç§°',
+  create_time  	DATETIME    	NOT NULL DEFAULT now()  COMMENT 'åˆ›å»ºæ—¶é—´',
+  update_user  	VARCHAR(50) 	NULL COMMENT 'ä¿®æ”¹è€…åç§°',
   update_time  	DATETIME    	NOT NULL DEFAULT now(),
   PRIMARY KEY (id),
   INDEX `ix_address_company_id` (`company_id`)
 )
-COMMENT 'µØÖ·±í'  ENGINE = INNODB  DEFAULT CHARSET = utf8;
+COMMENT 'åœ°å€è¡¨'  ENGINE = INNODB  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS contact 
 (
   id        	INTEGER      	NOT NULL AUTO_INCREMENT,
-  company_id	INTEGER			NOT NULL COMMENT '¹«Ë¾id',
-  `type`     	VARCHAR(10)  	NOT NULL COMMENT 'Í¨Ñ¶ÀàÐÍ£ºµç»°¡¢ÊÖ»ú¡¢QQ¡¢Î¢ÐÅ¡¢Î¢²©µÈ',
-  `value`	    VARCHAR(50) 	NOT NULL COMMENT 'ÁªÏµ·½Ê½',
-  `displayOrder`INTEGER		 	NOT NULL DEFAULT 0 COMMENT 'ÅÅÐò',
-  create_user  	VARCHAR(50) 	NULL COMMENT '´´½¨ÕßÃû³Æ',
-  create_time  	DATETIME    	NOT NULL DEFAULT now()  COMMENT '´´½¨Ê±¼ä',
-  update_user  	VARCHAR(50) 	NULL COMMENT 'ÐÞ¸ÄÕßÃû³Æ',
+  company_id	INTEGER			NOT NULL COMMENT 'å…¬å¸id',
+  `type`     	VARCHAR(10)  	NOT NULL COMMENT 'é€šè®¯ç±»åž‹ï¼šç”µè¯ã€æ‰‹æœºã€QQã€å¾®ä¿¡ã€å¾®åšç­‰',
+  `value`	    VARCHAR(50) 	NOT NULL COMMENT 'è”ç³»æ–¹å¼',
+  `displayOrder`INTEGER		 	NOT NULL DEFAULT 0 COMMENT 'æŽ’åº',
+  create_user  	VARCHAR(50) 	NULL COMMENT 'åˆ›å»ºè€…åç§°',
+  create_time  	DATETIME    	NOT NULL DEFAULT now()  COMMENT 'åˆ›å»ºæ—¶é—´',
+  update_user  	VARCHAR(50) 	NULL COMMENT 'ä¿®æ”¹è€…åç§°',
   update_time  	DATETIME    	NOT NULL DEFAULT now(),
   PRIMARY KEY (id),
   INDEX `ix_contact_company_id` (`company_id`)
 )
-COMMENT 'ÁªÏµÐÅÏ¢±í'  ENGINE = INNODB  DEFAULT CHARSET = utf8;
+COMMENT 'è”ç³»ä¿¡æ¯è¡¨'  ENGINE = INNODB  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS description 
 (
   id        	INTEGER      	NOT NULL AUTO_INCREMENT,
-  `type`     	TINYINT		  	NOT NULL COMMENT 'ÀàÐÍ£º1:°¸Àý,2:½éÉÜ,3:¶¯Ì¬',
-  head			VARCHAR(100)	NOT NULL COMMENT '±êÌâ',
-  subhead     	VARCHAR(200)  	NULL COMMENT '¸±±êÌâ',
-  desc_time   	DATETIME 		NULL COMMENT '·¢ÉúµÄÊ±¼ä',
-  location		VARCHAR(200) 	NULL COMMENT 'µØµã',
-  content		VARCHAR(512) 	NULL COMMENT 'ÃèÊöÄÚÈÝ',
-  create_user  	VARCHAR(50) 	NULL COMMENT '´´½¨ÕßÃû³Æ',
-  create_time  	DATETIME    	NOT NULL DEFAULT now()  COMMENT '´´½¨Ê±¼ä',
-  update_user  	VARCHAR(50) 	NULL COMMENT 'ÐÞ¸ÄÕßÃû³Æ',
+  `type`     	TINYINT		  	NOT NULL COMMENT 'ç±»åž‹ï¼š1:æ¡ˆä¾‹,2:ä»‹ç»,3:åŠ¨æ€',
+  head			VARCHAR(100)	NOT NULL COMMENT 'æ ‡é¢˜',
+  subhead     	VARCHAR(200)  	NULL COMMENT 'å‰¯æ ‡é¢˜',
+  desc_time   	DATETIME 		NULL COMMENT 'å‘ç”Ÿçš„æ—¶é—´',
+  location		VARCHAR(200) 	NULL COMMENT 'åœ°ç‚¹',
+  content		VARCHAR(512) 	NULL COMMENT 'æè¿°å†…å®¹',
+  create_user  	VARCHAR(50) 	NULL COMMENT 'åˆ›å»ºè€…åç§°',
+  create_time  	DATETIME    	NOT NULL DEFAULT now()  COMMENT 'åˆ›å»ºæ—¶é—´',
+  update_user  	VARCHAR(50) 	NULL COMMENT 'ä¿®æ”¹è€…åç§°',
   update_time  	DATETIME    	NOT NULL DEFAULT now(),
   PRIMARY KEY (id)
 )
-COMMENT 'ÐÅÏ¢ÃèÊö±í'  ENGINE = INNODB  DEFAULT CHARSET = utf8;
+COMMENT 'ä¿¡æ¯æè¿°è¡¨'  ENGINE = INNODB  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS description_item 
 (
   id        	INTEGER      	NOT NULL AUTO_INCREMENT,
-  description_id INTEGER		NOT NULL COMMENT 'ÀàÐÍ£º1:°¸Àý,2:½éÉÜ,3:¶¯Ì¬',
-  image_id		INTEGER 	NULL COMMENT 'Í¼Æ¬id',
-  content		VARCHAR(512) 	NULL COMMENT 'ÃèÊöÄÚÈÝ',
-  display_order	INTEGER			NOT NULL DEFAULT 0 COMMENT 'ÏÔÊ¾Ë³Ðò',
-  create_user  	VARCHAR(50) 	NULL COMMENT '´´½¨ÕßÃû³Æ',
-  create_time  	DATETIME    	NOT NULL DEFAULT now()  COMMENT '´´½¨Ê±¼ä',
-  update_user  	VARCHAR(50) 	NULL COMMENT 'ÐÞ¸ÄÕßÃû³Æ',
+  description_id INTEGER		NOT NULL COMMENT 'ç±»åž‹ï¼š0:æ¡ˆä¾‹,1:ä»‹ç»,2:åŠ¨æ€',
+  image_id		INTEGER 	NULL COMMENT 'å›¾ç‰‡id',
+  content		VARCHAR(512) 	NULL COMMENT 'æè¿°å†…å®¹',
+  display_order	INTEGER			NOT NULL DEFAULT 0 COMMENT 'æ˜¾ç¤ºé¡ºåº',
+  create_user  	VARCHAR(50) 	NULL COMMENT 'åˆ›å»ºè€…åç§°',
+  create_time  	DATETIME    	NOT NULL DEFAULT now()  COMMENT 'åˆ›å»ºæ—¶é—´',
+  update_user  	VARCHAR(50) 	NULL COMMENT 'ä¿®æ”¹è€…åç§°',
   update_time  	DATETIME    	NOT NULL DEFAULT now(),
   PRIMARY KEY (id),
   INDEX `ix_desc_item_desc_id` (`description_id`)
 )
-COMMENT 'ÐÅÏ¢ÃèÊö¾ßÌå±í'  ENGINE = INNODB  DEFAULT CHARSET = utf8;
+COMMENT 'ä¿¡æ¯æè¿°å…·ä½“è¡¨'  ENGINE = INNODB  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS image 
 (
   id        	INTEGER      	NOT NULL AUTO_INCREMENT,
-  url			VARCHAR(250)	NOT NULL COMMENT 'Í¼Æ¬url',
-  bytes			VARCHAR(100)	NOT NULL COMMENT 'Í¼Æ¬´óÐ¡',
-  create_user  	VARCHAR(50) 	NULL COMMENT '´´½¨ÕßÃû³Æ',
-  create_time  	DATETIME    	NOT NULL DEFAULT now()  COMMENT '´´½¨Ê±¼ä',
+  url			VARCHAR(250)	NOT NULL COMMENT 'å›¾ç‰‡url',
+  bytes			VARCHAR(100)	NOT NULL COMMENT 'å›¾ç‰‡å¤§å°',
+  create_user  	VARCHAR(50) 	NULL COMMENT 'åˆ›å»ºè€…åç§°',
+  create_time  	DATETIME    	NOT NULL DEFAULT now()  COMMENT 'åˆ›å»ºæ—¶é—´',
   PRIMARY KEY (id)
 )
-COMMENT 'ÐÅÏ¢ÃèÊö±í'  ENGINE = INNODB  DEFAULT CHARSET = utf8;
+COMMENT 'ä¿¡æ¯æè¿°è¡¨'  ENGINE = INNODB  DEFAULT CHARSET = utf8;
