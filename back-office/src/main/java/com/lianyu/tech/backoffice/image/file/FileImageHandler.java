@@ -5,9 +5,9 @@ import com.lianyu.tech.backoffice.image.ImageHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
+import org.springframework.web.util.WebUtils;
 
 import java.io.File;
-import java.io.IOException;
 import java.nio.file.Files;
 
 /**
@@ -16,6 +16,7 @@ import java.nio.file.Files;
 public class FileImageHandler implements ImageHandler {
     private static final Logger LOGGER = LoggerFactory.getLogger(FileImageHandler.class);
     private static final PathMatchingResourcePatternResolver PATH_RESOLVER = new PathMatchingResourcePatternResolver();
+    private static final String IMAGE_PATH = "images";
 
     @Override
     public String save(ImageEntity imageEntity) {
@@ -34,11 +35,34 @@ public class FileImageHandler implements ImageHandler {
 
     public File getFile(String fileName) {
         try {
-            return PATH_RESOLVER.getResource("classpath:img/" + fileName).getFile();
-        } catch (IOException ie) {
+            String rootPath = System.getProperty(WebUtils.DEFAULT_WEB_APP_ROOT_KEY);
+            String fullPath = combinePath(rootPath, IMAGE_PATH, fileName);
+            return new File(fullPath);
+        } catch (Exception ie) {
             LOGGER.warn("get file error: " + fileName, ie);
             return null;
         }
+    }
+
+    private String combinePath(String... paths) {
+        if (paths.length == 1) return paths[0];
+        StringBuilder builder = new StringBuilder();
+        String separator = File.separator;
+        int count = 0;
+        for (String p : paths) {
+            int startIndex = 0;
+            int endIndex = p.length();
+            if (p.startsWith(separator)) {
+                startIndex = 1;
+            }
+            if (p.endsWith(separator)) {
+                endIndex = p.length() - 1;
+            }
+            builder.append(p.substring(startIndex, endIndex));
+            count++;
+            if (count < paths.length) builder.append(separator);
+        }
+        return builder.toString();
     }
 
     public byte[] get404() {

@@ -68,7 +68,7 @@ CREATE TABLE IF NOT EXISTS description_item
 (
   id        	INTEGER      	NOT NULL AUTO_INCREMENT,
   description_id INTEGER		NOT NULL COMMENT '类型：0:案例,1:介绍,2:动态',
-  image_id		INTEGER 	NULL COMMENT '图片id',
+  image_id		INTEGER 		NULL COMMENT '图片id',
   content		VARCHAR(512) 	NULL COMMENT '描述内容',
   display_order	INTEGER			NOT NULL DEFAULT 0 COMMENT '显示顺序',
   create_user  	VARCHAR(50) 	NULL COMMENT '创建者名称',
@@ -83,10 +83,11 @@ COMMENT '信息描述具体表'  ENGINE = INNODB  DEFAULT CHARSET = utf8;
 CREATE TABLE IF NOT EXISTS image 
 (
   id        	INTEGER      	NOT NULL AUTO_INCREMENT,
-  url			VARCHAR(250)	NOT NULL COMMENT '图片url',
-  bytes			VARCHAR(100)	NOT NULL COMMENT '图片大小',
+  url			VARCHAR(250)	NOT NULL COMMENT  '图片url',
+  bytes			INTEGER			NOT NULL COMMENT '图片大小',
   create_user  	VARCHAR(50) 	NULL COMMENT '创建者名称',
   create_time  	DATETIME    	NOT NULL DEFAULT now()  COMMENT '创建时间',
-  PRIMARY KEY (id)
+  PRIMARY KEY (id),
+  INDEX `ix_image_url` (`url`)
 )
 COMMENT '信息描述表'  ENGINE = INNODB  DEFAULT CHARSET = utf8;

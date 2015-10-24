@@ -88,34 +88,7 @@
         <div id="sidebar-left" class="span2">
             <div class="nav-collapse sidebar-nav">
                 <ul class="nav nav-tabs nav-stacked main-menu">
-                    <li>
-                        <a href="<@url value='/'/>">
-                            <i class="icon-bar-chart"></i>
-                            <span class="hidden-tablet"> 首页</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="<@url value='/company'/>">
-                            <i class="icon-tasks"></i>
-                            <span class="hidden-tablet"> 公司信息</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="<@url value='/address'/>">
-                            <i class="icon-tasks"></i>
-                            <span class="hidden-tablet"> 地址信息</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="<@url value='/contact'/>">
-                            <i class="icon-tasks"></i>
-                            <span class="hidden-tablet"> 联系方式</span>
-                        </a>
-                    </li>
-                    <li><a href="file-manager.html"><i class="icon-folder-open"></i><span class="hidden-tablet"> File Manager</span></a>
-                    </li>
-                    <li><a href="login.html"><i class="icon-lock"></i><span class="hidden-tablet"> Login Page</span></a>
-                    </li>
+                    <#include "leftmenu.ftl"/>
                 </ul>
             </div>
         </div>
@@ -151,20 +124,6 @@
     <!--/#content.span10-->
 </div>
 <!--/fluid-row-->
-
-<div class="modal hide fade" id="myModal">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">×</button>
-        <h3>Settings</h3>
-    </div>
-    <div class="modal-body">
-        <p>Here settings can be configured...</p>
-    </div>
-    <div class="modal-footer">
-        <a href="#" class="btn" data-dismiss="modal">Close</a>
-        <a href="#" class="btn btn-primary">Save changes</a>
-    </div>
-</div>
 
 <div class="clearfix"></div>
 

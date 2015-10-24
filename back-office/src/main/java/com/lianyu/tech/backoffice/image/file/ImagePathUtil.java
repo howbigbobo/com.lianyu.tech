@@ -3,6 +3,8 @@ package com.lianyu.tech.backoffice.image.file;
 import com.lianyu.tech.backoffice.image.ImageType;
 import com.lianyu.tech.core.util.DigestUtils;
 
+import java.io.File;
+
 /**
  * @author bowen.zhang
  */
@@ -19,7 +21,7 @@ public final class ImagePathUtil {
     }
 
     public static String generatePath(String hash, String ext) {
-        return hash.substring(0, 2) + "/" + hash.substring(2, 4) + "/" + hash.substring(4, hash.length()) + "." + ext;
+        return File.separator + Integer.valueOf(hash.substring(0, 2)) % 10 + File.separator + hash + "." + ext;
     }
 
     public static String getHashPath(String hash, ImageType imageType) {

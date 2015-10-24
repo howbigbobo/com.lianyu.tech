@@ -17,8 +17,8 @@ import java.io.ByteArrayOutputStream;
  * @author bowen.zhang
  */
 @Service
-public class ImageService {
-    private final Logger logger = LoggerFactory.getLogger(ImageService.class.getName());
+public class ImageHandlerService {
+    private final Logger logger = LoggerFactory.getLogger(ImageHandlerService.class.getName());
 
     @Inject
     private ImageHandler imageHandler;

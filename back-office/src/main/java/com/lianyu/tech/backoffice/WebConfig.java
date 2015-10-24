@@ -27,10 +27,12 @@ import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
+import org.springframework.web.util.WebAppRootListener;
 
 import javax.inject.Inject;
 import javax.persistence.EntityManagerFactory;
 import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
 
 @Configuration
 @EnableTransactionManagement(proxyTargetClass = true)
@@ -42,6 +44,12 @@ public class WebConfig extends DefaultSiteConfig {
     EntityManagerFactory entityManagerFactory;
     @Inject
     ServletContext servletContext;
+
+    @Override
+    public void onStartup(ServletContext servletContext) throws ServletException {
+        super.onStartup(servletContext);
+        servletContext.addListener(WebAppRootListener.class);
+    }
 
     @Bean
     public SiteSettings siteSettings() {
