@@ -23,7 +23,12 @@ public class ImageService {
     @Inject
     private ImageHandler imageHandler;
 
-    public String insert(ImageEntity image) {
+    public ImageEntity get(String path) {
+        if (!StringUtils.hasText(path)) return null;
+        return imageHandler.get(path);
+    }
+
+    public String add(ImageEntity image) {
         if (image == null || image.getImageBytes() == null || image.getImageBytes().length == 0) {
             return "";
         }
@@ -34,11 +39,6 @@ public class ImageService {
         if (!StringUtils.hasText(path)) return false;
         imageHandler.delete(path);
         return true;
-    }
-
-    public ImageEntity get(String path) {
-        if (!StringUtils.hasText(path)) return null;
-        return imageHandler.get(path);
     }
 
     public ImageEntity resize(ImageEntity image, ImageSize size) {
