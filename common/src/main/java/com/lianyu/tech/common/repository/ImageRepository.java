@@ -28,7 +28,7 @@ public class ImageRepository extends CommonRepository {
         if (!StringUtils.hasText(url)) return null;
         Map<String, Object> params = new HashMap<>(1, 1);
         params.put("url", url);
-        String sql = "from " + Image.class.getName() + " where url = url";
+        String sql = "from " + Image.class.getName() + " where url = :url";
         List<Image> images = jpaAccess.find(sql, params);
         return CollectionUtils.isEmpty(images) ? null : images.get(0);
     }

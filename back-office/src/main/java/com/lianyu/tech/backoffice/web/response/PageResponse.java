@@ -15,7 +15,9 @@ public class PageResponse {
     }
 
     public int getTotalPage() {
-        return totalPage;
+        if (totalPage > 0) return totalPage;
+        if (pageSize == 0) return 0;
+        return (int) Math.ceil(totalCount / pageSize);
     }
 
     public void setTotalPage(int totalPage) {
@@ -37,4 +39,5 @@ public class PageResponse {
     public void setPageSize(int pageSize) {
         this.pageSize = pageSize;
     }
+
 }

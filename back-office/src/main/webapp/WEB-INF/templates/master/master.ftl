@@ -195,6 +195,7 @@
 <!-- end: JavaScript-->
 <@js src="plugin/template.js"/>
 <@js src="plugin/template-helper.js"/>
+<@js src="plugin/jquery.myPagination6.0.js"/>
 
 <@js src="jquery.formdata.js"/>
 <@js src="jquery.dialog.js"/>

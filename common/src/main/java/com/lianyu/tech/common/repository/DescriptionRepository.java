@@ -14,9 +14,17 @@ import java.util.Map;
 @Repository
 public class DescriptionRepository extends CommonRepository {
     public List<Description> findByType(DescriptionType type, int offset, int size) {
-        Map<String, Object> params = new HashMap<>(2);
+        Map<String, Object> params = new HashMap<>(1, 1);
         params.put("type", type);
         String sql = "from " + Description.class.getName() + " where type=:type order by descTime desc";
-        return jpaAccess.find(sql, null, offset, size);
+        return jpaAccess.find(sql, params, offset, size);
+    }
+
+    public int countByType(DescriptionType descriptionType) {
+        Map<String, Object> params = new HashMap<>(1, 1);
+        params.put("type", descriptionType);
+        String sql = "select count(1) from " + Description.class.getName() + " where type=:type ";
+        Long count = jpaAccess.findUniqueResult(sql, params);
+        return count.intValue();
     }
 }

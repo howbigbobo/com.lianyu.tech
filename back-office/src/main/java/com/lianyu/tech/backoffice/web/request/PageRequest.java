@@ -29,5 +29,8 @@ public class PageRequest {
     public void setPageSize(int pageSize) {
         this.pageSize = pageSize;
     }
-    
+
+    public int getOffset() {
+        return page <= 1 ? 0 : (page - 1) * getPageSize();
+    }
 }

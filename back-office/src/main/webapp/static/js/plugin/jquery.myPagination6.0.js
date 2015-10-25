@@ -11,7 +11,7 @@
             if (opts.ajax.contentType == "application/json") {
                 opts.ajax.param.page = opts.currPage;
                 if (opts.currSize) opts.ajax.param.pageSize = opts.currSize;
-                return opts.ajax.param;
+                return JSON.stringify(opts.ajax.param);
             }
             var a = "page=" + opts.currPage;
             if (opts.currSize) a += "&pageSize=" + opts.currSize;
@@ -72,7 +72,7 @@
                     url: opts.ajax.url,
                     type: opts.ajax.type,
                     data: getParam(),
-                    contentType: "application/x-www-form-urlencoded;utf-8",
+                    contentType: opts.ajax.contentType || "application/x-www-form-urlencoded;utf-8",
                     async: !0,
                     cache: !1,
                     timeout: 6e4,

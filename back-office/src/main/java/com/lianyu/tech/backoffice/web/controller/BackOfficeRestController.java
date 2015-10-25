@@ -41,5 +41,4 @@ public class BackOfficeRestController extends RESTController {
     public void setSiteContext(SiteContext siteContext) {
         this.siteContext = siteContext;
     }
-
 }
