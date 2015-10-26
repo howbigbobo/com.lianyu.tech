@@ -16,7 +16,7 @@ public class DescriptionRepository extends CommonRepository {
     public List<Description> findByType(DescriptionType type, int offset, int size) {
         Map<String, Object> params = new HashMap<>(1, 1);
         params.put("type", type);
-        String sql = "from " + Description.class.getName() + " where type=:type order by descTime desc";
+        String sql = "from " + Description.class.getName() + " where type=:type order by beginTime desc";
         return jpaAccess.find(sql, params, offset, size);
     }
 

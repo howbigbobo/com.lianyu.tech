@@ -13,7 +13,7 @@
         var $ctrl = $(ctrl);
         if (ctrl.length == 0) return {};
         option = option || {};
-        var inputs = $ctrl.find('input[name],select[name]');
+        var inputs = $ctrl.find('input[name],select[name],textarea[name]');
 
         var data = {};
         $.each(inputs, function (i, e) {

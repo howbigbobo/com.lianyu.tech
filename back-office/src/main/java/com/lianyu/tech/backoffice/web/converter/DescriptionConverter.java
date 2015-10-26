@@ -19,7 +19,8 @@ public abstract class DescriptionConverter {
         view.setType(description.getType());
         view.setHead(description.getHead());
         view.setSubhead(description.getSubhead());
-        view.setDescTime(description.getDescTime());
+        view.setBeginTime(description.getBeginTime());
+        view.setEndTime(description.getEndTime());
         view.setLocation(description.getLocation());
         view.setContent(description.getContent());
         return view;

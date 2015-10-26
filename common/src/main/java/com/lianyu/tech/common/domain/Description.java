@@ -1,6 +1,11 @@
 package com.lianyu.tech.common.domain;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.util.Date;
 
 /**
@@ -24,8 +29,11 @@ public class Description {
     @Column(name = "subhead")
     private String subhead;
 
-    @Column(name = "desc_time")
-    private Date descTime;
+    @Column(name = "begin_time")
+    private Date beginTime;
+
+    @Column(name = "end_time")
+    private Date endTime;
 
     @Column(name = "location")
     private String location;
@@ -77,12 +85,20 @@ public class Description {
         this.subhead = subhead;
     }
 
-    public Date getDescTime() {
-        return descTime;
+    public Date getBeginTime() {
+        return beginTime;
     }
 
-    public void setDescTime(Date descTime) {
-        this.descTime = descTime;
+    public void setBeginTime(Date beginTime) {
+        this.beginTime = beginTime;
+    }
+
+    public Date getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(Date endTime) {
+        this.endTime = endTime;
     }
 
     public String getLocation() {

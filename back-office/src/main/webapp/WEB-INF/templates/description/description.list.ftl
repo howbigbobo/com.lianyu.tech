@@ -37,7 +37,7 @@
             {{description.head}}
         </td>
         <td class="center"> {{description.subHead}}</td>
-        <td class="center">{{description.descTime | dateFormat('yyyy-MM-dd')}}</td>
+        <td class="center">{{description.beginTime | dateFormat('yyyy-MM-dd')}} - {{description.endTime | dateFormat('yyyy-MM-dd')}}</td>
         <td class="center">{{description.location}}</td>
         <td class="center">
             <a class="btn btn-info" href="javascript:" onclick="detail({{description.id}});">

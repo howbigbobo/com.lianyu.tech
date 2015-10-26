@@ -22,7 +22,33 @@ public class DescriptionController extends BackOfficeSiteController {
     @RequestMapping(value = "/description/{type}", method = RequestMethod.GET)
     public String list(Map<String, Object> model, @PathVariable("type") String type) {
         DescriptionType descriptionType = DescriptionType.fromName(type);
-        model.put("type", descriptionType.name().toLowerCase());
+        buildDescriptionTypeModel(model, descriptionType);
         return "description/description.list";
+    }
+
+    @RequestMapping(value = "/description/{type}/{id}", method = RequestMethod.GET)
+    public String detail(Map<String, Object> model, @PathVariable("type") String type, @PathVariable("id") Integer id) {
+        DescriptionType descriptionType = DescriptionType.fromName(type);
+        buildDescriptionTypeModel(model, descriptionType);
+        return "description/description.detail";
+    }
+
+    @RequestMapping(value = "/description/{type}/add", method = RequestMethod.GET)
+    public String add(Map<String, Object> model, @PathVariable("type") String type) {
+        DescriptionType descriptionType = DescriptionType.fromName(type);
+        buildDescriptionTypeModel(model, descriptionType);
+        return "description/description.edit";
+    }
+
+    @RequestMapping(value = "/description/{type}/edit/{id}", method = RequestMethod.GET)
+    public String edit(Map<String, Object> model, @PathVariable("type") String type, @PathVariable("id") Integer id) {
+        DescriptionType descriptionType = DescriptionType.fromName(type);
+        buildDescriptionTypeModel(model, descriptionType);
+        return "description/description.edit";
+    }
+
+    private void buildDescriptionTypeModel(Map<String, Object> model, DescriptionType type) {
+        model.put("type", type.name().toLowerCase());
+        model.put("descText", type.getText().toLowerCase());
     }
 }

@@ -16,7 +16,9 @@ public class DescriptionView {
 
     private String subhead;
 
-    private Date descTime;
+    private Date beginTime;
+
+    private Date endTime;
 
     private String location;
 
@@ -54,12 +56,20 @@ public class DescriptionView {
         this.subhead = subhead;
     }
 
-    public Date getDescTime() {
-        return descTime;
+    public Date getBeginTime() {
+        return beginTime;
     }
 
-    public void setDescTime(Date descTime) {
-        this.descTime = descTime;
+    public void setBeginTime(Date beginTime) {
+        this.beginTime = beginTime;
+    }
+
+    public Date getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(Date endTime) {
+        this.endTime = endTime;
     }
 
     public String getLocation() {

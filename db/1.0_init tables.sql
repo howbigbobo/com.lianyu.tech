@@ -51,9 +51,10 @@ CREATE TABLE IF NOT EXISTS description
 (
   id        	INTEGER      	NOT NULL AUTO_INCREMENT,
   `type`     	TINYINT		  	NOT NULL COMMENT '类型：1:案例,2:介绍,3:动态',
-  head			VARCHAR(100)	NOT NULL COMMENT '标题',
-  subhead     	VARCHAR(200)  	NULL COMMENT '副标题',
-  desc_time   	DATETIME 		NULL COMMENT '发生的时间',
+  head			VARCHAR(200)	NOT NULL COMMENT '标题',
+  subhead     	VARCHAR(400)  	NULL COMMENT '副标题',
+  begin_time   	DATETIME 		NULL COMMENT '开始时间',
+  end_time   	DATETIME 		NULL COMMENT '结束时间',
   location		VARCHAR(200) 	NULL COMMENT '地点',
   content		VARCHAR(512) 	NULL COMMENT '描述内容',
   create_user  	VARCHAR(50) 	NULL COMMENT '创建者名称',
