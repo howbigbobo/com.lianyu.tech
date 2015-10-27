@@ -2,6 +2,7 @@ package com.lianyu.tech.backoffice.web.controller.description;
 
 import com.lianyu.tech.backoffice.service.DescriptionService;
 import com.lianyu.tech.backoffice.web.controller.BackOfficeSiteController;
+import com.lianyu.tech.common.domain.Description;
 import com.lianyu.tech.common.domain.DescriptionType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -42,8 +43,16 @@ public class DescriptionController extends BackOfficeSiteController {
 
     @RequestMapping(value = "/description/{type}/edit/{id}", method = RequestMethod.GET)
     public String edit(Map<String, Object> model, @PathVariable("type") String type, @PathVariable("id") Integer id) {
+
+        Description description = descriptionService.get(id);
+        if (description == null) {
+            return "redirect://description/" + type.toLowerCase() + "/add";
+        }
+
         DescriptionType descriptionType = DescriptionType.fromName(type);
         buildDescriptionTypeModel(model, descriptionType);
+        model.put("descriptionId", id);
+        model.put("description", description);
         return "description/description.edit";
     }
 

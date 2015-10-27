@@ -248,7 +248,7 @@
                     on: !1,
                     type: "POST",
                     pageCountId: "pageCount",
-                    url: "jsonTest.php",
+                    url: "",
                     dataType: "json",
                     param: !1,
                     onClick: function () {

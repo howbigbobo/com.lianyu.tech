@@ -36,8 +36,11 @@
         <td>
             {{description.head}}
         </td>
-        <td class="center"> {{description.subHead}}</td>
-        <td class="center">{{description.beginTime | dateFormat('yyyy-MM-dd')}} - {{description.endTime | dateFormat('yyyy-MM-dd')}}</td>
+        <td class="center"> {{description.subhead}}</td>
+        <td class="center">
+            {{if description.beginTime}}{{description.beginTime |dateFormat:'yyyy-MM-dd'}} -{{/if}}
+            {{if description.endTime}}{{description.endTime |dateFormat:'yyyy-MM-dd'}}{{/if}}
+        </td>
         <td class="center">{{description.location}}</td>
         <td class="center">
             <a class="btn btn-info" href="javascript:" onclick="detail({{description.id}});">
@@ -54,4 +57,4 @@
     {{/each}}
 </script>
 </@master>
-<@js src = "description.js"/>
+<@js src = "description.list.js"/>
