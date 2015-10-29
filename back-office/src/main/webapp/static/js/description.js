@@ -27,3 +27,18 @@ function saveDescription() {
 
     return false;
 }
+
+
+/**************** item ************************************/
+
+function saveItem(ctrl) {
+
+}
+
+function updateItemOrder(ctrl, order) {
+
+}
+
+function deleteItem(ctrl) {
+
+}

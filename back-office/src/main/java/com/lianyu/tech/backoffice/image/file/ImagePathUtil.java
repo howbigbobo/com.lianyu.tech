@@ -13,6 +13,7 @@ import java.util.regex.Pattern;
 public final class ImagePathUtil {
     private static final String SALT = "com.lianyu.tech.2015";
     private static final Pattern NOT_HEX_PATTERN = Pattern.compile("[^a-f0-9]");
+    private static final int FOLDER_COUNT = 10;
 
     public static String generateHash(byte[] bytes) {
         String byteHash = DigestUtils.md5(bytes);
@@ -25,7 +26,7 @@ public final class ImagePathUtil {
 
     public static String generatePath(String hash, String ext) {
         if (!validatePath(hash)) return "";
-        return Integer.parseInt(hash.substring(0, 2), 16) % 5 + File.separator + hash + "." + ext;
+        return Integer.parseInt(hash.substring(0, 2), 16) % FOLDER_COUNT + File.separator + hash + "." + ext;
     }
 
     public static String getHashPath(String hash, ImageType imageType) {

@@ -10,6 +10,11 @@
         <div class="box-content" id="description-item-container">
             <form class="form-horizontal description-item">
                 <fieldset>
+                    <input type="hidden" name="id" value=""/>
+                    <input type="hidden" name="displayOrder" value=""/>
+                    <input type="hidden" name="descriptionId" value=""/>
+                    <input type="hidden" name="imageId" value=""/>
+
                     <div class="control-group success">
                         <label class="control-label">图片</label>
 
@@ -27,9 +32,9 @@
                         <div class="controls">
                             <textarea name="content" class="large" rows="1"/></textarea>
                             <span class="help-inline">
-                                <a href="javascript:;" title="保存"><i class="halflings-icon ok"></i></a>
-                                <a href="javascript:;" title="上移"><i class="halflings-icon arrow-up"></i></a>
-                                <a href="javascript:;" title="下移"><i class="halflings-icon arrow-down"></i></a>
+                                <a href="javascript:;" onclick="saveItem(this);" title="保存"><i class="halflings-icon ok"></i></a>
+                                <a href="javascript:;" onclick="updateItemOrder(this,-1);" title="上移"><i class="halflings-icon arrow-up"></i></a>
+                                <a href="javascript:;" onclick="updateItemOrder(this,1);" title="下移"><i class="halflings-icon arrow-down"></i></a>
                                 <a href="javascript:;" title="删除"><i class="halflings-icon trash"></i></a>
                             </span>
                         </div>
