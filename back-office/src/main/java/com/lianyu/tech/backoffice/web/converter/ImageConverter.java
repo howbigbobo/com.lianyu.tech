@@ -1,12 +1,12 @@
 package com.lianyu.tech.backoffice.web.converter;
 
-import com.lianyu.tech.backoffice.ImageServerSetting;
 import com.lianyu.tech.common.domain.Image;
+import com.lianyu.tech.core.platform.web.DeploymentSettings;
 import com.lianyu.tech.core.util.StringUtils;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
-import javax.inject.Inject;
 import java.util.List;
 
 /**
@@ -14,23 +14,36 @@ import java.util.List;
  */
 @Service
 public class ImageConverter {
-    @Inject
-    private ImageServerSetting imageServerSetting;
+
+    @Value("image.server.url")
+    private String imageServer;
 
     public void buildImageFullUrl(List<Image> images) {
         if (CollectionUtils.isEmpty(images)) return;
+        String server = getServer();
         for (Image image : images) {
-            image.setUrl(combinePath(image.getUrl()));
+            image.setUrl(combinePath(image.getUrl(), server));
         }
     }
 
-    private String combinePath(String url) {
+    private String combinePath(String url, String server) {
         if (!StringUtils.hasText(url)) return "";
         StringBuilder builder = new StringBuilder();
-        builder.append(imageServerSetting.getImageServer());
+        builder.append(server);
         if (!url.startsWith("/")) {
             builder.append(url.substring(1));
         }
         return builder.toString();
+    }
+
+    private String getServer() {
+        String server = imageServer;
+        if (!StringUtils.hasText(server) || "/".equalsIgnoreCase(server)) {
+            server = DeploymentSettings.get().getDeploymentContext();
+        }
+        if (!server.endsWith("/")) {
+            server = server + "/";
+        }
+        return server;
     }
 }

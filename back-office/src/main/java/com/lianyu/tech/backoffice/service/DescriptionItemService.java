@@ -49,6 +49,17 @@ public class DescriptionItemService {
     }
 
     @Transactional
+    public void updateOrder(int id, int order) {
+        DescriptionItem existItem = descriptionItemRepository.get(DescriptionItem.class, id);
+        if (existItem != null) {
+            existItem.setDisplayOrder(order);
+            existItem.setUpdateTime(new Date());
+            existItem.setUpdateUser("");
+            descriptionItemRepository.update(existItem);
+        }
+    }
+
+    @Transactional
     public void delete(Integer id) {
         DescriptionItem existItem = descriptionItemRepository.get(DescriptionItem.class, id);
         if (existItem != null) {

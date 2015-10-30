@@ -1,31 +1,37 @@
 package com.lianyu.tech.backoffice.web.controller.description;
 
+import com.lianyu.tech.backoffice.image.ImageEntity;
+import com.lianyu.tech.backoffice.image.file.ImagePathUtil;
 import com.lianyu.tech.backoffice.service.DescriptionItemService;
+import com.lianyu.tech.backoffice.service.ImageFacadeService;
 import com.lianyu.tech.backoffice.service.ImageService;
 import com.lianyu.tech.backoffice.web.controller.BackOfficeRestController;
 import com.lianyu.tech.backoffice.web.converter.DescriptionItemConverter;
 import com.lianyu.tech.backoffice.web.converter.ImageConverter;
-import com.lianyu.tech.backoffice.web.request.DescriptionItemOrderRequest;
 import com.lianyu.tech.backoffice.web.request.DescriptionItemRequest;
+import com.lianyu.tech.backoffice.web.response.DescriptionItemListResponse;
 import com.lianyu.tech.backoffice.web.vo.DescriptionItemView;
 import com.lianyu.tech.common.domain.DescriptionItem;
 import com.lianyu.tech.common.domain.Image;
 import com.lianyu.tech.common.utils.Converter;
 import com.lianyu.tech.common.utils.ListUtils;
+import com.lianyu.tech.core.platform.exception.InvalidRequestException;
+import com.lianyu.tech.core.util.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import javax.inject.Inject;
 import javax.validation.Valid;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -40,11 +46,34 @@ public class DescriptionItemRestController extends BackOfficeRestController {
     private ImageService imageService;
     @Inject
     private ImageConverter imageConverter;
+    @Inject
+    private ImageFacadeService imageFacadeService;
 
     @ResponseBody
     @RequestMapping(value = "/description/item/save", method = RequestMethod.POST)
-    public void add(@Valid DescriptionItemRequest request, MultipartHttpServletRequest imageRequest) throws IOException {
+    public DescriptionItemListResponse add(@Valid DescriptionItemRequest request, MultipartHttpServletRequest imageRequest) throws IOException {
+        List<ImageEntity> imageEntities = getImageEntity(imageRequest);
 
+        Image image = null;
+        for (ImageEntity imageEntity : imageEntities) {
+            image = imageFacadeService.add(imageEntity);
+        }
+        if (image == null && !StringUtils.hasText(request.getContent())) {
+            throw new InvalidRequestException("图片和描述必须填写一个");
+        }
+
+        DescriptionItem item = new DescriptionItem();
+        item.setId(request.getId());
+        item.setContent(request.getContent());
+        item.setDescriptionId(request.getDescriptionId());
+        item.setDisplayOrder(request.getDisplayOrder());
+        if (image != null) item.setImageId(image.getId());
+
+        descriptionItemService.save(item);
+
+        DescriptionItemListResponse response = new DescriptionItemListResponse();
+        response.setItems(Arrays.asList(DescriptionItemConverter.convert(item, image)));
+        return response;
     }
 
     @ResponseBody
@@ -54,18 +83,16 @@ public class DescriptionItemRestController extends BackOfficeRestController {
     }
 
     @ResponseBody
-    @RequestMapping(value = "/description/item/order/update", method = RequestMethod.POST)
-    public void updateOrder(@RequestBody DescriptionItemOrderRequest request) {
-
+    @RequestMapping(value = "/description/item/{id}/order/{order}", method = RequestMethod.POST)
+    public void updateOrder(@PathVariable("id") int id, @PathVariable("order") int order) {
+        descriptionItemService.updateOrder(id, order);
     }
 
     @ResponseBody
     @RequestMapping(value = "/description/item/list/{descriptionId}", method = RequestMethod.POST)
-    public Map<String, Object> listItems(@PathVariable("descriptionId") Integer descriptionId) {
+    public DescriptionItemListResponse listItems(@PathVariable("descriptionId") Integer descriptionId) {
         List<DescriptionItemView> list = buildDescriptionItemViews(descriptionId);
-        Map<String, Object> map = new HashMap<>(1, 1);
-        map.put("descriptionItems", list);
-        return map;
+        return new DescriptionItemListResponse(list);
     }
 
     private List<DescriptionItemView> buildDescriptionItemViews(Integer descriptionId) {
@@ -81,5 +108,18 @@ public class DescriptionItemRestController extends BackOfficeRestController {
         imageConverter.buildImageFullUrl(images);
         List<DescriptionItemView> itemViews = DescriptionItemConverter.convert(items, images);
         return itemViews;
+    }
+
+    private List<ImageEntity> getImageEntity(MultipartHttpServletRequest request) throws IOException {
+        Map<String, MultipartFile> fileMap = request.getFileMap();
+        List<ImageEntity> imageEntities = new ArrayList<>();
+        for (Map.Entry<String, MultipartFile> entry : fileMap.entrySet()) {
+            MultipartFile file = entry.getValue();
+            ImageEntity imageEntity = new ImageEntity();
+            imageEntity.setImageBytes(file.getBytes());
+            imageEntity.setImageType(ImagePathUtil.getImageType(file.getName()));
+            imageEntities.add(imageEntity);
+        }
+        return imageEntities;
     }
 }

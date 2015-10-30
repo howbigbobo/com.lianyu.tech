@@ -24,7 +24,7 @@ public class DescriptionItemRequest {
     private String content;
 
     @FormParam("displayOrder")
-    private Integer displayOrder;
+    private int displayOrder;
 
     public Integer getId() {
         return id;
@@ -58,11 +58,11 @@ public class DescriptionItemRequest {
         this.content = content;
     }
 
-    public Integer getDisplayOrder() {
+    public int getDisplayOrder() {
         return displayOrder;
     }
 
-    public void setDisplayOrder(Integer displayOrder) {
+    public void setDisplayOrder(int displayOrder) {
         this.displayOrder = displayOrder;
     }
 }
