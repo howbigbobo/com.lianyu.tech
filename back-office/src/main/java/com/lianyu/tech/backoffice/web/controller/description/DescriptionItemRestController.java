@@ -20,6 +20,7 @@ import com.lianyu.tech.core.util.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -62,18 +63,25 @@ public class DescriptionItemRestController extends BackOfficeRestController {
             throw new InvalidRequestException("图片和描述必须填写一个");
         }
 
+        DescriptionItem item = convertDescriptionItem(request);
+        if (image != null) item.setImageId(image.getId());
+
+        descriptionItemService.save(item);
+
+        imageConverter.buildImageFullUrl(Arrays.asList(image));
+
+        DescriptionItemListResponse response = new DescriptionItemListResponse();
+        response.setItems(Arrays.asList(DescriptionItemConverter.convert(item, image)));
+        return response;
+    }
+
+    private DescriptionItem convertDescriptionItem(DescriptionItemRequest request) {
         DescriptionItem item = new DescriptionItem();
         item.setId(request.getId());
         item.setContent(request.getContent());
         item.setDescriptionId(request.getDescriptionId());
         item.setDisplayOrder(request.getDisplayOrder());
-        if (image != null) item.setImageId(image.getId());
-
-        descriptionItemService.save(item);
-
-        DescriptionItemListResponse response = new DescriptionItemListResponse();
-        response.setItems(Arrays.asList(DescriptionItemConverter.convert(item, image)));
-        return response;
+        return item;
     }
 
     @ResponseBody
@@ -86,6 +94,16 @@ public class DescriptionItemRestController extends BackOfficeRestController {
     @RequestMapping(value = "/description/item/{id}/order/{order}", method = RequestMethod.POST)
     public void updateOrder(@PathVariable("id") int id, @PathVariable("order") int order) {
         descriptionItemService.updateOrder(id, order);
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/description/item/update", method = RequestMethod.POST)
+    public void update(@RequestBody DescriptionItemRequest request) {
+        if ((request.getImageId() == null || request.getImageId() == 0) && !StringUtils.hasText(request.getContent())) {
+            throw new InvalidRequestException("图片和描述至少要填写一个");
+        }
+        DescriptionItem item = convertDescriptionItem(request);
+        descriptionItemService.save(item);
     }
 
     @ResponseBody

@@ -66,6 +66,6 @@ public final class ImagePathUtil {
     }
 
     private static boolean validatePath(String path) {
-        return !StringUtils.hasText(path) && path.length() > 10 && !NOT_HEX_PATTERN.matcher(path.substring(0, 2)).find();
+        return StringUtils.hasText(path) && path.length() > 10 && !NOT_HEX_PATTERN.matcher(path.substring(0, 2)).find();
     }
 }

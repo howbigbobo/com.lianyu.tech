@@ -16,7 +16,7 @@
                     <div class="form-actions">
                         <button type="button" class="btn btn-success" onclick="newItemContainer(); return false;"> &nbsp;继续添加&nbsp;&nbsp;</button>
                         &nbsp;&nbsp;
-                        <button type="button" class="btn btn-primary" onclick="saveDescription(); return false;"> &nbsp;全部保存&nbsp;&nbsp;</button>
+                        <button type="button" class="btn btn-primary" onclick="saveAllItem(); return false;"> &nbsp;全部保存&nbsp;&nbsp;</button>
                         <label class="label-warning" id="description-message"></label>
                     </div>
                 </fieldset>
@@ -31,7 +31,6 @@
         <fieldset>
             <input type="hidden" name="id" value="{{item.id}}"/>
             <input type="hidden" name="displayOrder" value="{{item.displayOrder}}"/>
-            <input type="hidden" name="origin-displayOrder" value="{{item.displayOrder}}"/>
             <input type="hidden" name="descriptionId" value="{{item.descriptionId}}"/>
             <input type="hidden" name="imageId" value="{{item.imageId}}"/>
 
@@ -52,9 +51,9 @@
                 <label class="control-label">描述</label>
 
                 <div class="controls">
-                    <textarea name="content" class="large" rows="1"/></textarea>
+                    <textarea name="content" class="large" rows="1">{{item.content}}</textarea>
                             <span class="help-inline">
-                                <a href="javascript:;" class="item-save" title="保存"><i class="halflings-icon ok"></i></a>
+                                <a href="javascript:;" class="item-save" title="保存" onclick="saveItem(this);"><i class="halflings-icon ok"></i></a>
                                 <a href="javascript:;" onclick="updateItemOrder(this,-1);" title="上移"><i class="halflings-icon arrow-up"></i></a>
                                 <a href="javascript:;" onclick="updateItemOrder(this,1);" title="下移"><i class="halflings-icon arrow-down"></i></a>
                                 <a href="javascript:;" onclick="deleteItem(this);" title="删除"><i class="halflings-icon trash"></i></a>

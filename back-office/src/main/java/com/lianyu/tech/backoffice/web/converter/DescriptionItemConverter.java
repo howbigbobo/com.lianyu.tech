@@ -29,7 +29,7 @@ public abstract class DescriptionItemConverter {
     }
 
     public static List<DescriptionItemView> convert(List<DescriptionItem> items, List<Image> images) {
-        if (CollectionUtils.isEmpty(images)) return Collections.EMPTY_LIST;
+        if (CollectionUtils.isEmpty(items)) return Collections.EMPTY_LIST;
         Map<Integer, Image> imageMap = ListUtils.toMap(images, new Converter<Image, Integer>() {
             @Override
             public Integer convert(Image image) {

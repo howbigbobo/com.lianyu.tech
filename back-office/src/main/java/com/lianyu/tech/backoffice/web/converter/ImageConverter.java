@@ -15,7 +15,7 @@ import java.util.List;
 @Service
 public class ImageConverter {
 
-    @Value("image.server.url")
+    @Value("${image.server.url}")
     private String imageServer;
 
     public void buildImageFullUrl(List<Image> images) {
@@ -30,8 +30,10 @@ public class ImageConverter {
         if (!StringUtils.hasText(url)) return "";
         StringBuilder builder = new StringBuilder();
         builder.append(server);
-        if (!url.startsWith("/")) {
+        if (url.startsWith("/")) {
             builder.append(url.substring(1));
+        } else {
+            builder.append(url);
         }
         return builder.toString();
     }
@@ -39,7 +41,7 @@ public class ImageConverter {
     private String getServer() {
         String server = imageServer;
         if (!StringUtils.hasText(server) || "/".equalsIgnoreCase(server)) {
-            server = DeploymentSettings.get().getDeploymentContext();
+            server = DeploymentSettings.get().getDeploymentContext() + "/img/";
         }
         if (!server.endsWith("/")) {
             server = server + "/";

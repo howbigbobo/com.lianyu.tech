@@ -1,5 +1,6 @@
 package com.lianyu.tech.backoffice.web.controller.description;
 
+import com.lianyu.tech.backoffice.service.DescriptionItemService;
 import com.lianyu.tech.backoffice.service.DescriptionService;
 import com.lianyu.tech.backoffice.web.controller.BackOfficeRestController;
 import com.lianyu.tech.backoffice.web.converter.DescriptionConverter;
@@ -26,6 +27,8 @@ public class DescriptionRestController extends BackOfficeRestController {
 
     @Inject
     private DescriptionService descriptionService;
+    @Inject
+    private DescriptionItemService descriptionItemService;
 
     @ResponseBody
     @RequestMapping(value = "/description/list", method = RequestMethod.POST)
@@ -44,6 +47,7 @@ public class DescriptionRestController extends BackOfficeRestController {
     @RequestMapping(value = "/description/delete/{id}", method = RequestMethod.POST)
     public void delete(@PathVariable("id") int id) {
         descriptionService.delete(id);
+        descriptionItemService.deleteByDescriptionId(id);
     }
 
     @ResponseBody

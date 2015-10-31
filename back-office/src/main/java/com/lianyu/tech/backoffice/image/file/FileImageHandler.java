@@ -5,7 +5,6 @@ import com.lianyu.tech.backoffice.image.ImageHandler;
 import com.lianyu.tech.core.util.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.web.util.WebUtils;
 
 import java.io.File;
@@ -16,7 +15,6 @@ import java.nio.file.Files;
  */
 public class FileImageHandler implements ImageHandler {
     private static final Logger LOGGER = LoggerFactory.getLogger(FileImageHandler.class);
-    private static final PathMatchingResourcePatternResolver PATH_RESOLVER = new PathMatchingResourcePatternResolver();
     private static final String IMAGE_PATH = "images";
 
     @Override

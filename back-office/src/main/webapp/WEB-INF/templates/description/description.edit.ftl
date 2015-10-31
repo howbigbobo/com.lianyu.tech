@@ -71,7 +71,7 @@
                         </div>
                     </div>
                     <div class="form-actions">
-                        <button type="button" class="btn btn-primary" onclick="saveDescription();"> &nbsp;保 &nbsp;&nbsp;存&nbsp;&nbsp;</button>
+                        <button type="button" class="btn btn-primary" onclick="saveDescription(); return false;"> &nbsp;保 &nbsp;&nbsp;存&nbsp;&nbsp;</button>
                         <label class="label-warning" id="description-message"></label>
                     </div>
                 </fieldset>
