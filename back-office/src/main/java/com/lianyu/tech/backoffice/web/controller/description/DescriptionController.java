@@ -1,26 +1,15 @@
 package com.lianyu.tech.backoffice.web.controller.description;
 
-import com.lianyu.tech.backoffice.service.DescriptionItemService;
 import com.lianyu.tech.backoffice.service.DescriptionService;
-import com.lianyu.tech.backoffice.service.ImageService;
 import com.lianyu.tech.backoffice.web.controller.BackOfficeSiteController;
-import com.lianyu.tech.backoffice.web.converter.DescriptionItemConverter;
-import com.lianyu.tech.backoffice.web.converter.ImageConverter;
-import com.lianyu.tech.backoffice.web.vo.DescriptionItemView;
 import com.lianyu.tech.common.domain.Description;
-import com.lianyu.tech.common.domain.DescriptionItem;
 import com.lianyu.tech.common.domain.DescriptionType;
-import com.lianyu.tech.common.domain.Image;
-import com.lianyu.tech.common.utils.Converter;
-import com.lianyu.tech.common.utils.ListUtils;
 import org.springframework.stereotype.Controller;
-import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.inject.Inject;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -67,7 +56,6 @@ public class DescriptionController extends BackOfficeSiteController {
         model.put("description", description);
         return "description/description.edit";
     }
-
 
 
     private void buildDescriptionTypeModel(Map<String, Object> model, DescriptionType type) {

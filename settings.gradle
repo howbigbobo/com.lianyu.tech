@@ -1,1 +1,1 @@
-include 'core','common','back-office'
+include 'core', 'common', 'back-office', 'website'

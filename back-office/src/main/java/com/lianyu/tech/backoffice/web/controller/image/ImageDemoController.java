@@ -35,7 +35,6 @@ public class ImageDemoController extends BackOfficeSiteController {
     @ResponseBody
     @RequestMapping(value = "/image/save", method = RequestMethod.POST)
     public Map<String, Object> imageSave(ImageSaveView imageSaveView, MultipartHttpServletRequest imageRequest) throws IOException {
-        String description = imageSaveView.getDescription();
         List<ImageEntity> imageEntities = getImageEntity(imageRequest);
 
         for (ImageEntity imageEntity : imageEntities) {
