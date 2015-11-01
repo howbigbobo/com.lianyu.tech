@@ -1,0 +1,64 @@
+/* latin-ext */
+@font-face {
+  font-family: 'Gentium Book Basic';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Gentium Book Basic'), local('GentiumBookBasic'), url(font/IRFxB2matTxrjZt6a3FUnkOfX_EXNwRBhTjDnYj6jWg.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Gentium Book Basic';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Gentium Book Basic'), local('GentiumBookBasic'), url(font/IRFxB2matTxrjZt6a3FUntZP4GUu-EsApAyJMU_dJ9I.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Gentium Book Basic';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Gentium Book Basic Bold'), local('GentiumBookBasic-Bold'), url(font/T2vUYmWzlqUtgLYdlemGncrLMuARhrejm6DHeW95LT0.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Gentium Book Basic';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Gentium Book Basic Bold'), local('GentiumBookBasic-Bold'), url(font/T2vUYmWzlqUtgLYdlemGnYRjMofpY2QVEIrKQ01iDTw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Gentium Book Basic';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Gentium Book Basic Italic'), local('GentiumBookBasic-Italic'), url(font/qHqW2lwKO8-uTfIkh8FsUQO1wt6JBq6LkcixJxjo9y8.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Gentium Book Basic';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Gentium Book Basic Italic'), local('GentiumBookBasic-Italic'), url(font/qHqW2lwKO8-uTfIkh8FsUXUql-1tEtvjER-FQGS8CNg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Gentium Book Basic';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Gentium Book Basic Bold Italic'), local('GentiumBookBasic-BoldItalic'), url(font/632u7TMIoFDWQYUaHFUp5BXv2RqNL8fS6WflAyDxqC32Ot9t5h1GRSTIE78Whtoh.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Gentium Book Basic';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Gentium Book Basic Bold Italic'), local('GentiumBookBasic-BoldItalic'), url(font/632u7TMIoFDWQYUaHFUp5ANP697_9vdFBSYQK024I8k.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
