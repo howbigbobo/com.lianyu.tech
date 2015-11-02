@@ -7,7 +7,6 @@ import com.lianyu.tech.core.platform.web.site.cookie.CookieContext;
 import com.lianyu.tech.core.platform.web.site.session.SecureSessionContext;
 import com.lianyu.tech.core.platform.web.site.session.SessionContext;
 import com.lianyu.tech.core.util.StringUtils;
-import com.lianyu.tech.backoffice.web.vo.CookieConstants;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;

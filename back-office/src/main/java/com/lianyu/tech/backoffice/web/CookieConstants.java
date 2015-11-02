@@ -1,4 +1,4 @@
-package com.lianyu.tech.backoffice.web.vo;
+package com.lianyu.tech.backoffice.web;
 
 import com.lianyu.tech.core.collection.Key;
 import com.lianyu.tech.core.platform.web.site.cookie.CookieSpec;
