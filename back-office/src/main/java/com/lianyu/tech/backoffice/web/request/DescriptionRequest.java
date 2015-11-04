@@ -1,7 +1,7 @@
 package com.lianyu.tech.backoffice.web.request;
 
-import com.lianyu.tech.backoffice.web.converter.DescriptionTypeAdapter;
-import com.lianyu.tech.backoffice.web.converter.StringDateAdapter;
+import com.lianyu.tech.common.vo.converter.DescriptionTypeAdapter;
+import com.lianyu.tech.common.vo.converter.StringDateAdapter;
 import com.lianyu.tech.common.domain.DescriptionType;
 import org.hibernate.validator.constraints.NotEmpty;
 

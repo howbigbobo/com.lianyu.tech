@@ -1,4 +1,4 @@
-package com.lianyu.tech.website.vo;
+package com.lianyu.tech.common.vo;
 
 /**
  * @author bowen
@@ -13,6 +13,10 @@ public class CompanyView {
     private String logoUrl;
 
     private String domain;
+
+    private String leadDescription;
+
+    private String description;
 
     public Integer getId() {
         return id;
@@ -52,5 +56,21 @@ public class CompanyView {
 
     public void setDomain(String domain) {
         this.domain = domain;
+    }
+
+    public String getLeadDescription() {
+        return leadDescription;
+    }
+
+    public void setLeadDescription(String leadDescription) {
+        this.leadDescription = leadDescription;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

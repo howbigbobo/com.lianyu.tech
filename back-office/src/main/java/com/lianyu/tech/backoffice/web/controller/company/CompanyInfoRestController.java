@@ -30,7 +30,8 @@ public class CompanyInfoRestController extends BackOfficeRestController {
         companyInfo.setSlogan(request.getSlogan());
         companyInfo.setLogoUrl(request.getLogoUrl());
         companyInfo.setDomain(request.getDomain());
-
+        companyInfo.setLeadDescription(request.getLeadDescription());
+        companyInfo.setDescription(request.getDescription());
         companyInfoService.save(companyInfo);
         return companyInfo.getId();
     }

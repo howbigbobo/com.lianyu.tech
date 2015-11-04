@@ -16,6 +16,8 @@ public class CompanyInfoRequest {
     private String logoUrl;
     @NotEmpty(message = "域名不能为空")
     private String domain;
+    private String leadDescription;
+    private String description;
 
     public Integer getId() {
         return id;
@@ -55,5 +57,21 @@ public class CompanyInfoRequest {
 
     public void setDomain(String domain) {
         this.domain = domain;
+    }
+
+    public String getLeadDescription() {
+        return leadDescription;
+    }
+
+    public void setLeadDescription(String leadDescription) {
+        this.leadDescription = leadDescription;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

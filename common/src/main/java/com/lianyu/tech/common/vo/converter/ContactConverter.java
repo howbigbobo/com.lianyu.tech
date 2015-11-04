@@ -1,9 +1,9 @@
-package com.lianyu.tech.backoffice.web.converter;
+package com.lianyu.tech.common.vo.converter;
 
-import com.lianyu.tech.backoffice.web.vo.ContactView;
 import com.lianyu.tech.common.domain.Contact;
 import com.lianyu.tech.common.utils.Converter;
 import com.lianyu.tech.common.utils.ListUtils;
+import com.lianyu.tech.common.vo.ContactView;
 
 import java.util.List;
 
@@ -11,7 +11,7 @@ import java.util.List;
  * @author bowen.zhang
  */
 public abstract class ContactConverter {
-    
+
     public static ContactView convert(Contact contact) {
         if (contact == null) return null;
         ContactView view = new ContactView();

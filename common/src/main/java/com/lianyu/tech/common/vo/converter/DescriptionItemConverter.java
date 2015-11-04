@@ -1,10 +1,10 @@
-package com.lianyu.tech.backoffice.web.converter;
+package com.lianyu.tech.common.vo.converter;
 
-import com.lianyu.tech.backoffice.web.vo.DescriptionItemView;
 import com.lianyu.tech.common.domain.DescriptionItem;
 import com.lianyu.tech.common.domain.Image;
 import com.lianyu.tech.common.utils.Converter;
 import com.lianyu.tech.common.utils.ListUtils;
+import com.lianyu.tech.common.vo.DescriptionItemView;
 import org.springframework.util.CollectionUtils;
 
 import java.util.ArrayList;

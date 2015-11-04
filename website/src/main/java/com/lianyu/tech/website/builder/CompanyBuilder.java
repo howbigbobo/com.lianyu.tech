@@ -2,7 +2,7 @@ package com.lianyu.tech.website.builder;
 
 import com.lianyu.tech.common.domain.CompanyInfo;
 import com.lianyu.tech.common.repository.CompanyInfoRepository;
-import com.lianyu.tech.website.vo.CompanyView;
+import com.lianyu.tech.common.vo.CompanyView;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
@@ -28,6 +28,8 @@ public class CompanyBuilder {
         view.setLogoUrl(companyInfo.getLogoUrl());
         view.setName(companyInfo.getName());
         view.setSlogan(companyInfo.getSlogan());
+        view.setDescription(companyInfo.getDescription());
+        view.setLeadDescription(companyInfo.getLeadDescription());
         return view;
     }
 }

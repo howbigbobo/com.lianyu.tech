@@ -1,4 +1,4 @@
-package com.lianyu.tech.backoffice.web.vo;
+package com.lianyu.tech.common.vo;
 
 /**
  * @author bowen

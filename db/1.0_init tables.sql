@@ -2,7 +2,7 @@
 (
   id        	INTEGER      	NOT NULL AUTO_INCREMENT,
   name      	VARCHAR(50)  	NOT NULL COMMENT '公司名称',
-  slogan    	VARCHAR(200) 	NOT NULL COMMENT '公司理念',
+  slogan    	VARCHAR(200) 	NOT NULL COMMENT '公司理念、口号',
   logo_url  	VARCHAR(200) 	NOT NULL COMMENT '图标url',
   `domain`  	VARCHAR(200) 	NOT NULL DEFAULT 'http://localhost' COMMENT '域名地址',
   create_user  	VARCHAR(50) 	NULL COMMENT '创建者名称',

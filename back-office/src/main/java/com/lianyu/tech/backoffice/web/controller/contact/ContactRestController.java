@@ -2,10 +2,10 @@ package com.lianyu.tech.backoffice.web.controller.contact;
 
 import com.lianyu.tech.backoffice.service.ContactService;
 import com.lianyu.tech.backoffice.web.controller.BackOfficeRestController;
-import com.lianyu.tech.backoffice.web.converter.ContactConverter;
 import com.lianyu.tech.backoffice.web.request.ContactRequest;
-import com.lianyu.tech.backoffice.web.vo.ContactView;
 import com.lianyu.tech.common.domain.Contact;
+import com.lianyu.tech.common.vo.ContactView;
+import com.lianyu.tech.common.vo.converter.ContactConverter;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;

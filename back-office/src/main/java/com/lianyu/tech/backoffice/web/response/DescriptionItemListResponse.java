@@ -1,6 +1,7 @@
 package com.lianyu.tech.backoffice.web.response;
 
-import com.lianyu.tech.backoffice.web.vo.DescriptionItemView;
+
+import com.lianyu.tech.common.vo.DescriptionItemView;
 
 import java.util.List;
 

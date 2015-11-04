@@ -33,6 +33,8 @@ public class CompanyInfoRepositoryTest extends SpringWithDbTest {
         companyInfo.setSlogan("b1");
         companyInfo.setDomain("c1");
         companyInfo.setLogoUrl("u1");
+        companyInfo.setDescription("d1");
+        companyInfo.setLeadDescription("ld");
         companyInfoRepository.create(companyInfo);
     }
 

@@ -3,7 +3,7 @@ package com.lianyu.tech.backoffice.web.controller.description;
 import com.lianyu.tech.backoffice.service.DescriptionItemService;
 import com.lianyu.tech.backoffice.service.DescriptionService;
 import com.lianyu.tech.backoffice.web.controller.BackOfficeRestController;
-import com.lianyu.tech.backoffice.web.converter.DescriptionConverter;
+import com.lianyu.tech.common.vo.converter.DescriptionConverter;
 import com.lianyu.tech.backoffice.web.request.DescriptionListRequest;
 import com.lianyu.tech.backoffice.web.request.DescriptionRequest;
 import com.lianyu.tech.backoffice.web.response.DescriptionListResponse;

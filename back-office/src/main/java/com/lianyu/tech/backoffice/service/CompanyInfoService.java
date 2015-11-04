@@ -29,6 +29,8 @@ public class CompanyInfoService {
             existsCompanyInfo.setLogoUrl(companyInfo.getLogoUrl());
             existsCompanyInfo.setDomain(companyInfo.getDomain());
             existsCompanyInfo.setSlogan(companyInfo.getSlogan());
+            existsCompanyInfo.setDescription(companyInfo.getDescription());
+            existsCompanyInfo.setLeadDescription(companyInfo.getLeadDescription());
             existsCompanyInfo.setUpdateUser("");
             existsCompanyInfo.setUpdateTime(new Date());
             companyInfoRepository.update(existsCompanyInfo);

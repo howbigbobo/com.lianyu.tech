@@ -1,4 +1,4 @@
-package com.lianyu.tech.website.vo;
+package com.lianyu.tech.common.vo;
 
 import com.lianyu.tech.common.domain.ContactType;
 

@@ -1,9 +1,9 @@
-package com.lianyu.tech.backoffice.web.converter;
+package com.lianyu.tech.common.vo.converter;
 
-import com.lianyu.tech.backoffice.web.vo.AddressView;
 import com.lianyu.tech.common.domain.Address;
 import com.lianyu.tech.common.utils.Converter;
 import com.lianyu.tech.common.utils.ListUtils;
+import com.lianyu.tech.common.vo.AddressView;
 
 import java.util.List;
 

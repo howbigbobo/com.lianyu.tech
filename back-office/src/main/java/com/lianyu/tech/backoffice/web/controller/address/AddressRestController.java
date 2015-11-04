@@ -2,10 +2,10 @@ package com.lianyu.tech.backoffice.web.controller.address;
 
 import com.lianyu.tech.backoffice.service.AddressService;
 import com.lianyu.tech.backoffice.web.controller.BackOfficeRestController;
-import com.lianyu.tech.backoffice.web.converter.AddressConverter;
 import com.lianyu.tech.backoffice.web.request.AddressRequest;
-import com.lianyu.tech.backoffice.web.vo.AddressView;
 import com.lianyu.tech.common.domain.Address;
+import com.lianyu.tech.common.vo.AddressView;
+import com.lianyu.tech.common.vo.converter.AddressConverter;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;

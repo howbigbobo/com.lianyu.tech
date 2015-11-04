@@ -28,6 +28,12 @@ public class CompanyInfo {
     @Column(name = "domain")
     private String domain;
 
+    @Column(name = "lead_description")
+    private String leadDescription;
+
+    @Column(name = "description")
+    private String description;
+
     @Column(name = "create_user")
     private String createUser;
 
@@ -78,6 +84,22 @@ public class CompanyInfo {
 
     public void setDomain(String domain) {
         this.domain = domain;
+    }
+
+    public String getLeadDescription() {
+        return leadDescription;
+    }
+
+    public void setLeadDescription(String leadDescription) {
+        this.leadDescription = leadDescription;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getCreateUser() {

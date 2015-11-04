@@ -7,9 +7,8 @@
 <head>
     <meta charset="utf-8"/>
 
-    <!-- Website Title & Description -->
-    <title>Dreamer - Responsive One Page Parallax Template</title>
-    <meta name="description" content="Dreamer - Responsive One Page Parallax Template">
+    <title>${company.name!}</title>
+    <meta name="description" content="${company.slogan!}">
 
     <!-- Set the viewport width to device width for mobile -->
     <meta name="viewport" content="width=device-width"/>
@@ -198,88 +197,79 @@
         <nav class="top-bar">
 
             <ul>
-                <li class="name"><a href="#homepage"><img src="<@url value='/static/css/dreamer/images/logo.png'/>" alt="Dreamer Logo"></a></li>
+                <li class="name"><a href="#homepage"><img src="<@url value='/static/img/logo_full.png'/>" alt="${company.name}"></a></li>
             </ul>
 
             <section class="hide-for-small">
                 <ul class="right">
-                    <li><a href="#homepage">Home</a></li>
-                    <li><a href="#our-team">Our Team</a></li>
-                    <li><a href="#about-us">About Us</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#news">News</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#homepage">首页</a></li>
+                    <li><a href="#our-team">公司简介</a></li>
+                    <li><a href="#about-us">关于我们</a></li>
+                    <li><a href="#portfolio">成功案例</a></li>
+                    <li><a href="#services">服务项目</a></li>
+                    <li><a href="#news">新闻动态</a></li>
+                    <li><a href="#contact">联系我们</a></li>
                 </ul>
             </section>
 
             <select class="responsive-nav show-for-small" onChange="moveTo(this.value)" onFocus="moveTo(this.value)">
-                <option value="" selected="">Main Navigation</option>
-                <option value="#homepage">Home</option>
-                <option value="#our-team">Our Team</option>
-                <option value="#about-us">About Us</option>
-                <option value="#portfolio">Portfolio</option>
-                <option value="#services">Services</option>
-                <option value="#news">News</option>
-                <option value="#contact">Contact</option>
-                <option value="#">Facebook</option>
-                <option value="#">Twitter</option>
+                <option value="#homepage">首页</option>
+                <option value="#our-team">公司简介</option>
+                <option value="#about-us">关于我们</option>
+                <option value="#portfolio">成功案例</option>
+                <option value="#services">服务项目</option>
+                <option value="#news">新闻动态</option>
+                <option value="#contact">联系我们</option>
             </select>
         </nav>
-        <a href="#/AvaPremiumThemes" class="facebook-header" target="_blank"></a>
-        <a href="https://twitter.com/AVAThemes" class="twitter-header" target="_blank"></a>
     </div>
 </div>
 
 <div class="homepage-text">
     <div class="top-icon">
-        <img src="<@url value='/static/css/dreamer/images/homepage-text-top-icon.png'/>" alt="Homepage Top Icon">
+        <img src="<@url value='/static/img/logo.png'/>" alt="${company.name}">
     </div>
     <div class="top-divider"></div>
-    <h1>We Are Dreamer</h1>
+    <h1>${company.name}</h1>
 
     <div class="bottom-divider"></div>
-    <h2>WE ARE ALL ABOUT PASSION FOR INTERACTION</h2>
+    <h2>${company.slogan!}</h2>
 
-    <h3>Want to know why and how we do it?</h3>
+    <h3>${company.leadDescription!}</h3>
 
     <div class="bottom-icon">
-        <a href="#parallax-one"><img src="<@url value='/static/css/dreamer/images/homepage-text-bottom-icon.png'/>" alt="Homepage Bottom Icon"></a>
+        <a href="#parallax-one"><img src="<@url value='/static/css/dreamer/images/homepage-text-bottom-icon.png'/>" alt="首页底部"></a>
     </div>
 </div>
 
-<!-- Main Content Starts HERE -->
 <div class="content-container">
 
     <div id="homepage"></div>
 
-    <!-- Parallax One - Content -->
     <div class="parallax-one">
         <div class="quote1-pattern" id="parallax-one">
             <div class="quote1-shape"></div>
         </div>
         <div class="row">
             <div class="twelve columns parallax-container">
-                <h1 class="parallax-title">MEET THE AMAZING TEAM</h1>
+                <h1 class="parallax-title">公司简介</h1>
 
                 <div class="parallax-divider">
-                    <img src="<@url value='/static/css/dreamer/images/icons/60px/white/appbar.people.multiple.png'/>" alt="Read More About Us">
+                    <img src="<@url value='/static/css/dreamer/images/icons/60px/white/appbar.people.multiple.png'/>" alt="更多">
                 </div>
-                <h2 class="parallax-subtitle">We love building and rebuilding brands.<br>Using colour, fonts and illustration, we brand companies in a way you’ll never forget.</h2>
+                <h2 class="parallax-subtitle">${company.slogan}</h2>
             </div>
         </div>
     </div>
-    <div class="copyrights">Collect from <a href="http://www.cssmoban.com/" title="网站模板">网站模板</a></div>
     <!-- Our Team Page -->
     <div class="page-container pattern-2" id="our-team">
 
         <div class="row">
 
             <div class="twelve columns page-content">
-                <h1 class="page-title">Meet Our Amazing Team</h1>
+                <h1 class="page-title">公司简介</h1>
 
-                <h2 class="page-subtitle">We love building and <span>rebuilding brands.</span><br>Using <span>colour, fonts</span> and illustration, we brand companies in a way you’ll never forget.
-                </h2>
+                <h2 class="page-subtitle">${company.slogan}</h2>
             </div>
 
             <div class="three columns padding-four-columns team-member mobile-two">

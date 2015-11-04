@@ -1,4 +1,4 @@
-package com.lianyu.tech.backoffice.web.converter;
+package com.lianyu.tech.common.vo.converter;
 
 import com.lianyu.tech.core.util.Convert;
 import com.lianyu.tech.core.util.StringUtils;

@@ -1,7 +1,7 @@
-package com.lianyu.tech.website.builder.converter;
+package com.lianyu.tech.common.vo.converter;
 
 import com.lianyu.tech.common.domain.Description;
-import com.lianyu.tech.website.vo.DescriptionView;
+import com.lianyu.tech.common.vo.DescriptionView;
 import org.springframework.util.CollectionUtils;
 
 import java.util.ArrayList;
