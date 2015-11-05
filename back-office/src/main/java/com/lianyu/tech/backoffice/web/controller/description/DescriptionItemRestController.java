@@ -7,7 +7,7 @@ import com.lianyu.tech.backoffice.service.ImageFacadeService;
 import com.lianyu.tech.backoffice.service.ImageService;
 import com.lianyu.tech.backoffice.web.controller.BackOfficeRestController;
 import com.lianyu.tech.common.vo.converter.DescriptionItemConverter;
-import com.lianyu.tech.backoffice.web.converter.ImageConverter;
+import com.lianyu.tech.common.vo.converter.ImageConverter;
 import com.lianyu.tech.backoffice.web.request.DescriptionItemRequest;
 import com.lianyu.tech.backoffice.web.response.DescriptionItemListResponse;
 import com.lianyu.tech.common.vo.DescriptionItemView;

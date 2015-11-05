@@ -18,4 +18,11 @@ public class DescriptionItemRepository extends CommonRepository {
         String sql = "from " + DescriptionItem.class.getName() + " where descriptionId=:descriptionId order by displayOrder";
         return jpaAccess.find(sql, params);
     }
+
+    public List<DescriptionItem> findByDescriptionIds(List<Integer> descriptionIds) {
+        Map<String, Object> params = new HashMap<>(2);
+        params.put("descriptionIds", descriptionIds);
+        String sql = "from " + DescriptionItem.class.getName() + " where descriptionId in :descriptionIds order by displayOrder";
+        return jpaAccess.find(sql, params);
+    }
 }
