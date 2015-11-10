@@ -92,3 +92,18 @@ CREATE TABLE IF NOT EXISTS image
   INDEX `ix_image_url` (`url`)
 )
 COMMENT '信息描述表'  ENGINE = INNODB  DEFAULT CHARSET = utf8;
+
+CREATE TABLE IF NOT EXISTS system_config 
+(
+  id        	INTEGER      	NOT NULL AUTO_INCREMENT,
+  `group_name`		VARCHAR(100)	NOT NULL COMMENT  '配置组',
+  `key_name`			VARCHAR(100)	NOT NULL COMMENT '配置key',
+  `content`		VARCHAR(500)	NULL COMMENT '配置内容',
+  create_user  	VARCHAR(50) 	NULL COMMENT '创建者名称',
+  create_time  	DATETIME    	NOT NULL DEFAULT now()  COMMENT '创建时间',
+  update_user  	VARCHAR(50) 	NULL COMMENT '修改者名称',
+  update_time  	DATETIME    	NOT NULL DEFAULT now(),
+  PRIMARY KEY (id),
+  UNIQUE `ix_system_config_group_key` (`group_name`,`key_name`)
+)
+COMMENT '系统配置表'  ENGINE = INNODB  DEFAULT CHARSET = utf8;
