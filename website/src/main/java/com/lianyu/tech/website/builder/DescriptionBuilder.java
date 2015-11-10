@@ -38,6 +38,15 @@ public class DescriptionBuilder {
 
     public List<DescriptionVo> findByType(DescriptionType descriptionType) {
         List<Description> descriptions = descriptionRepository.findByType(descriptionType);
+        return getDescriptionVos(descriptions);
+    }
+
+    public List<DescriptionVo> findByType(DescriptionType descriptionType, int size) {
+        List<Description> descriptions = descriptionRepository.findByType(descriptionType, 0, size);
+        return getDescriptionVos(descriptions);
+    }
+
+    private List<DescriptionVo> getDescriptionVos(List<Description> descriptions) {
         if (CollectionUtils.isEmpty(descriptions)) return Collections.EMPTY_LIST;
 
         List<Integer> descriptionIds = ListUtils.select(descriptions, new Converter<Description, Integer>() {
@@ -69,7 +78,7 @@ public class DescriptionBuilder {
             DescriptionVo vo = new DescriptionVo();
             vo.setInfo(DescriptionConverter.convert(description));
             List<DescriptionItem> descriptionItems = itemMap.get(description.getId());
-            vo.setItems(DescriptionItemConverter.convert(items, images));
+            vo.setItems(DescriptionItemConverter.convert(descriptionItems, images));
             vos.add(vo);
         }
         return vos;
