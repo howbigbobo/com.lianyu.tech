@@ -23,6 +23,12 @@
     </a>
 </li>
 <li>
+    <a href="<@url value='/config'/>">
+        <i class="icon-tasks"></i>
+        <span class="hidden-tablet"> 页面配置</span>
+    </a>
+</li>
+<li>
     <a href="<@url value='/description/introduce'/>">
         <i class="icon-tasks"></i>
         <span class="hidden-tablet"> 简介</span>

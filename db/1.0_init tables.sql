@@ -95,10 +95,14 @@ COMMENT '信息描述表'  ENGINE = INNODB  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS system_config 
 (
-  id        	INTEGER      	NOT NULL AUTO_INCREMENT,
+   id        	INTEGER      	NOT NULL AUTO_INCREMENT,
   `group_name`		VARCHAR(100)	NOT NULL COMMENT  '配置组',
   `key_name`			VARCHAR(100)	NOT NULL COMMENT '配置key',
   `content`		VARCHAR(500)	NULL COMMENT '配置内容',
+  `group_text`		VARCHAR(100)	NULL COMMENT  '配置组显示名称',
+  `key_text`		VARCHAR(100)	NULL COMMENT  '配置key显示名称',
+  `group_order`		INTEGER		NOT NULL DEFAULT 0 COMMENT  '配置组显示顺序',
+  `key_order`		INTEGER		NOT NULL DEFAULT 0 COMMENT  '配置key显示顺序',
   create_user  	VARCHAR(50) 	NULL COMMENT '创建者名称',
   create_time  	DATETIME    	NOT NULL DEFAULT now()  COMMENT '创建时间',
   update_user  	VARCHAR(50) 	NULL COMMENT '修改者名称',

@@ -5,30 +5,16 @@ package com.lianyu.tech.common.vo;
  */
 public class SystemConfigKey {
 
-    private String group;
-    private String key;
     private String name;
+    private String text;
+    private String content;
+    private int order;
 
-    public SystemConfigKey(String group, String key, String name) {
-        this.group = group;
-        this.key = key;
+    public SystemConfigKey(String name, String text, String content, int order) {
         this.name = name;
-    }
-
-    public String getGroup() {
-        return group;
-    }
-
-    public void setGroup(String group) {
-        this.group = group;
-    }
-
-    public String getKey() {
-        return key;
-    }
-
-    public void setKey(String key) {
-        this.key = key;
+        this.text = text;
+        this.content = content;
+        this.order = order;
     }
 
     public String getName() {
@@ -39,7 +25,27 @@ public class SystemConfigKey {
         this.name = name;
     }
 
-    public String getFullKey() {
-        return group + "." + key;
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public int getOrder() {
+        return order;
+    }
+
+    public void setOrder(int order) {
+        this.order = order;
     }
 }

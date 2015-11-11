@@ -3,21 +3,21 @@
     <div class="row-fluid sortable ui-sortable">
         <div class="box span12">
             <div class="box-header" data-original-title="">
-                <h2><i class="halflings-icon edit"></i><span class="break"></span>${group.name!}</h2>
+                <h2><i class="halflings-icon edit"></i><span class="break"></span>${group.text!}</h2>
 
                 <div class="box-icon">
                     <a href="#" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>
                 </div>
             </div>
             <div class="box-content" style="display: block;">
-                <form class="form-horizontal systemConfig" group="${group.group}">
+                <form class="form-horizontal systemConfig" group="${group.name}">
                     <fieldset>
                         <#list group.keys as key>
                             <div class="control-group success">
-                                <label class="control-label">${key.name}</label>
+                                <label class="control-label">${key.text}</label>
 
                                 <div class="controls">
-                                    <input type="text" name="${key.fullKey}" class="large" value="${(config.get(key.fullKey))!}">
+                                    <input type="text" name="${group.name}.${key.name}" class="large" value="${key.content!}">
                                 </div>
                             </div>
                         </#list>

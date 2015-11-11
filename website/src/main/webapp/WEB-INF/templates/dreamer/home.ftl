@@ -230,15 +230,15 @@
         <img src="<@url value='/static/img/logo.png'/>" alt="${company.name}">
     </div>
     <div class="top-divider"></div>
-    <h1>${company.name}</h1>
+    <h1>${config.get("landing.title")!}</h1>
 
     <div class="bottom-divider"></div>
-    <h2>${company.slogan!}</h2>
+    <h2>${config.get("landing.slogan")!}</h2>
 
-    <h3>${company.leadDescription!}</h3>
+    <h3>${config.get("landing.subSlogan")!}</h3>
 
     <div class="bottom-icon">
-        <a href="#parallax-one"><img src="<@url value='/static/css/dreamer/images/homepage-text-bottom-icon.png'/>" alt="首页底部"></a>
+        <a href="#parallax-one"><img src="<@url value='/static/css/dreamer/images/homepage-text-bottom-icon.png'/>" alt="${company.name}"></a>
     </div>
 </div>
 

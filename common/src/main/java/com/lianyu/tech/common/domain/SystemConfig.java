@@ -4,7 +4,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -12,10 +11,8 @@ import java.util.Date;
  */
 
 @Entity(name = "system_config")
-public class SystemConfig implements Serializable {
+public class SystemConfig {
 
-
-    private static final long serialVersionUID = 5864361100455532991L;
     @Id
     @GeneratedValue
     @Column(name = "id")
@@ -29,6 +26,18 @@ public class SystemConfig implements Serializable {
 
     @Column(name = "content")
     private String content;
+
+    @Column(name = "group_text")
+    private String groupText;
+
+    @Column(name = "key_text")
+    private String keyText;
+
+    @Column(name = "group_order")
+    private int groupOrder;
+
+    @Column(name = "key_order")
+    private int keyOrder;
 
     @Column(name = "create_user")
     private String createUser;
@@ -74,6 +83,38 @@ public class SystemConfig implements Serializable {
         this.content = content;
     }
 
+    public String getGroupText() {
+        return groupText;
+    }
+
+    public void setGroupText(String groupText) {
+        this.groupText = groupText;
+    }
+
+    public String getKeyText() {
+        return keyText;
+    }
+
+    public void setKeyText(String keyText) {
+        this.keyText = keyText;
+    }
+
+    public int getGroupOrder() {
+        return groupOrder;
+    }
+
+    public void setGroupOrder(int groupOrder) {
+        this.groupOrder = groupOrder;
+    }
+
+    public int getKeyOrder() {
+        return keyOrder;
+    }
+
+    public void setKeyOrder(int keyOrder) {
+        this.keyOrder = keyOrder;
+    }
+
     public String getCreateUser() {
         return createUser;
     }
@@ -104,5 +145,9 @@ public class SystemConfig implements Serializable {
 
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
+    }
+
+    public String fullKey() {
+        return groupName + "." + keyName;
     }
 }
