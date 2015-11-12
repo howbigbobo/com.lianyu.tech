@@ -1,9 +1,9 @@
 <div class="row">
 
     <div class="twelve columns page-content">
-        <h1 class="page-title">公司简介</h1>
+        <h1 class="page-title">${config.get("introduce.secondHead")!}</h1>
 
-        <h2 class="page-subtitle">${company.slogan}</h2>
+        <h2 class="page-subtitle">${config.get("introduce.secondSubHead")!}</h2>
     </div>
     <#if introduces??>
         <#list introduces as introduce>
@@ -28,9 +28,9 @@
         </#list>
     </#if>
     <div class="twelve columns page-section">
-        <h1 class="page-title">Testimonials</h1>
+        <h1 class="page-title">${config.get("introduce.bottomHead")!}</h1>
 
-        <h2 class="page-subtitle">We’re fortunate to work with <span>fantastic clients</span><br>from across the globe in over <span>11 countries</span> on design, branding, and <span>development projects.</span>
+        <h2 class="page-subtitle">${config.get("introduce.bottomSubHead")!}</span>
         </h2>
     </div>
 
@@ -44,22 +44,21 @@
 
         <div class="four columns testimonial-date hide-for-small">
             <div class="nine columns">
-                <div class="testimonial-day">17</div>
+                <div class="testimonial-day">${config.get("introduce.bottomNumber")!}</div>
             </div>
             <div class="three columns mobile-four">
-                <div class="testimonial-month">JANUARY</div>
-                <div class="testimonial-circle">th</div>
+                <div class="testimonial-month">${config.get("introduce.bottomSmallText")!}</div>
+                <div class="testimonial-circle">${config.get("introduce.bottomRed")!}</div>
             </div>
         </div>
 
         <div class="six columns testimonial-content mobile-four">
             <div class="testimonial-content-inner">
-                <h4 class="testimonial-title mobile-four">Testimonial Title Goes Here</h4>
+                <h4 class="testimonial-title mobile-four">${config.get("introduce.bottomRightTitle")!}</h4>
 
-                <p class="testimonial-content mobile-four">Habitasse pulvinar elit magnis tritue elementum auctor placerat sit ut cu auctor. Ac egestas mauris proin! Elementum auctor placerat
-                    sit. Habitasse pulvinar elit magnis tritue elementum.</p>
+                <p class="testimonial-content mobile-four">${config.get("introduce.bottomRightContent")!}</p>
 
-                <p class="testimonial-signature mobile-four">Anna McDonald<span> Executive Manager at Pepsi</span></p>
+                <p class="testimonial-signature mobile-four">${config.get("introduce.bottomRightSub")!}</p>
             </div>
         </div>
 
@@ -73,22 +72,21 @@
 
         <div class="four columns testimonial-date hide-for-small">
             <div class="nine columns">
-                <div class="testimonial-day">14</div>
+                <div class="testimonial-day">${config.get("introduce.bottomNumber2")!}</div>
             </div>
             <div class="three columns mobile-four">
-                <div class="testimonial-month">JANUARY</div>
-                <div class="testimonial-circle">th</div>
+                <div class="testimonial-month">${config.get("introduce.bottomSmallText2")!}</div>
+                <div class="testimonial-circle">${config.get("introduce.bottomRed2")!}</div>
             </div>
         </div>
 
         <div class="six columns testimonial-content mobile-four">
             <div class="testimonial-content-inner">
-                <h4 class="testimonial-title mobile-four">Testimonial Title Goes Here</h4>
+                <h4 class="testimonial-title mobile-four">${config.get("introduce.bottomRightTitle2")!}</h4>
 
-                <p class="testimonial-content mobile-four">Habitasse pulvinar elit magnis tritue elementum auctor placerat sit ut cu auctor. Ac egestas mauris proin! Elementum auctor placerat
-                    sit. Habitasse pulvinar elit magnis tritue elementum.</p>
+                <p class="testimonial-content mobile-four">${config.get("introduce.bottomRightContent2")!}</p>
 
-                <p class="testimonial-signature mobile-four">Anna McDonald<span> Executive Manager at Pepsi</span></p>
+                <p class="testimonial-signature mobile-four">${config.get("introduce.bottomRightSub2")!}</p>
             </div>
         </div>
     </div>

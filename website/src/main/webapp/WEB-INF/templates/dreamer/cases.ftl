@@ -1,9 +1,9 @@
 <div class="row">
 
     <div class="twelve columns page-content">
-        <h1 class="page-title">成功案例</h1>
+        <h1 class="page-title">${config.get("cases.secondHead")!}</h1>
 
-        <h2 class="page-subtitle">We love building and <span>rebuilding brands.</span><br>Using <span>colour, fonts</span> and illustration, we brand companies in a way you’ll never forget.
+        <h2 class="page-subtitle">${config.get("cases.secondSubHead")!}
         </h2>
     </div>
 

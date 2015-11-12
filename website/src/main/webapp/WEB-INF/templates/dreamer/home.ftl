@@ -252,12 +252,12 @@
         </div>
         <div class="row">
             <div class="twelve columns parallax-container">
-                <h1 class="parallax-title">公司简介</h1>
+                <h1 class="parallax-title">${config.get("introduce.firstHead")!}</h1>
 
                 <div class="parallax-divider">
                     <img src="<@url value='/static/css/dreamer/images/icons/60px/white/appbar.people.multiple.png'/>" alt="更多">
                 </div>
-                <h2 class="parallax-subtitle">${company.slogan}</h2>
+                <h2 class="parallax-subtitle">${config.get("introduce.firstSubHead")!}</h2>
             </div>
         </div>
     </div>
@@ -272,12 +272,12 @@
         </div>
         <div class="row">
             <div class="twelve columns parallax-container">
-                <h1 class="parallax-title">READ MORE ABOUT US</h1>
+                <h1 class="parallax-title">${config.get("aboutus.firstHead")!}</h1>
 
                 <div class="parallax-divider">
-                    <img src="<@url value='/static/css/dreamer/images/icons/60px/white/appbar.book.open.writing.png'/>" alt="Read More About Us">
+                    <img src="<@url value='/static/css/dreamer/images/icons/60px/white/appbar.book.open.writing.png'/>" alt='${config.get("aboutus.firstHead")!}'>
                 </div>
-                <h2 class="parallax-subtitle">We love building and rebuilding brands.<br>Using colour, fonts and illustration, we brand companies in a way you’ll never forget.</h2>
+                <h2 class="parallax-subtitle">${config.get("aboutus.firstHead")!}</h2>
             </div>
         </div>
     </div>
@@ -294,12 +294,12 @@
         </div>
         <div class="row">
             <div class="twelve columns parallax-container">
-                <h1 class="parallax-title">成功案例</h1>
+                <h1 class="parallax-title">${config.get("cases.firstHead")!}</h1>
 
                 <div class="parallax-divider">
-                    <img src="<@url value='/static/css/dreamer/images/icons/60px/white/appbar.camera.png'/>" alt="案例">
+                    <img src="<@url value='/static/css/dreamer/images/icons/60px/white/appbar.camera.png'/>" alt='${config.get("cases.firstHead")!}'>
                 </div>
-                <h2 class="parallax-subtitle">We love building and rebuilding brands.<br>Using colour, fonts and illustration, we brand companies in a way you’ll never forget.</h2>
+                <h2 class="parallax-subtitle">${config.get("cases.firstSubHead")!}</h2>
             </div>
         </div>
     </div>
@@ -316,102 +316,19 @@
         </div>
         <div class="row">
             <div class="twelve columns parallax-container">
-                <h1 class="parallax-title">CHECK OUT OUR SERVICES</h1>
+                <h1 class="parallax-title">${config.get("services.firstHead")!}</h1>
 
                 <div class="parallax-divider">
-                    <img src="<@url value='/static/css/dreamer/images/icons/60px/white/appbar.cogs.png'/>" alt="Read More About Us">
+                    <img src="<@url value='/static/css/dreamer/images/icons/60px/white/appbar.cogs.png'/>" alt='${config.get("services.firstHead")!}'>
                 </div>
-                <h2 class="parallax-subtitle">We love building and rebuilding brands.<br>Using colour, fonts and illustration, we brand companies in a way you’ll never forget.</h2>
+                <h2 class="parallax-subtitle">${config.get("services.firstSubHead")!}</h2>
             </div>
         </div>
     </div>
 
     <!-- Our Services Page -->
     <div class="page-container pattern-1" id="services">
-
-        <div class="row">
-            <div class="twelve columns page-content">
-                <h1 class="page-title">Check Out Our Services</h1>
-
-                <h2 class="page-subtitle">We love building and <span>rebuilding brands.</span><br>Using <span>colour, fonts</span> and illustration, we brand companies in a way you’ll never forget.
-                </h2>
-            </div>
-        </div>
-
-        <div class="row services-wide-banner">
-            <div class="twelve columns"><img src="<@url value='/static/css/dreamer/images/services-banner.png'/>" alt="Our Services"></div>
-        </div>
-
-        <div class="row">
-            <div class="twelve columns services-top">
-                <div class="four columns services first-column mobile-two">
-                    <h3 class="services-title">OUR STRAGEGY</h3>
-
-                    <div class="services-image">
-                        <div class="services-divider-top"></div>
-                        <img src="<@url value='/static/css/dreamer/images/services/1.png'/>" alt="Our Strategy">
-
-                        <div class="services-divider-bottom"></div>
-                    </div>
-                    <p class="services-text">Habitasse pulvinar elit tristique elm auctor placerat sit ut acu uctor. Ptor eetas scelerisque, non. Ac egestas mauris proin, pulviar tuis!</p>
-                </div>
-                <div class="four columns services middle-column mobile-two">
-                    <h3 class="services-title">USER EXPERIENCE</h3>
-
-                    <div class="services-image">
-                        <div class="services-divider-top"></div>
-                        <img src="<@url value='/static/css/dreamer/images/services/2.png'/>" alt="Our Strategy">
-
-                        <div class="services-divider-bottom"></div>
-                    </div>
-                    <p class="services-text">Habitasse pulvinar elit tristique elm auctor placerat sit ut acu uctor. Ptor eetas scelerisque, non. Ac egestas mauris proin, pulviar tuis!</p>
-                </div>
-                <div class="four columns services last-column mobile-two">
-                    <h3 class="services-title">DESIGN</h3>
-
-                    <div class="services-image">
-                        <div class="services-divider-top"></div>
-                        <img src="<@url value='/static/css/dreamer/images/services/3.png'/>" alt="Our Strategy">
-
-                        <div class="services-divider-bottom"></div>
-                    </div>
-                    <p class="services-text">Habitasse pulvinar elit tristique elm auctor placerat sit ut acu uctor. Ptor eetas scelerisque, non. Ac egestas mauris proin, pulviar tuis!</p>
-                </div>
-                <div class="four columns services first-column mobile-two">
-                    <h3 class="services-title">DEVELOPMENT</h3>
-
-                    <div class="services-image">
-                        <div class="services-divider-top"></div>
-                        <img src="<@url value='/static/css/dreamer/images/services/4.png'/>" alt="Our Strategy">
-
-                        <div class="services-divider-bottom"></div>
-                    </div>
-                    <p class="services-text">Habitasse pulvinar elit tristique elm auctor placerat sit ut acu uctor. Ptor eetas scelerisque, non. Ac egestas mauris proin, pulviar tuis!</p>
-                </div>
-                <div class="four columns services middle-column mobile-two">
-                    <h3 class="services-title">BRANDING</h3>
-
-                    <div class="services-image">
-                        <div class="services-divider-top"></div>
-                        <img src="<@url value='/static/css/dreamer/images/services/5.png'/>" alt="Our Strategy">
-
-                        <div class="services-divider-bottom"></div>
-                    </div>
-                    <p class="services-text">Habitasse pulvinar elit tristique elm auctor placerat sit ut acu uctor. Ptor eetas scelerisque, non. Ac egestas mauris proin, pulviar tuis!</p>
-                </div>
-                <div class="four columns services last-column mobile-two">
-                    <h3 class="services-title">MARKETING</h3>
-
-                    <div class="services-image">
-                        <div class="services-divider-top"></div>
-                        <img src="<@url value='/static/css/dreamer/images/services/6.png'/>" alt="Our Strategy">
-
-                        <div class="services-divider-bottom"></div>
-                    </div>
-                    <p class="services-text">Habitasse pulvinar elit tristique elm auctor placerat sit ut acu uctor. Ptor eetas scelerisque, non. Ac egestas mauris proin, pulviar tuis!</p>
-                </div>
-            </div>
-        </div>
+        <#include "services.ftl"/>
     </div>
 
     <!-- Parallax Five - Content -->
@@ -421,402 +338,96 @@
         </div>
         <div class="row">
             <div class="twelve columns parallax-container">
-                <h1 class="parallax-title">LATEST NEWS</h1>
+                <h1 class="parallax-title">${config.get("news.firstHead")!}</h1>
 
                 <div class="parallax-divider">
                     <img src="<@url value='/static/css/dreamer/images/icons/60px/white/appbar.globe.png'/>" alt="Read More About Us">
                 </div>
-                <h2 class="parallax-subtitle">We love building and rebuilding brands.<br>Using colour, fonts and illustration, we brand companies in a way you’ll never forget.</h2>
+                <h2 class="parallax-subtitle">${config.get("news.firstSubHead")!}</h2>
             </div>
         </div>
     </div>
 
     <!-- Our Latest News Page -->
     <div class="page-container pattern-2" id="news">
+        <#include "news.ftl"/>
+    </div>
 
+    <!-- Parallax Six - Content -->
+    <div class="parallax-six">
+        <div class="quote6-pattern">
+            <div class="quote6-shape"></div>
+        </div>
         <div class="row">
-            <div class="twelve columns page-content">
-                <h1 class="page-title">Check Our Latest News</h1>
+            <div class="twelve columns parallax-container">
+                <h1 class="parallax-title">${config.get("contact.firstHead")!}</h1>
 
-                <h2 class="page-subtitle">We love building and <span>rebuilding brands.</span><br>Using <span>colour, fonts</span> and illustration, we brand companies in a way you’ll never forget.
-                </h2>
-            </div>
-
-            <div class="twelve columns news">
-                <div id="news-slider">
-
-                    <!-- News -->
-                    <div class="news-section" data-thumb=<@url value='/static/css/dreamer/images/our-news.png'/>
-                    ">
-
-                    <div class="four columns news-item mobile-two">
-                        <section class="news-cat-image">
-                            <img src="<@url value='/static/css/dreamer/images/icons/40px/white/124.png'/>" alt="News Image">
-                        </section>
-                        <span class="news-date">Published on January 18, 2013</span>
-                        <a href="#" class="photo-link" data-reveal-id="single-news"><img src="<@url value='/static/css/dreamer/images/news/1.jpg'/>" alt="News Image" class="wide-image"></a>
-                        <section class="news-details">
-                            <h3 class="news-title"><a href="#" data-reveal-id="single-news">Et elementum odio amet consectue single elementum etcon!</a></h3>
-
-                            <div class="news-title-divider"></div>
-                            <p class="news-content">Habitasse pulvinar elit tristique elmauctr placerat sit ut acu uctor. Ptor eetas sceris que, non. Ac egesta, pulviar tuis!</p>
-                        </section>
-                        <section class="news-hover hide-for-small">
-                            <div class="open-news-item">
-                                <a href="#" data-reveal-id="single-news" class="news-link"></a>
-                            </div>
-                        </section>
-                    </div>
-
-                    <div class="four columns news-item mobile-two">
-                        <section class="news-cat-image">
-                            <img src="<@url value='/static/css/dreamer/images/icons/40px/white/124.png'/>" alt="News Image">
-                        </section>
-                        <span class="news-date">Published on January 18, 2013</span>
-                        <a href="#" class="photo-link" data-reveal-id="single-news"><img src="<@url value='/static/css/dreamer/images/news/2.jpg'/>" alt="News Image" class="wide-image"></a>
-                        <section class="news-details">
-                            <h3 class="news-title"><a href="#" data-reveal-id="single-news">Et elementum odio amet consectue single elementum etcon!</a></h3>
-
-                            <div class="news-title-divider"></div>
-                            <p class="news-content">Habitasse pulvinar elit tristique elmauctr placerat sit ut acu uctor. Ptor eetas sceris que, non. Ac egesta, pulviar tuis!</p>
-                        </section>
-                        <section class="news-hover hide-for-small">
-                            <div class="open-news-item">
-                                <a href="#" data-reveal-id="single-news" class="news-link"></a>
-                            </div>
-                        </section>
-                    </div>
-
-                    <div class="four columns news-item mobile-two">
-                        <section class="news-cat-image">
-                            <img src="<@url value='/static/css/dreamer/images/icons/40px/white/124.png'/>" alt="News Image">
-                        </section>
-                        <span class="news-date">Published on January 18, 2013</span>
-                        <a href="#" class="photo-link" data-reveal-id="single-news"><img src="<@url value='/static/css/dreamer/images/news/3.jpg'/>" alt="News Image" class="wide-image"></a>
-                        <section class="news-details">
-                            <h3 class="news-title"><a href="#" data-reveal-id="single-news">Et elementum odio amet consectue single elementum etcon!</a></h3>
-
-                            <div class="news-title-divider"></div>
-                            <p class="news-content">Habitasse pulvinar elit tristique elmauctr placerat sit ut acu uctor. Ptor eetas sceris que, non. Ac egesta, pulviar tuis!</p>
-                        </section>
-                        <section class="news-hover hide-for-small">
-                            <div class="open-news-item">
-                                <a href="#" data-reveal-id="single-news" class="news-link"></a>
-                            </div>
-                        </section>
-                    </div>
-
-                    <div class="four columns news-item mobile-two">
-                        <section class="news-cat-image">
-                            <img src="<@url value='/static/css/dreamer/images/icons/40px/white/124.png'/>" alt="News Image">
-                        </section>
-                        <span class="news-date">Published on January 18, 2013</span>
-                        <a href="#" class="photo-link" data-reveal-id="single-news"><img src="<@url value='/static/css/dreamer/images/news/4.jpg'/>" alt="News Image" class="wide-image"></a>
-                        <section class="news-details">
-                            <h3 class="news-title"><a href="#" data-reveal-id="single-news">Et elementum odio amet consectue single elementum etcon!</a></h3>
-
-                            <div class="news-title-divider"></div>
-                            <p class="news-content">Habitasse pulvinar elit tristique elmauctr placerat sit ut acu uctor. Ptor eetas sceris que, non. Ac egesta, pulviar tuis!</p>
-                        </section>
-                        <section class="news-hover hide-for-small">
-                            <div class="open-news-item">
-                                <a href="#" data-reveal-id="single-news" class="news-link"></a>
-                            </div>
-                        </section>
-                    </div>
-
-                    <div class="four columns news-item mobile-two">
-                        <section class="news-cat-image">
-                            <img src="<@url value='/static/css/dreamer/images/icons/40px/white/124.png'/>" alt="News Image">
-                        </section>
-                        <span class="news-date">Published on January 18, 2013</span>
-                        <a href="#" class="photo-link" data-reveal-id="single-news"><img src="<@url value='/static/css/dreamer/images/news/5.jpg'/>" alt="News Image" class="wide-image"></a>
-                        <section class="news-details">
-                            <h3 class="news-title"><a href="#" data-reveal-id="single-news">Et elementum odio amet consectue single elementum etcon!</a></h3>
-
-                            <div class="news-title-divider"></div>
-                            <p class="news-content">Habitasse pulvinar elit tristique elmauctr placerat sit ut acu uctor. Ptor eetas sceris que, non. Ac egesta, pulviar tuis!</p>
-                        </section>
-                        <section class="news-hover hide-for-small">
-                            <div class="open-news-item">
-                                <a href="#" data-reveal-id="single-news" class="news-link"></a>
-                            </div>
-                        </section>
-                    </div>
-
-                    <div class="four columns news-item mobile-two">
-                        <section class="news-cat-image">
-                            <img src="<@url value='/static/css/dreamer/images/icons/40px/white/124.png'/>" alt="News Image">
-                        </section>
-                        <span class="news-date">Published on January 18, 2013</span>
-                        <a href="#" class="photo-link" data-reveal-id="single-news"><img src="<@url value='/static/css/dreamer/images/news/6.jpg'/>" alt="News Image" class="wide-image"></a>
-                        <section class="news-details">
-                            <h3 class="news-title"><a href="#" data-reveal-id="single-news">Et elementum odio amet consectue single elementum etcon!</a></h3>
-
-                            <div class="news-title-divider"></div>
-                            <p class="news-content">Habitasse pulvinar elit tristique elmauctr placerat sit ut acu uctor. Ptor eetas sceris que, non. Ac egesta, pulviar tuis!</p>
-                        </section>
-                        <section class="news-hover hide-for-small">
-                            <div class="open-news-item">
-                                <a href="#" data-reveal-id="single-news" class="news-link"></a>
-                            </div>
-                        </section>
-                    </div>
-
+                <div class="parallax-divider">
+                    <img src="<@url value='/static/css/dreamer/images/icons/60px/white/appbar.email.png'/>" alt="Read More About Us">
                 </div>
-
-                <!-- Twitter Feed -->
-                <div class="twitter-section" data-thumb=<@url value='/static/css/dreamer/images/twitter-feed.png'/>
-                ">
-                <div id="jstwitter">
-                </div>
+                <h2 class="parallax-subtitle">${config.get("contact.firstSubHead")!}</h2>
             </div>
         </div>
     </div>
 
-</div>
-</div>
-
-<!-- Parallax Six - Content -->
-<div class="parallax-six">
-    <div class="quote6-pattern">
-        <div class="quote6-shape"></div>
+    <!-- Contact Page -->
+    <div class="page-container pattern-1" id="contact">
+        <#include "contact.ftl"/>
     </div>
-    <div class="row">
-        <div class="twelve columns parallax-container">
-            <h1 class="parallax-title">CONTACT US TODAY</h1>
 
-            <div class="parallax-divider">
-                <img src="<@url value='/static/css/dreamer/images/icons/60px/white/appbar.email.png'/>" alt="Read More About Us">
-            </div>
-            <h2 class="parallax-subtitle">We love building and rebuilding brands.<br>Using colour, fonts and illustration, we brand companies in a way you’ll never forget.</h2>
+    <div class="twelve columns contact-section">
+        <h1 class="page-title">Social Media Icons & Buttons</h1>
+
+        <h2 class="page-subtitle">We’re fortunate to work with <span>fantastic clients</span><br>from across the globe in over <span>11 countries</span> on design, branding, and <span>development projects.</span>
+        </h2>
+    </div>
+    <div class="twelve columns">
+        <div class="section-divider">
+            <img src="<@url value='/static/css/dreamer/images/social-media.png'/>" alt="Read More About Us">
         </div>
     </div>
-</div>
-
-<!-- Contact Page -->
-<div class="page-container pattern-1" id="contact">
-
-    <div class="row">
-        <div class="twelve columns page-content">
-            <h1 class="page-title">Contact Us Today</h1>
-
-            <h2 class="page-subtitle">We love building and <span>rebuilding brands.</span><br>Using <span>colour, fonts</span> and illustration, we brand companies in a way you’ll never forget.
-            </h2>
+    <div class="twelve columns">
+        <div class="social-media-buttons">
+            <a href="#" class="behance-button has-tip tip-top radius" title="Behance"></a>
+            <a href="#" class="blogger-button has-tip tip-top radius" title="Blogger"></a>
+            <a href="#" class="digg-button has-tip tip-top radius" title="Digg"></a>
+            <a href="#" class="dribbble-button has-tip tip-top radius" title="Dribbble"></a>
+            <a href="#" class="email-button has-tip tip-top radius" title="Email"></a>
+            <a href="#" class="facebook-button has-tip tip-top radius" title="Facebook"></a>
+            <a href="#" class="flickr-button has-tip tip-top radius" title="Flickr"></a>
+            <a href="#" class="gplus-button has-tip tip-top radius" title="Google Plus"></a>
+            <a href="#" class="instagram-button has-tip tip-top radius" title="Instagram"></a>
+            <a href="#" class="lastfm-button has-tip tip-top radius" title="Last.fm"></a>
+            <a href="#" class="linkedin-button has-tip tip-top radius" title="Linkedin"></a>
+            <a href="#" class="livejournal-button has-tip tip-top radius" title="LiveJournal"></a>
+            <a href="#" class="myspace-button has-tip tip-top radius" title="MySpace"></a>
+            <a href="#" class="paypal-button has-tip tip-top radius" title="Paypal"></a>
+            <a href="#" class="pinterest-button has-tip tip-top radius" title="Pinterest"></a>
+            <a href="#" class="reddit-button has-tip tip-top radius" title="Reddit"></a>
+            <a href="#" class="soundcloud-button has-tip tip-top radius" title="Sound Cloud"></a>
+            <a href="#" class="spotify-button has-tip tip-top radius" title="Spotify"></a>
+            <a href="#" class="stumbleupon-button has-tip tip-top radius" title="StumbleUpon"></a>
+            <a href="#" class="tumblr-button has-tip tip-top radius" title="Tumblr"></a>
+            <a href="#" class="twitter-button has-tip tip-top radius" title="Twitter"></a>
+            <a href="#" class="vimeo-button has-tip tip-top radius" title="Vimeo"></a>
+            <a href="#" class="wordpress-button has-tip tip-top radius" title="WordPress"></a>
+            <a href="#" class="youtube-button has-tip tip-top radius" title="Youtube"></a>
         </div>
     </div>
 
+    <div class="twelve columns sharing-section">
+        <h3 class="sharing-buttons">Sharing Buttons</h3>
+    </div>
 
-    <div class="row">
+    <div class="twelve columns sharing-icons">
+        <div class="facebook-share-button">
+            <div class="facebook-share-button-over">Like It Now</div>
+        </div>
+        <div class="twitter-tweet-button">
+            <div class="twitter-tweet-button-over">Tweet It</div>
 
-        <div class="twelve columns contact">
-            <div id="contact-slider">
-
-                <!-- Contact Details -->
-                <div class="contact-details" data-thumb=<@url value='/static/css/dreamer/images/contact-details.png'/>
-                ">
-                <div class="four columns first-column mobile-three-one contact-margin">
-                    <h3 class="contact-title">San Francisco</h3>
-
-                    <div class="contact-image hide-for-760">
-                        <div class="contact-divider-top"></div>
-                        <img src="<@url value='/static/css/dreamer/images/san-francisco.jpg'/>" alt="San Francisco">
-
-                        <div class="contact-divider-bottom"></div>
-                    </div>
-                    <p class="contact-text">One Auctor Stockton Street<br>London, UK 94108</p>
-
-                    <p class="contact-text"><span>EMAIL:</span> info@dreamer.com</p>
-
-                    <p class="contact-text"><span>PHONE:</span> 415.415.4155</p>
-                </div>
-                <div class="four columns middle-column mobile-three-one contact-margin">
-                    <h3 class="contact-title">Los Angeles</h3>
-
-                    <div class="contact-image hide-for-760">
-                        <div class="contact-divider-top"></div>
-                        <img src="<@url value='/static/css/dreamer/images/los-angeles.jpg'/>" alt="Los Angeles">
-
-                        <div class="contact-divider-bottom"></div>
-                    </div>
-                    <p class="contact-text">One Auctor Stockton Street<br>London, UK 94108</p>
-
-                    <p class="contact-text"><span>EMAIL:</span> info@dreamer.com</p>
-
-                    <p class="contact-text"><span>PHONE:</span> 415.415.4155</p>
-                </div>
-                <div class="four columns last-column mobile-three-one contact-margin">
-                    <h3 class="contact-title">New York</h3>
-
-                    <div class="contact-image hide-for-760">
-                        <div class="contact-divider-top"></div>
-                        <img src="<@url value='/static/css/dreamer/images/new-york.jpg'/>" alt="London">
-
-                        <div class="contact-divider-bottom"></div>
-                    </div>
-                    <p class="contact-text">One Auctor Stockton Street<br>New York, NY 94108</p>
-
-                    <p class="contact-text"><span>EMAIL:</span> info@dreamer.com</p>
-
-                    <p class="contact-text"><span>PHONE:</span> 415.415.4155</p>
-                </div>
-            </div>
-
-            <!-- Contact Form -->
-            <div class="contact-form" data-thumb=<@url value='/static/css/dreamer/images/contact-form.png'/>
-            ">
-
-            <div class="done"><b style="color:#e44d26;">THANK YOU!</b><br> We have received your message.</div>
-
-            <form method="post" action="http://avathemes.com/HTML5/Dreamer/contact-form.php">
-                <div class="twelve columns contact-form-div">
-                    <div class="eight columns mobile-four-760">
-                        <div class="six columns first-column mobile-two-670">
-                            <div class="row collapse">
-                                <div class="two mobile-one columns">
-                                    <span class="prefix"><img src="<@url value='/static/css/dreamer/images/icons/40px/1.png'/>" alt="Contact Name"></span>
-                                </div>
-                                <div class="ten mobile-three columns">
-                                    <input type="text" placeholder="Name *" name="name" value=""/>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="six columns middle-column mobile-two-670">
-                            <div class="row collapse">
-                                <div class="two mobile-one columns">
-                                    <span class="prefix"><img src="<@url value='/static/css/dreamer/images/icons/40px/2.png'/>" alt="Contact Email"></span>
-                                </div>
-                                <div class="ten mobile-three columns">
-                                    <input type="text" placeholder="Email *" name="email" value=""/>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="six columns first-column mobile-two-670">
-                            <div class="row collapse">
-                                <div class="two mobile-one columns">
-                                    <span class="prefix"><img src="<@url value='/static/css/dreamer/images/icons/40px/3.png'/>" alt="Phone Number"></span>
-                                </div>
-                                <div class="ten mobile-three columns">
-                                    <input type="text" placeholder="Phone Number" name="phonenumber" value=""/>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="six columns middle-column mobile-two-670">
-                            <div class="row collapse">
-                                <div class="two mobile-one columns">
-                                    <span class="prefix"><img src="<@url value='/static/css/dreamer/images/icons/40px/4.png'/>" alt="Website"></span>
-                                </div>
-                                <div class="ten mobile-three columns">
-                                    <input type="text" placeholder="Website / Link" name="website" value=""/>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="six columns first-column mobile-two-670">
-                            <div class="row collapse">
-                                <div class="two mobile-one columns">
-                                    <span class="prefix"><img src="<@url value='/static/css/dreamer/images/icons/40px/5.png'/>" alt="Project Budget"></span>
-                                </div>
-                                <div class="ten mobile-three columns">
-                                    <input type="text" placeholder="Project Budget" name="projectbudget" value=""/>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="six columns middle-column mobile-two-670">
-                            <div class="row collapse">
-                                <div class="two mobile-one columns">
-                                    <span class="prefix"><img src="<@url value='/static/css/dreamer/images/icons/40px/6.png'/>" alt="Timeframe"></span>
-                                </div>
-                                <div class="ten mobile-three columns">
-                                    <input type="text" placeholder="Timeframe" name="timeframe" value=""/>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="six columns first-column mobile-two-670">
-                            <div class="row collapse">
-                                <div class="two mobile-one columns">
-                                    <span class="prefix"><img src="<@url value='/static/css/dreamer/images/icons/40px/7.png'/>" alt="You're interested in?"></span>
-                                </div>
-                                <div class="ten mobile-three columns">
-                                    <input type="text" placeholder="You're interested in?" name="youreinterestedin" value=""/>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="six columns middle-column mobile-two-670">
-                            <div class="row collapse">
-                                <div class="two mobile-one columns">
-                                    <span class="prefix"><img src="<@url value='/static/css/dreamer/images/icons/40px/8.png'/>" alt="How did you hear about us?"></span>
-                                </div>
-                                <div class="ten mobile-three columns">
-                                    <input type="text" placeholder="How did you hear about us?" name="howdidyouhearaboutus" id="subject" value=""/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="four columns last-column mobile-four-760">
-                        <textarea placeholder="Message *" name="comment"></textarea>
-                    </div>
-                    <div class="twelve columns submit-760">
-                        <input type="submit" class="button radius secondary submit-wide" value="Send Message" id="submit"/>
-                    </div>
-                </div>
-            </form>
         </div>
     </div>
-</div>
-
-<div class="twelve columns contact-section">
-    <h1 class="page-title">Social Media Icons & Buttons</h1>
-
-    <h2 class="page-subtitle">We’re fortunate to work with <span>fantastic clients</span><br>from across the globe in over <span>11 countries</span> on design, branding, and <span>development projects.</span>
-    </h2>
-</div>
-<div class="twelve columns">
-    <div class="section-divider">
-        <img src="<@url value='/static/css/dreamer/images/social-media.png'/>" alt="Read More About Us">
-    </div>
-</div>
-<div class="twelve columns">
-    <div class="social-media-buttons">
-        <a href="#" class="behance-button has-tip tip-top radius" title="Behance"></a>
-        <a href="#" class="blogger-button has-tip tip-top radius" title="Blogger"></a>
-        <a href="#" class="digg-button has-tip tip-top radius" title="Digg"></a>
-        <a href="#" class="dribbble-button has-tip tip-top radius" title="Dribbble"></a>
-        <a href="#" class="email-button has-tip tip-top radius" title="Email"></a>
-        <a href="#" class="facebook-button has-tip tip-top radius" title="Facebook"></a>
-        <a href="#" class="flickr-button has-tip tip-top radius" title="Flickr"></a>
-        <a href="#" class="gplus-button has-tip tip-top radius" title="Google Plus"></a>
-        <a href="#" class="instagram-button has-tip tip-top radius" title="Instagram"></a>
-        <a href="#" class="lastfm-button has-tip tip-top radius" title="Last.fm"></a>
-        <a href="#" class="linkedin-button has-tip tip-top radius" title="Linkedin"></a>
-        <a href="#" class="livejournal-button has-tip tip-top radius" title="LiveJournal"></a>
-        <a href="#" class="myspace-button has-tip tip-top radius" title="MySpace"></a>
-        <a href="#" class="paypal-button has-tip tip-top radius" title="Paypal"></a>
-        <a href="#" class="pinterest-button has-tip tip-top radius" title="Pinterest"></a>
-        <a href="#" class="reddit-button has-tip tip-top radius" title="Reddit"></a>
-        <a href="#" class="soundcloud-button has-tip tip-top radius" title="Sound Cloud"></a>
-        <a href="#" class="spotify-button has-tip tip-top radius" title="Spotify"></a>
-        <a href="#" class="stumbleupon-button has-tip tip-top radius" title="StumbleUpon"></a>
-        <a href="#" class="tumblr-button has-tip tip-top radius" title="Tumblr"></a>
-        <a href="#" class="twitter-button has-tip tip-top radius" title="Twitter"></a>
-        <a href="#" class="vimeo-button has-tip tip-top radius" title="Vimeo"></a>
-        <a href="#" class="wordpress-button has-tip tip-top radius" title="WordPress"></a>
-        <a href="#" class="youtube-button has-tip tip-top radius" title="Youtube"></a>
-    </div>
-</div>
-
-<div class="twelve columns sharing-section">
-    <h3 class="sharing-buttons">Sharing Buttons</h3>
-</div>
-
-<div class="twelve columns sharing-icons">
-    <div class="facebook-share-button">
-        <div class="facebook-share-button-over">Like It Now</div>
-    </div>
-    <div class="twitter-tweet-button">
-        <div class="twitter-tweet-button-over">Tweet It</div>
-
-    </div>
-</div>
 
 </div>
 </div>

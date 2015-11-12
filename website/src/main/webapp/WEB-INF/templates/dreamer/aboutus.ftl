@@ -1,41 +1,41 @@
 <div class="row">
 
     <div class="twelve columns page-content">
-        <h1 class="page-title">This is Who We Are</h1>
+        <h1 class="page-title">${config.get("aboutus.secondHead")!}</h1>
 
-        <h2 class="page-subtitle">We love building and <span>rebuilding brands.</span><br>Using <span>colour, fonts</span> and illustration, we brand companies in a way you’ll never forget.
+        <h2 class="page-subtitle">${config.get("aboutus.secondSubHead")!}
         </h2>
     </div>
 
     <div class="four columns about mobile-three-one">
-        <img src="<@url value='/static/css/dreamer/images/about-us/1.png'/>" alt="About US">
+        <img src="<@url value='/static/css/dreamer/images/about-us/1.png'/>" alt="${config.get(" aboutus.secondHead")!}">
 
-        <h3 class="about-us-title">OUR MISSION</h3>
+        <h3 class="about-us-title">${config.get("aboutus.mission")!}</h3>
 
-        <p class="about-us-text">Habitasse pulvinar elit magnis tritue elementum auctor placerat sit ut cu auctor. Ac egestas mauris proin!</p>
+        <p class="about-us-text">${config.get("aboutus.missionContent")!}</p>
 
     </div>
 
     <div class="four columns about mobile-three-one">
         <img src="<@url value='/static/css/dreamer/images/about-us/2.png'/>" alt="About US">
 
-        <h3 class="about-us-title">OUR Skills</h3>
+        <h3 class="about-us-title">${config.get("aboutus.skill")!}</h3>
 
-        <p class="about-us-text">Habitasse pulvinar elit magnis tritue elementum auctor placerat sit ut cu auctor. Ac egestas mauris proin!</p>
+        <p class="about-us-text">${config.get("aboutus.skillContent")!}</p>
     </div>
 
     <div class="four columns about mobile-three-one">
         <img src="<@url value='/static/css/dreamer/images/about-us/3.png'/>" alt="About US">
 
-        <h3 class="about-us-title">OUR Clients</h3>
+        <h3 class="about-us-title">${config.get("aboutus.client")!}</h3>
 
-        <p class="about-us-text">Habitasse pulvinar elit magnis tritue elementum auctor placerat sit ut cu auctor. Ac egestas mauris proin!</p>
+        <p class="about-us-text">${config.get("aboutus.clientContent")!}</p>
     </div>
 
     <div class="twelve columns page-section hide-for-760">
-        <h1 class="page-title">Our Skills & Numbers</h1>
+        <h1 class="page-title">${config.get("aboutus.thirdHead")!}</h1>
 
-        <h2 class="page-subtitle">We’re fortunate to work with <span>fantastic clients</span><br>from across the globe in over <span>11 countries</span> on design, branding, and <span>development projects.</span>
+        <h2 class="page-subtitle">${config.get("aboutus.thirdSubhead")!}
         </h2>
     </div>
 

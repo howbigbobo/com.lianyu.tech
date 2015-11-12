@@ -1,3 +1,7 @@
+$(function () {
+    $('.btn-minimize').click()
+});
+
 function saveSystemConfig(ctrl) {
     var $ctrl = $(ctrl);
     var data = $ctrl.closest('form.systemConfig').formData();
