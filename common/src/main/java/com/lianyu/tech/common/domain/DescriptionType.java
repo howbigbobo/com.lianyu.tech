@@ -8,7 +8,8 @@ import com.lianyu.tech.core.platform.exception.ResourceNotFoundException;
 public enum DescriptionType {
     CASES("案例"),
     INTRODUCE("简介"),
-    NEWS("动态");
+    NEWS("动态"),
+    SERVICE("动态");
 
     private String text;
 

@@ -16,14 +16,7 @@
 
                 <div class="our-team-divider"></div>
                 <p class="our-team-text">${(introduce.info.content)!}</p>
-
-                <div class="team-hover">
-                    <div class="team-social-media">
-                        <a href="#" class="team-facebook"></a>
-                        <a href="#" class="team-twitter"></a>
-                        <a href="#" class="team-linkedin"></a>
-                    </div>
-                </div>
+                
             </div>
         </#list>
     </#if>

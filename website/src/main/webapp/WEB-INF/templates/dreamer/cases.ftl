@@ -8,15 +8,8 @@
     </div>
 
     <div class="twelve columns portfolio-filter hide-for-760">
-        <ul class="filterOptions">
-            <li class="active"><a href="#" class="all"><img src="<@url value='/static/css/dreamer/images/icons/40px/123.png'/>" alt="All Projects"><span>All Projects</span></a></li>
-            <li><a href="#" class="photography"><img src="<@url value='/static/css/dreamer/images/icons/40px/96.png'/>" alt="Photography"><span>Photography</span></a></li>
-            <li><a href="#" class="website-design"><img src="<@url value='/static/css/dreamer/images/icons/40px/121.png'/>" alt="Website Design"><span>Website Design</span></a></li>
-            <li><a href="#" class="branding"><img src="<@url value='/static/css/dreamer/images/icons/40px/155.png'/>" alt="Branding"><span>Branding</span></a></li>
-            <li><a href="#" class="logo-design"><img src="<@url value='/static/css/dreamer/images/icons/40px/88.png'/>" alt="Logo Design"><span>Logo Design</span></a></li>
-        </ul>
+       
     </div>
-
     <div class="twelve columns portfolio">
         <ul class="ourHolder">
             <#if cases??>

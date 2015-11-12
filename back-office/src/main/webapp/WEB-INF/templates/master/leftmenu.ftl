@@ -41,6 +41,12 @@
     </a>
 </li>
 <li>
+    <a href="<@url value='/description/service'/>">
+        <i class="icon-tasks"></i>
+        <span class="hidden-tablet"> 服务项目</span>
+    </a>
+</li>
+<li>
     <a href="<@url value='/description/news'/>">
         <i class="icon-tasks"></i>
         <span class="hidden-tablet"> 动态</span>

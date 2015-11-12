@@ -238,7 +238,7 @@
     <h3>${config.get("landing.subSlogan")!}</h3>
 
     <div class="bottom-icon">
-        <a href="#parallax-one"><img src="<@url value='/static/css/dreamer/images/homepage-text-bottom-icon.png'/>" alt="${company.name}"></a>
+        <a href="#intruduction"><img src="<@url value='/static/css/dreamer/images/homepage-text-bottom-icon.png'/>" alt="${company.name}"></a>
     </div>
 </div>
 
