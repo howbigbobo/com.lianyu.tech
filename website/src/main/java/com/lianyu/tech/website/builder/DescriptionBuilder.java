@@ -9,6 +9,7 @@ import com.lianyu.tech.common.repository.DescriptionRepository;
 import com.lianyu.tech.common.repository.ImageRepository;
 import com.lianyu.tech.common.utils.Converter;
 import com.lianyu.tech.common.utils.ListUtils;
+import com.lianyu.tech.common.vo.DescriptionItemView;
 import com.lianyu.tech.common.vo.converter.DescriptionConverter;
 import com.lianyu.tech.common.vo.converter.DescriptionItemConverter;
 import com.lianyu.tech.common.vo.converter.ImageConverter;
@@ -36,17 +37,17 @@ public class DescriptionBuilder {
     @Inject
     private ImageConverter imageConverter;
 
-    public List<DescriptionVo> findByType(DescriptionType descriptionType) {
+    public List<DescriptionVo> findByType(DescriptionType descriptionType, int width, int height) {
         List<Description> descriptions = descriptionRepository.findByType(descriptionType);
-        return getDescriptionVos(descriptions);
+        return getDescriptionVos(descriptions, width, height);
     }
 
-    public List<DescriptionVo> findByType(DescriptionType descriptionType, int size) {
+    public List<DescriptionVo> findByType(DescriptionType descriptionType, int size, int width, int height) {
         List<Description> descriptions = descriptionRepository.findByType(descriptionType, 0, size);
-        return getDescriptionVos(descriptions);
+        return getDescriptionVos(descriptions, width, height);
     }
 
-    private List<DescriptionVo> getDescriptionVos(List<Description> descriptions) {
+    private List<DescriptionVo> getDescriptionVos(List<Description> descriptions, int width, int height) {
         if (CollectionUtils.isEmpty(descriptions)) return Collections.EMPTY_LIST;
 
         List<Integer> descriptionIds = ListUtils.select(descriptions, new Converter<Description, Integer>() {
@@ -79,9 +80,16 @@ public class DescriptionBuilder {
             vo.setInfo(DescriptionConverter.convert(description));
             List<DescriptionItem> descriptionItems = itemMap.get(description.getId());
             vo.setItems(DescriptionItemConverter.convert(descriptionItems, images));
+            setImageThumbUrl(vo.getItems(), width, height);
             vos.add(vo);
         }
         return vos;
     }
 
+    private void setImageThumbUrl(List<DescriptionItemView> descriptionItems, int width, int height) {
+        if (CollectionUtils.isEmpty(descriptionItems)) return;
+        for (DescriptionItemView item : descriptionItems) {
+            item.setImageThumbUrl(imageConverter.getThumbUrl(item.getImageUrl(), width, height));
+        }
+    }
 }

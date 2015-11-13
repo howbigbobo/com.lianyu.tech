@@ -26,11 +26,11 @@ public class ImageViewController {
     @ResponseBody
     public byte[] viewImage(@PathVariable("imageFileName") String imageFileName, @PathVariable("ext") String extend) {
         //imageFileName = e1ad1231231231.jpg!200x300
-        String[] exts = extend.split("[!_]");
-        String fileName = imageFileName;
+        String[] exts = imageFileName.split("[!_]");
+        String fileName = exts[0];
         ImageSize imageSize = null;
         if (exts.length > 0) {
-            fileName += "." + exts[0];
+            fileName += "." + extend;
         }
         if (exts.length >= 2) {
             imageSize = buildImageSize(exts[1]);

@@ -48,4 +48,13 @@ public class ImageConverter {
         }
         return server;
     }
+
+    public String getThumbUrl(String originUrl, int width, int height) {
+        if (!StringUtils.hasText(originUrl)) return originUrl;
+        int index = originUrl.lastIndexOf('.');
+        if (index > 0) {
+            return originUrl.substring(0, index) + "_" + width + "x" + height + originUrl.substring(index);
+        }
+        return originUrl;
+    }
 }

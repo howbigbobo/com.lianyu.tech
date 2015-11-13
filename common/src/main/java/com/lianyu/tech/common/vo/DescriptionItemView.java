@@ -10,6 +10,8 @@ public class DescriptionItemView {
 
     private Integer imageId;
 
+    private String imageThumbUrl;
+
     private String imageUrl;
 
     private String content;
@@ -38,6 +40,14 @@ public class DescriptionItemView {
 
     public void setImageId(Integer imageId) {
         this.imageId = imageId;
+    }
+
+    public String getImageThumbUrl() {
+        return imageThumbUrl;
+    }
+
+    public void setImageThumbUrl(String imageThumbUrl) {
+        this.imageThumbUrl = imageThumbUrl;
     }
 
     public String getImageUrl() {

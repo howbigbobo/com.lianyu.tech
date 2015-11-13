@@ -18,9 +18,10 @@ public class HomeController extends WebsiteSiteController {
 
     @RequestMapping(value = "/home", method = RequestMethod.GET)
     public String home(Map<String, Object> model) {
-        model.put("introduces", descriptionBuilder.findByType(DescriptionType.INTRODUCE));
-        model.put("cases", descriptionBuilder.findByType(DescriptionType.CASES, 9));
-        model.put("services", descriptionBuilder.findByType(DescriptionType.SERVICE, 9));
+        model.put("introduces", descriptionBuilder.findByType(DescriptionType.INTRODUCE, 225, 0));
+        model.put("cases", descriptionBuilder.findByType(DescriptionType.CASES, 9, 310, 0));
+        model.put("services", descriptionBuilder.findByType(DescriptionType.SERVICE, 9, 310, 0));
+        model.put("news", descriptionBuilder.findByType(DescriptionType.NEWS, 9, 310, 0));
         return "dreamer/home";
     }
 }

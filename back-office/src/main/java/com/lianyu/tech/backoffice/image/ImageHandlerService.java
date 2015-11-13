@@ -99,7 +99,7 @@ public class ImageHandlerService {
         ImageSize newSize = new ImageSize();
         double scale = originalHeight * 1.0 / originWidth;
         newSize.setWidth(size.getWidth());
-        newSize.setHeight((int) Math.ceil(size.getHeight() * scale));
+        newSize.setHeight((int) Math.ceil(size.getWidth() * scale));
         return newSize;
     }
 
