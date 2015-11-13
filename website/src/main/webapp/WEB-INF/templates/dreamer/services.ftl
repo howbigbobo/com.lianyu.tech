@@ -15,7 +15,7 @@
 
                 <div class="services-image">
                     <div class="services-divider-top"></div>
-                    <img src="${(service.defaultItem.imageUrl)!}" alt="${(service.info.head)!}">
+                    <img src="${(service.defaultItem.imageThumbUrl)!}" alt="${(service.info.head)!}">
 
                     <div class="services-divider-bottom"></div>
                 </div>

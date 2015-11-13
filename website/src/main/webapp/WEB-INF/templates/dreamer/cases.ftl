@@ -8,7 +8,7 @@
     </div>
 
     <div class="twelve columns portfolio-filter hide-for-760">
-       
+
     </div>
     <div class="twelve columns portfolio">
         <ul class="ourHolder">
@@ -23,7 +23,7 @@
                                 </div>
                             </div>
                             <a href="${(case.defaultItem.imageUrl)!}" class="photo-link" rel="prettyPhoto"><img
-                                    src="${(case.defaultItem.imageUrl)!}"
+                                    src="${(case.defaultItem.imageThumbUrl)!}"
                                     alt="${(case.info.head)!}"
                                     class="wide-image"></a>
 

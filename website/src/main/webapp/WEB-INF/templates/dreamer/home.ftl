@@ -203,7 +203,7 @@
             <section class="hide-for-small">
                 <ul class="right">
                     <li><a href="#homepage">首页</a></li>
-                    <li><a href="#intruduction">公司简介</a></li>
+                    <li><a href="#introduction">公司简介</a></li>
                     <li><a href="#about-us">关于我们</a></li>
                     <li><a href="#portfolio">成功案例</a></li>
                     <li><a href="#services">服务项目</a></li>
@@ -214,7 +214,7 @@
 
             <select class="responsive-nav show-for-small" onChange="moveTo(this.value)" onFocus="moveTo(this.value)">
                 <option value="#homepage">首页</option>
-                <option value="#intruduction">公司简介</option>
+                <option value="#introduction">公司简介</option>
                 <option value="#about-us">关于我们</option>
                 <option value="#portfolio">成功案例</option>
                 <option value="#services">服务项目</option>
@@ -238,14 +238,14 @@
     <h3>${config.get("landing.subSlogan")!}</h3>
 
     <div class="bottom-icon">
-        <a href="#intruduction"><img src="<@url value='/static/css/dreamer/images/homepage-text-bottom-icon.png'/>" alt="${company.name}"></a>
+        <a href="#introduction"><img src="<@url value='/static/css/dreamer/images/homepage-text-bottom-icon.png'/>" alt="${company.name}"></a>
     </div>
 </div>
 
 <div class="content-container">
 
     <div id="homepage"></div>
-
+    <div id="diagram" class="hide"></div>
     <div class="parallax-one">
         <div class="quote1-pattern" id="parallax-one">
             <div class="quote1-shape"></div>
@@ -262,7 +262,7 @@
         </div>
     </div>
     <!-- Our Team Page -->
-    <div class="page-container pattern-2" id="intruduction">
+    <div class="page-container pattern-2" id="introduction">
         <#include "introduction.ftl"/>
     </div>
     <!-- Parallax Two - Content -->
@@ -432,6 +432,7 @@
 </div>
 </div>
 
+
 <div class="footer-container">
     <div class="row">
         <div class="four columns first-column hide-for-small">
@@ -441,11 +442,12 @@
             <a href="#homepage"><img src="<@url value='/static/css/dreamer/images/back-to-top.png'/>" alt="Go Back To Top"></a>
         </div>
         <div class="four columns last-column mobile-four">
-            <p class="footer-right"><a href="#/user/AVAThemes/portfolio" target="_blank">CREATED BY AVATHEMES</a></p>
+            <p class="footer-right"><a href="<@url value='/'/>" target="_blank">${company.name}</a></p>
         </div>
     </div>
 </div>
 </div>
+
 
 <#include "cases.item.ftl"/>
 

@@ -8,7 +8,7 @@
     <#if introduces??>
         <#list introduces as introduce>
             <div class="three columns padding-four-columns team-member mobile-two">
-                <img src="${(introduce.defaultItem.imageUrl)!}" alt="${(introduce.info.head)!}">
+                <img src="${(introduce.defaultItem.imageThumbUrl)!}" alt="${(introduce.info.head)!}">
 
                 <h3 class="our-team-title">${(introduce.info.head)!}</h3>
 
@@ -16,7 +16,7 @@
 
                 <div class="our-team-divider"></div>
                 <p class="our-team-text">${(introduce.info.content)!}</p>
-                
+
             </div>
         </#list>
     </#if>
