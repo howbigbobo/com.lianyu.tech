@@ -83,80 +83,6 @@
                 $('.parallax-five').parallax("50%", 0.5);
                 $('.parallax-six').parallax("50%", 0.5);
             }
-
-            //if submit button is clicked
-            $('#submit').click(function () {
-
-                //Get the data from all the fields
-                var name = $('input[name=name]');
-                var email = $('input[name=email]');
-                var phonenumber = $('input[name=phonenumber]');
-                var website = $('input[name=website]');
-                var projectbudget = $('input[name=projectbudget]');
-                var timeframe = $('input[name=timeframe]');
-                var youreinterestedin = $('input[name=youreinterestedin]');
-                var howdidyouhearaboutus = $('input[name=howdidyouhearaboutus]');
-                var comment = $('textarea[name=comment]');
-
-                //Simple validation to make sure user entered something
-                //If error found, add hightlight class to the text field
-                if (name.val() == '') {
-                    name.addClass('hightlight');
-                    return false;
-                } else name.removeClass('hightlight');
-
-                if (email.val() == '') {
-                    email.addClass('hightlight');
-                    return false;
-                } else email.removeClass('hightlight');
-
-                if (comment.val() == '') {
-                    comment.addClass('hightlight-message');
-                    return false;
-                } else comment.removeClass('hightlight-message');
-
-                //organize the data properly
-                var data = 'name=' + name.val() + '&email=' + email.val() + '&phonenumber=' + phonenumber.val() + '&website=' + website.val() + '&projectbudget=' + projectbudget.val() + '&timeframe=' + timeframe.val() + '&youreinterestedin=' + youreinterestedin.val() + '&howdidyouhearaboutus=' + howdidyouhearaboutus.val() + '&comment=' + encodeURIComponent(comment.val());
-
-                //disabled all the text fields
-                $('.text').attr('disabled', 'true');
-
-                //show the loading sign
-                document.getElementById("submit").disabled = true;
-                document.getElementById("submit").value = 'Please Wait..';
-
-                //start the ajax
-                $.ajax({
-                    //this is the php file that processes the data and send mail
-                    url: "contact-form.php",
-
-                    //GET method is used
-                    type: "GET",
-
-                    //pass the data
-                    data: data,
-
-                    //Do not cache the page
-                    cache: false,
-
-                    //success
-                    success: function (html) {
-                        //if process.php returned 1/true (send mail success)
-                        if (html == 1) {
-                            //hide the form
-                            $('.contact-form-div').fadeOut('slow');
-
-                            //show the success message
-                            $('.done').fadeIn('slow');
-
-                            //if process.php returned 0/false (send mail failed)
-                        } else alert('Sorry, unexpected error. Please try again later.');
-                    }
-                });
-
-                //cancel the submit button default behaviours
-                return false;
-            });
         })
     </script>
 
@@ -363,7 +289,7 @@
                 <h1 class="parallax-title">${config.get("contact.firstHead")!}</h1>
 
                 <div class="parallax-divider">
-                    <img src="<@url value='/static/css/dreamer/images/icons/60px/white/appbar.email.png'/>" alt="Read More About Us">
+                    <img src="<@url value='/static/css/dreamer/images/icons/60px/white/appbar.email.png'/>" alt='${config.get("contact.firstHead")!}'>
                 </div>
                 <h2 class="parallax-subtitle">${config.get("contact.firstSubHead")!}</h2>
             </div>
@@ -374,61 +300,6 @@
     <div class="page-container pattern-1" id="contact">
         <#include "contact.ftl"/>
     </div>
-
-    <div class="twelve columns contact-section">
-        <h1 class="page-title">Social Media Icons & Buttons</h1>
-
-        <h2 class="page-subtitle">We’re fortunate to work with <span>fantastic clients</span><br>from across the globe in over <span>11 countries</span> on design, branding, and <span>development projects.</span>
-        </h2>
-    </div>
-    <div class="twelve columns">
-        <div class="section-divider">
-            <img src="<@url value='/static/css/dreamer/images/social-media.png'/>" alt="Read More About Us">
-        </div>
-    </div>
-    <div class="twelve columns">
-        <div class="social-media-buttons">
-            <a href="#" class="behance-button has-tip tip-top radius" title="Behance"></a>
-            <a href="#" class="blogger-button has-tip tip-top radius" title="Blogger"></a>
-            <a href="#" class="digg-button has-tip tip-top radius" title="Digg"></a>
-            <a href="#" class="dribbble-button has-tip tip-top radius" title="Dribbble"></a>
-            <a href="#" class="email-button has-tip tip-top radius" title="Email"></a>
-            <a href="#" class="facebook-button has-tip tip-top radius" title="Facebook"></a>
-            <a href="#" class="flickr-button has-tip tip-top radius" title="Flickr"></a>
-            <a href="#" class="gplus-button has-tip tip-top radius" title="Google Plus"></a>
-            <a href="#" class="instagram-button has-tip tip-top radius" title="Instagram"></a>
-            <a href="#" class="lastfm-button has-tip tip-top radius" title="Last.fm"></a>
-            <a href="#" class="linkedin-button has-tip tip-top radius" title="Linkedin"></a>
-            <a href="#" class="livejournal-button has-tip tip-top radius" title="LiveJournal"></a>
-            <a href="#" class="myspace-button has-tip tip-top radius" title="MySpace"></a>
-            <a href="#" class="paypal-button has-tip tip-top radius" title="Paypal"></a>
-            <a href="#" class="pinterest-button has-tip tip-top radius" title="Pinterest"></a>
-            <a href="#" class="reddit-button has-tip tip-top radius" title="Reddit"></a>
-            <a href="#" class="soundcloud-button has-tip tip-top radius" title="Sound Cloud"></a>
-            <a href="#" class="spotify-button has-tip tip-top radius" title="Spotify"></a>
-            <a href="#" class="stumbleupon-button has-tip tip-top radius" title="StumbleUpon"></a>
-            <a href="#" class="tumblr-button has-tip tip-top radius" title="Tumblr"></a>
-            <a href="#" class="twitter-button has-tip tip-top radius" title="Twitter"></a>
-            <a href="#" class="vimeo-button has-tip tip-top radius" title="Vimeo"></a>
-            <a href="#" class="wordpress-button has-tip tip-top radius" title="WordPress"></a>
-            <a href="#" class="youtube-button has-tip tip-top radius" title="Youtube"></a>
-        </div>
-    </div>
-
-    <div class="twelve columns sharing-section">
-        <h3 class="sharing-buttons">Sharing Buttons</h3>
-    </div>
-
-    <div class="twelve columns sharing-icons">
-        <div class="facebook-share-button">
-            <div class="facebook-share-button-over">Like It Now</div>
-        </div>
-        <div class="twitter-tweet-button">
-            <div class="twitter-tweet-button-over">Tweet It</div>
-
-        </div>
-    </div>
-
 </div>
 </div>
 

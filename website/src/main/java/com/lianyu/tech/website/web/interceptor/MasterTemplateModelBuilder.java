@@ -29,7 +29,7 @@ public class MasterTemplateModelBuilder implements ModelBuilder {
     public void build(Map<String, Object> model) {
         model.put("company", companyBuilder.get());
         model.put("address", addressBuilder.find());
-        model.put("contact", contactBuilder.getContact());
+        model.put("contacts", contactBuilder.getContact());
         model.put("config", systemConfigBuilder.get());
         model.putAll(siteContext.getModel());
     }
