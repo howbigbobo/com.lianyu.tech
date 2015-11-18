@@ -11,10 +11,7 @@
 
     <div class="twelve columns contact">
         <div id="contact-slider1">
-
-            <!-- Contact Details -->
-            <div class="contact-details" data-thumb=<@url value='/static/css/dreamer/images/contact-details.png'/>
-            ">
+            
             <#if address?? &&address.defaultAddress??>
                 <div class="six columns first-column mobile-two contact-margin">
                     <h3 class="contact-title">公司地址</h3>
@@ -50,8 +47,5 @@
 
         </div>
 
-        <!-- Contact Form -->
-        <div class="contact-form" data-thumb=<@url value='/static/css/dreamer/images/contact-form.png'/>
-        ">
     </div>
 </div>

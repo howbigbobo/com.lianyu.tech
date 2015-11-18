@@ -300,23 +300,21 @@
     <div class="page-container pattern-1" id="contact">
         <#include "contact.ftl"/>
     </div>
-</div>
-</div>
 
 
-<div class="footer-container">
-    <div class="row">
-        <div class="four columns first-column hide-for-small">
-            <p class="footer-left">版权所有&copy; ${.now?string("yyyy")} </p>
-        </div>
-        <div class="four columns middle-column back-to-top hide-for-small">
-            <a href="#homepage"><img src="<@url value='/static/css/dreamer/images/back-to-top.png'/>" alt="Go Back To Top"></a>
-        </div>
-        <div class="four columns last-column mobile-four">
-            <p class="footer-right"><a href="<@url value='/'/>" target="_blank">${company.name}</a></p>
+    <div class="footer-container">
+        <div class="row">
+            <div class="four columns first-column hide-for-small">
+                <p class="footer-left">版权所有&copy; ${.now?string("yyyy")} </p>
+            </div>
+            <div class="four columns middle-column back-to-top hide-for-small">
+                <a href="#homepage"><img src="<@url value='/static/css/dreamer/images/back-to-top.png'/>" alt="Go Back To Top"></a>
+            </div>
+            <div class="four columns last-column mobile-four">
+                <p class="footer-right"><a href="<@url value='/'/>" target="_blank">${company.name}</a></p>
+            </div>
         </div>
     </div>
-</div>
 </div>
 
 
@@ -526,6 +524,7 @@
 
 <!-- Initialize Orbit -->
 <@js src="dreamer/jquery.foundation.orbit.js"/>
+<@js src="dreamer/jssor.slider.mini.js"/>
 <script type='text/javascript'>
     $(window).load(function () {
         var windowsize = $(window).width();
@@ -587,6 +586,6 @@
 <script>
     $(".single-project-image-video").fitVids();
 </script>
-
+<#include "slider.ftl"/>
 </body>
 </html>
