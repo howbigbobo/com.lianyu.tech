@@ -108,6 +108,22 @@ CREATE TABLE IF NOT EXISTS system_config
   update_user  	VARCHAR(50) 	NULL COMMENT '修改者名称',
   update_time  	DATETIME    	NOT NULL DEFAULT now(),
   PRIMARY KEY (id),
-  UNIQUE `ix_system_config_group_key` (`group_name`,`key_name`)
+  UNIQUE `ux_system_config_group_key` (`group_name`,`key_name`)
 )
 COMMENT '系统配置表'  ENGINE = INNODB  DEFAULT CHARSET = utf8;
+
+CREATE TABLE IF NOT EXISTS account 
+(
+  id        	INTEGER      	NOT NULL AUTO_INCREMENT,
+  name			VARCHAR(50)		NOT NULL COMMENT '用户名',
+  pwd		    VARCHAR(512) 	NOT	NULL COMMENT '密码',
+  create_user  	VARCHAR(50) 	NULL COMMENT '创建者名称',
+  create_time  	DATETIME    	NOT NULL DEFAULT now()  COMMENT '创建时间',
+  update_user  	VARCHAR(50) 	NULL COMMENT '修改者名称',
+  update_time  	DATETIME    	NOT NULL DEFAULT now(),
+  last_login  	DATETIME    	NOT NULL DEFAULT now(),
+  status		TINYINT			NOT NULL DEFAULT 0 COMMENT '状态：0:未启用,1:启用,2:锁定',
+  PRIMARY KEY (id),
+  UNIQUE `ux_account_name` (`name`)
+)
+COMMENT '账号表'  ENGINE = INNODB  DEFAULT CHARSET = utf8;

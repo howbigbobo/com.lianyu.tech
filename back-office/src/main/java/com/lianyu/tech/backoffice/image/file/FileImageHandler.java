@@ -2,6 +2,7 @@ package com.lianyu.tech.backoffice.image.file;
 
 import com.lianyu.tech.backoffice.image.ImageEntity;
 import com.lianyu.tech.backoffice.image.ImageHandler;
+import com.lianyu.tech.common.utils.ImageIOUtil;
 import com.lianyu.tech.core.util.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

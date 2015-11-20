@@ -1,7 +1,7 @@
 package com.lianyu.tech.backoffice.image;
 
 
-import com.lianyu.tech.backoffice.image.file.ImageIOUtil;
+import com.lianyu.tech.common.utils.ImageIOUtil;
 import com.lianyu.tech.backoffice.image.file.ImagePathUtil;
 import com.lianyu.tech.core.platform.exception.ResourceNotFoundException;
 import org.slf4j.Logger;

@@ -1,6 +1,7 @@
 package com.lianyu.tech.backoffice.web;
 
 
+import com.lianyu.tech.core.collection.Key;
 import com.lianyu.tech.core.json.JSONBinder;
 import com.lianyu.tech.core.platform.web.request.RequestContext;
 import com.lianyu.tech.core.platform.web.site.cookie.CookieContext;
@@ -81,6 +82,18 @@ public class SiteContext {
         if (adminInfo != null)
             map.put("accountName", adminInfo.getName());
         return map;
+    }
+
+    public <T> void addSession(Key<T> key, T value) {
+        sessionContext.set(key, value);
+    }
+
+    public <T> T getSession(Key<T> key) {
+        return sessionContext.get(key);
+    }
+
+    public <T> void removeSession(Key<T> key) {
+        sessionContext.set(key, null);
     }
 }
 

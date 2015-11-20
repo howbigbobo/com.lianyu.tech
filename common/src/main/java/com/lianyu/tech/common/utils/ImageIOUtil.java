@@ -1,4 +1,4 @@
-package com.lianyu.tech.backoffice.image.file;
+package com.lianyu.tech.common.utils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.nio.file.Files;
 
@@ -44,5 +45,20 @@ public final class ImageIOUtil {
         } catch (Exception e) {
             LOGGER.error("readImageBytes error", e);
         }
+    }
+
+    public static byte[] getBytes(BufferedImage bufferedImage) {
+        if (bufferedImage == null) return new byte[0];
+        try {
+            ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+            ImageIO.write(bufferedImage, "jpg", outputStream);
+            outputStream.flush();
+            byte[] imageBytes = outputStream.toByteArray();
+            outputStream.close();
+            return imageBytes;
+        } catch (Exception e) {
+            LOGGER.error("readImageBytes error", e);
+        }
+        return new byte[0];
     }
 }
