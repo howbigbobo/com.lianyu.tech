@@ -1,15 +1,15 @@
 package com.lianyu.tech.backoffice.web;
 
-public class AdminInfo {
-    Integer adminId;
+public class AccountInfo {
+    int id;
     String name;
 
-    public Integer getAdminId() {
-        return adminId;
+    public int getId() {
+        return id;
     }
 
-    public void setAdminId(Integer adminId) {
-        this.adminId = adminId;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {

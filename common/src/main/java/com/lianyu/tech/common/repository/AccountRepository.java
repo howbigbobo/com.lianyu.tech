@@ -13,7 +13,7 @@ import java.util.Map;
 @Repository
 public class AccountRepository extends CommonRepository {
 
-    public Account findByName(String name) {
+    public Account getByName(String name) {
         if (!StringUtils.hasText(name)) return null;
         Map<String, Object> param = new HashMap<>(1, 1);
         param.put("name", name);

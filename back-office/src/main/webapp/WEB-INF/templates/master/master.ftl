@@ -1,44 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- start: Meta -->
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta charset="utf-8">
-    <title>Bootstrap Metro Dashboard by Dennis Ji for ARM demo</title>
-    <meta name="description" content="Bootstrap Metro Dashboard">
-    <meta name="author" content="lianyuchuanmei">
-    <meta name="keyword"
-          content="">
-    <!-- end: Meta -->
-
-    <!-- start: Mobile Specific -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- end: Mobile Specific -->
-
-    <!-- start: CSS -->
-    <@css id="bootstrap-style" href="bootstrap.min.css" rel="stylesheet" type="text/css"/>
-    <@css href="bootstrap-responsive.min.css" rel="stylesheet"type="text/css"/>
-    <@css id="base-style" href="style.css" rel="stylesheet" type="text/css"/>
-    <@css id="base-style-responsive" href="style-responsive.css" rel="stylesheet"type="text/css"/>
-    <!-- end: CSS -->
-
-
-    <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-    <@js src="plugin/html5shiv.min.js"/>
-    <@css id="ie-style" href="ie.css" rel="stylesheet" type="text/css"/>
-    <![endif]-->
-
-    <!--[if IE 9]>
-    <@css id="ie9style" href="ie9.css" rel="stylesheet"/>
-    <![endif]-->
-
-    <!-- start: Favicon -->
-    <link rel="shortcut icon" href="<@url value='/static/img/favicon.ico'/>">
-    <!-- end: Favicon -->
-    <script type="text/javascript">
-        globalRootUrl = "<@url value='/' />";
-    </script>
+    <#include "head.ftl"/>
 </head>
 
 <body>
@@ -60,15 +23,11 @@
                     <!-- start: User Dropdown -->
                     <li class="dropdown">
                         <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-                            <i class="halflings-icon white user"></i> Dennis Ji
+                            <i class="halflings-icon white user"></i> ${(account.name)!}
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li class="dropdown-menu-title">
-                                <span>Account Settings</span>
-                            </li>
-                            <li><a href="#"><i class="halflings-icon user"></i> Profile</a></li>
-                            <li><a href="login.html"><i class="halflings-icon off"></i> Logout</a></li>
+                            <li><a href="<@url value='/logout'/>"><i class="halflings-icon off"></i> 退出</a></li>
                         </ul>
                     </li>
                     <!-- end: User Dropdown -->
@@ -136,69 +95,6 @@
 
 </footer>
 
-<!-- start: JavaScript-->
-
-<@js src="plugin/jquery-1.9.1.min.js"/>
-<@js src="plugin/jquery-migrate-1.0.0.min.js"/>
-
-<@js src="plugin/jquery-ui-1.10.0.custom.min.js"/>
-
-<@js src="plugin/jquery.ui.touch-punch.js"/>
-
-<@js src="plugin/modernizr.js"/>
-
-<@js src="plugin/bootstrap.min.js"/>
-
-<@js src="plugin/jquery.cookie.js"/>
-
-<@js src="plugin/fullcalendar.min.js"/>
-
-<@js src="plugin/jquery.dataTables.min.js"/>
-
-<@js src="plugin/excanvas.js"/>
-<@js src="plugin/jquery.flot.js"/>
-<@js src="plugin/jquery.flot.pie.js"/>
-<@js src="plugin/jquery.flot.stack.js"/>
-<@js src="plugin/jquery.flot.resize.min.js"/>
-
-<@js src="plugin/jquery.chosen.min.js"/>
-
-<@js src="plugin/jquery.uniform.min.js"/>
-
-<@js src="plugin/jquery.cleditor.min.js"/>
-
-<@js src="plugin/jquery.noty.js"/>
-
-<@js src="plugin/jquery.elfinder.min.js"/>
-
-<@js src="plugin/jquery.raty.min.js"/>
-
-<@js src="plugin/jquery.iphone.toggle.js"/>
-
-<@js src="plugin/jquery.uploadify-3.1.min.js"/>
-
-<@js src="plugin/jquery.gritter.min.js"/>
-
-<@js src="plugin/jquery.imagesloaded.js"/>
-
-<@js src="plugin/jquery.masonry.min.js"/>
-
-<@js src="plugin/jquery.knob.modified.js"/>
-
-<@js src="plugin/jquery.sparkline.min.js"/>
-
-<@js src="plugin/counter.js"/>
-
-<@js src="plugin/retina.js"/>
-
-<@js src="plugin/custom.js"/>
-<!-- end: JavaScript-->
-<@js src="plugin/template.js"/>
-<@js src="plugin/template-helper.js"/>
-<@js src="plugin/jquery.myPagination6.0.js"/>
-
-<@js src="jquery.formdata.js"/>
-<@js src="jquery.dialog.js"/>
-<@js src="ajax.common.js"/>
+<#include "js.ftl"/>
 </body>
 </html>

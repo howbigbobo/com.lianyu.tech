@@ -1,7 +1,5 @@
 package com.lianyu.tech.backoffice.web.controller.verify;
 
-import com.lianyu.tech.backoffice.web.SessionConstants;
-import com.lianyu.tech.backoffice.web.SiteContext;
 import com.lianyu.tech.common.utils.ImageIOUtil;
 import com.lianyu.tech.common.utils.MathVerifyCodeUtils;
 import com.lianyu.tech.common.utils.VerifyCode;
@@ -25,7 +23,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class VerifyCodeRestController extends RESTController {
 
     @Inject
-    SiteContext siteContext;
+    private VerifyCodeValidator verifyCodeValidator;
 
     @ResponseBody
     @RequestMapping(value = "/verify/code", method = RequestMethod.GET, produces = {MediaType.IMAGE_JPEG_VALUE, MediaType.IMAGE_PNG_VALUE, MediaType.IMAGE_GIF_VALUE})
@@ -38,7 +36,7 @@ public class VerifyCodeRestController extends RESTController {
         } else {
             verifyCode = MathVerifyCodeUtils.generate();
         }
-        siteContext.addSession(SessionConstants.VERIFY_CODE_IMG, verifyCode.getResult());
+        verifyCodeValidator.setVerifyCode(verifyCode.getResult());
         return ImageIOUtil.getBytes(verifyCode.getImage());
     }
 }
