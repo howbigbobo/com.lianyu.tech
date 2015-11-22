@@ -1,10 +1,11 @@
 package com.lianyu.tech.backoffice.web.controller;
 
+import com.lianyu.tech.backoffice.web.SiteContext;
+import com.lianyu.tech.backoffice.web.interceptor.LoginRequired;
+import com.lianyu.tech.backoffice.web.interceptor.MasterLayout;
 import com.lianyu.tech.core.platform.web.site.SiteController;
 import com.lianyu.tech.core.platform.web.site.cookie.RequireCookie;
 import com.lianyu.tech.core.platform.web.site.session.RequireSession;
-import com.lianyu.tech.backoffice.web.SiteContext;
-import com.lianyu.tech.backoffice.web.interceptor.MasterLayout;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -18,7 +19,7 @@ import java.util.Map;
 @Controller
 @RequireCookie
 @RequireSession
-//@LoginRequired
+@LoginRequired
 @MasterLayout
 public class BackOfficeSiteController extends SiteController {
     @Inject

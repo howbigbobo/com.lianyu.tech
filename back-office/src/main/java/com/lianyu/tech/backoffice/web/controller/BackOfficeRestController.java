@@ -1,6 +1,7 @@
 package com.lianyu.tech.backoffice.web.controller;
 
 import com.lianyu.tech.backoffice.web.SiteContext;
+import com.lianyu.tech.backoffice.web.interceptor.LoginRequired;
 import com.lianyu.tech.backoffice.web.interceptor.MasterLayout;
 import com.lianyu.tech.core.platform.web.rest.RESTController;
 import com.lianyu.tech.core.platform.web.rest.exception.ErrorResponse;
@@ -19,7 +20,7 @@ import javax.inject.Inject;
 @RestController
 @RequireCookie
 @RequireSession
-//@LoginRequired
+@LoginRequired
 @MasterLayout
 public class BackOfficeRestController extends RESTController {
     @Inject

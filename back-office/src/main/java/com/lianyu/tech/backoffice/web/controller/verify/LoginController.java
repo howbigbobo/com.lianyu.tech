@@ -1,5 +1,6 @@
 package com.lianyu.tech.backoffice.web.controller.verify;
 
+import com.lianyu.tech.backoffice.web.SessionConstants;
 import com.lianyu.tech.backoffice.web.SiteContext;
 import com.lianyu.tech.common.service.AccountService;
 import com.lianyu.tech.core.platform.web.site.SiteController;
@@ -22,12 +23,22 @@ public class LoginController extends SiteController {
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login() {
+        siteContext.addSession(SessionConstants.VERIFY_CODE_IMG, "");
         return "login";
     }
 
-    @RequestMapping(value = "/loginOut", method = RequestMethod.GET)
+    @RequestMapping(value = "/logout", method = RequestMethod.GET)
     public String loginOut() {
         siteContext.logout();
-        return "login";
+        return "redirect:/login";
     }
+
+//    @RequestMapping(value = "/addUser", method = RequestMethod.GET)
+//    public String addUser(@RequestParam("name") String name, @RequestParam("name") String pwd) {
+//        Account account = new Account();
+//        account.setName(name);
+//        account.setPwd(pwd);
+//        accountService.add(account);
+//        return "login";
+//    }
 }

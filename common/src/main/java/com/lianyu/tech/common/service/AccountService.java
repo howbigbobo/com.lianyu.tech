@@ -2,6 +2,7 @@ package com.lianyu.tech.common.service;
 
 import com.lianyu.tech.common.domain.Account;
 import com.lianyu.tech.common.repository.AccountRepository;
+import com.lianyu.tech.common.utils.ByteUtils;
 import com.lianyu.tech.core.crypto.HMAC;
 import com.lianyu.tech.core.platform.exception.InvalidRequestException;
 import com.lianyu.tech.core.platform.exception.UserAuthorizationException;
@@ -10,7 +11,6 @@ import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
 import javax.transaction.Transactional;
-import java.nio.charset.Charset;
 import java.util.Date;
 
 /**
@@ -26,9 +26,10 @@ public class AccountService {
     public String encrypt(String pwd) {
         if (!StringUtils.hasText(pwd)) return "";
         HMAC hmac = new HMAC();
-        hmac.setHash(HMAC.Hash.SHA256);
-        byte[] encryptedBytes = hmac.digest(pwd + PASSWORD_SALT);
-        return new String(encryptedBytes, Charset.forName("UTF-8"));
+        hmac.setHash(HMAC.Hash.SHA512);
+        hmac.setSecretKey(PASSWORD_SALT.getBytes());
+        byte[] encryptedBytes = hmac.digest(pwd);
+        return ByteUtils.bytesToHex(encryptedBytes);
     }
 
     @Transactional
@@ -60,10 +61,11 @@ public class AccountService {
     }
 
     @Transactional
-    public void login(String name, String pwd) {
+    public Account login(String name, String pwd) {
         Account existAccount = getValidAccount(name, pwd);
         existAccount.setLastLogin(new Date());
         accountRepository.update(existAccount);
+        return existAccount;
     }
 
     private Account getValidAccount(String name, String pwd) {
@@ -75,7 +77,7 @@ public class AccountService {
             throw new UserAuthorizationException("用户名不存在.");
         }
         String encryptPwd = encrypt(pwd);
-        if (!encryptPwd.equals(pwd)) {
+        if (!encryptPwd.equals(encryptPwd)) {
             throw new UserAuthorizationException("密码不正确.");
         }
         if (!Account.Status.active.equals(existAccount.getStatus())) {

@@ -1,8 +1,8 @@
 package com.lianyu.tech.backoffice.web.interceptor;
 
+import com.lianyu.tech.backoffice.web.SiteContext;
 import com.lianyu.tech.core.platform.web.ControllerHelper;
 import com.lianyu.tech.core.util.StringUtils;
-import com.lianyu.tech.backoffice.web.SiteContext;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
@@ -10,7 +10,6 @@ import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-
 
 public class LoginInterceptor extends HandlerInterceptorAdapter {
     @Inject

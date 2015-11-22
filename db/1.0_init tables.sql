@@ -121,9 +121,9 @@ CREATE TABLE IF NOT EXISTS account
   create_time  	DATETIME    	NOT NULL DEFAULT now()  COMMENT '创建时间',
   update_user  	VARCHAR(50) 	NULL COMMENT '修改者名称',
   update_time  	DATETIME    	NOT NULL DEFAULT now(),
-  last_login  	DATETIME    	NOT NULL DEFAULT now(),
+  last_login  	DATETIME    	NULL DEFAULT now(),
   status		TINYINT			NOT NULL DEFAULT 0 COMMENT '状态：0:未启用,1:启用,2:锁定',
   PRIMARY KEY (id),
-  UNIQUE `ux_account_name` (`name`)
+  INDEX `ix_account_name` (`name`)
 )
 COMMENT '账号表'  ENGINE = INNODB  DEFAULT CHARSET = utf8;

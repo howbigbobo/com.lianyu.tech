@@ -21,7 +21,7 @@
 
                 <h2>登录</h2>
 
-                <div class="form-horizontal">
+                <div class="form-horizontal" id="login-form">
                     <fieldset>
                         <div class="input-prepend" title="Username">
                             <span class="add-on"><i class="halflings-icon user"></i></span>
@@ -33,20 +33,20 @@
                             <span class="add-on"><i class="halflings-icon lock"></i></span>
                             <input class="input-large span10" name="pwd" id="password" type="password" placeholder="密码"/>
                         </div>
-
-                        <div class="clearfix"></div>
-                        <div class="input-prepend" title="verify-code">
-                            <span class="add-on"><i class="halflings-icon lock"></i></span>
-                            <input class="input-large span10" name="verifyCode" id="verifyCode" type="password" placeholder="验证码"/>
-                        </div>
                         <div class="clearfix"></div>
                         <div class="input-prepend" title="verify-code-image">
-                            <img src="<@url value='/verify/code'/>?r=${.now?long}" alt="验证码"/>
+                            <img src="<@url value='/verify/code'/>?r=${.now?long}" onclick="updateCode(this);" alt="验证码"/>
                         </div>
+                        <div class="clearfix"></div>
+                        <div class="input-prepend" title="verify-code">
+                            <span class="add-on"><i class="halflings-icon"></i></span>
+                            <input class="input-large span10" name="verifyCode" id="verifyCode" type="password" placeholder="验证码"/>
+                        </div>
+
                         <div class="clearfix"></div>
 
                         <div class="button-login">
-                            <button type="submit" class="btn btn-primary">登录</button>
+                            <button type="submit" class="btn btn-primary" onclick="login();">登录</button>
                         </div>
                         <div class="clearfix"></div>
                 </div>

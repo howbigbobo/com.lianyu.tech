@@ -23,8 +23,8 @@ public class SiteContext {
     protected RequestContext requestContext;
 
     public boolean isLogin() {
-        AccountInfo accountInfo = getAdminInfo();
-        return accountInfo != null && StringUtils.hasText(accountInfo.getName());
+        Boolean isLogin = sessionContext.get(SessionConstants.ACCOUNT_IS_LOGIN);
+        return isLogin != null && isLogin;
     }
 
     public AccountInfo getAdminInfo() {
@@ -37,11 +37,12 @@ public class SiteContext {
 
     public void login(AccountInfo accountInfo) {
         String adminInfoValue = JSONBinder.binder(AccountInfo.class).toJSON(accountInfo);
+        sessionContext.set(SessionConstants.ACCOUNT_IS_LOGIN, true);
         sessionContext.set(SessionConstants.ACCOUNT_LOGIN, adminInfoValue);
     }
 
     public void logout() {
-        sessionContext.set(SessionConstants.ACCOUNT_LOGIN, "");
+        sessionContext.invalidate();
     }
 
     public Map<String, Object> getModel() {
