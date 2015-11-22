@@ -124,6 +124,6 @@ CREATE TABLE IF NOT EXISTS account
   last_login  	DATETIME    	NULL DEFAULT now(),
   status		TINYINT			NOT NULL DEFAULT 0 COMMENT '状态：0:未启用,1:启用,2:锁定',
   PRIMARY KEY (id),
-  INDEX `ix_account_name` (`name`)
+  UNIQUE `ux_account_name` (`name`)
 )
 COMMENT '账号表'  ENGINE = INNODB  DEFAULT CHARSET = utf8;
