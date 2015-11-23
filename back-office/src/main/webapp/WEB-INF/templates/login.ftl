@@ -40,7 +40,7 @@
                         <div class="clearfix"></div>
                         <div class="input-prepend" title="verify-code">
                             <span class="add-on"><i class="halflings-icon"></i></span>
-                            <input class="input-large span10" name="verifyCode" id="verifyCode" type="password" placeholder="验证码"/>
+                            <input class="input-large span10" name="verifyCode" id="verifyCode" type="text" placeholder="验证码"/>
                         </div>
 
                         <div class="clearfix"></div>

@@ -19,6 +19,7 @@ import org.springframework.util.CollectionUtils;
 
 import javax.inject.Inject;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
@@ -36,6 +37,12 @@ public class DescriptionBuilder {
     private ImageRepository imageRepository;
     @Inject
     private ImageConverter imageConverter;
+
+    public DescriptionVo get(int id) {
+        Description description = descriptionRepository.get(Description.class, id);
+        List<DescriptionVo> vos = getDescriptionVos(Arrays.asList(description), 0, 0);
+        return CollectionUtils.isEmpty(vos) ? new DescriptionVo() : vos.get(0);
+    }
 
     public List<DescriptionVo> findByType(DescriptionType descriptionType, int width, int height) {
         List<Description> descriptions = descriptionRepository.findByType(descriptionType);
