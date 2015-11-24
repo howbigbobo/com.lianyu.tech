@@ -1,10 +1,17 @@
 <div id="jssor_1" style="z-index:100;position: fixed; margin: 0 auto; top: 80px; left: 50px; width: 1200px; height: 800px; overflow: hidden; visibility: hidden;">
     <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1200px; height: 800px; overflow: hidden;">
-        <#list descriptionItems as item>
+        <div data-p="225.00" style="display: none;">
+            <img data-u="image" src="${descriptionVo.defaultItem.imageUrl!}" alt="${descriptionVo.defaultItem.content!}"/>
+
+            <div style="position: absolute; bottom: 120px; left: 80px; width: 600px; height: 120px; font-size: 16px; color: #ffffff; line-height: 16px;">
+                ${descriptionVo.info.head!}
+            </div>
+        </div>
+        <#list descriptionVo.items as item>
             <div data-p="225.00" style="display: none;">
                 <img data-u="image" src="${item.imageUrl!}" alt="${item.content!}"/>
 
-                <div style="position: absolute; top: 500px; left: 80px; width: 480px; height: 120px; font-size: 20px; color: #ffffff; line-height: 38px;">
+                <div style="position: absolute; bottom: 60px; right: 80px; width: 60%; height: 120px; font-size: 16px; color: #ffffff; line-height: 16px;">
                     ${item.content!}
                 </div>
             </div>

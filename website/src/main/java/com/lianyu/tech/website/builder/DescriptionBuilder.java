@@ -13,6 +13,7 @@ import com.lianyu.tech.common.vo.DescriptionItemView;
 import com.lianyu.tech.common.vo.converter.DescriptionConverter;
 import com.lianyu.tech.common.vo.converter.DescriptionItemConverter;
 import com.lianyu.tech.common.vo.converter.ImageConverter;
+import com.lianyu.tech.core.platform.exception.ResourceNotFoundException;
 import com.lianyu.tech.website.vo.DescriptionVo;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
@@ -40,7 +41,10 @@ public class DescriptionBuilder {
 
     public DescriptionVo get(int id) {
         Description description = descriptionRepository.get(Description.class, id);
-        List<DescriptionVo> vos = getDescriptionVos(Arrays.asList(description), 0, 0);
+        if (description == null) {
+            throw new ResourceNotFoundException("description not exist. id=" + id);
+        }
+        List<DescriptionVo> vos = getDescriptionVos(Arrays.asList(description), 100, 0);
         return CollectionUtils.isEmpty(vos) ? new DescriptionVo() : vos.get(0);
     }
 

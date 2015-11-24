@@ -67,7 +67,9 @@ function removeSlider() {
 }
 
 function openSlider() {
+    removeSlider();
     SliderElement = initSlider();
+    $('.mfp-container').show();
 }
 
 $(function () {
@@ -80,8 +82,8 @@ $(function () {
 
 function openDescription(id) {
     $.ajax({
-        url: "",
-        type: "get",
+        url: globalRootUrl + "description/" + id + "?r=" + Math.random(),
+        type: "post",
         success: function (html) {
             $('#mpf-slider').html(html);
             openSlider();

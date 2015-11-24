@@ -36,6 +36,10 @@
         }
     })(document, window.navigator, "standalone")</script>
 
+    <script>
+        var globalRootUrl = "<@url value='/'/>";
+    </script>
+
     <!-- Included CSS Files -->
     <@css href="dreamer/style.css"/>
     <@css href="dreamer/css/portfolio.css"/>
