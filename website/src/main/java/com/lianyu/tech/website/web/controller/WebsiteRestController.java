@@ -6,6 +6,7 @@ import com.lianyu.tech.core.platform.web.rest.exception.ErrorResponseBuilder;
 import com.lianyu.tech.core.platform.web.site.cookie.RequireCookie;
 import com.lianyu.tech.core.platform.web.site.session.RequireSession;
 import com.lianyu.tech.website.web.SiteContext;
+import com.lianyu.tech.website.web.interceptor.LoginRequired;
 import com.lianyu.tech.website.web.interceptor.MasterLayout;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -19,6 +20,7 @@ import javax.inject.Inject;
 @RestController
 @RequireCookie
 @RequireSession
+@LoginRequired
 @MasterLayout
 public class WebsiteRestController extends RESTController {
     @Inject

@@ -20,7 +20,7 @@ function initSlider() {
     ];
 
     var jssor_1_options = {
-        $AutoPlay: true,
+        $AutoPlay: false,
         $SlideDuration: 1200,
         $SlideEasing: $Jease$.$OutQuint,
         $CaptionSliderOptions: {
@@ -40,7 +40,7 @@ function initSlider() {
     //responsive code begin
     //you can remove responsive code if you don't want the slider scales while window resizes
     function ScaleSlider() {
-        var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth * 0.85;
+        var refSize = $(window).width() * 0.85;
         if (refSize) {
             refSize = Math.min(refSize, 1920);
             jssor_1_slider.$ScaleWidth(refSize);

@@ -1,10 +1,12 @@
 package com.lianyu.tech.website.web;
 
 
+import com.lianyu.tech.core.collection.Key;
+import com.lianyu.tech.core.json.JSONBinder;
 import com.lianyu.tech.core.platform.web.request.RequestContext;
-import com.lianyu.tech.core.platform.web.site.cookie.CookieContext;
 import com.lianyu.tech.core.platform.web.site.session.SecureSessionContext;
 import com.lianyu.tech.core.platform.web.site.session.SessionContext;
+import com.lianyu.tech.core.util.StringUtils;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
@@ -19,46 +21,47 @@ public class SiteContext {
     protected SecureSessionContext secureSessionContext;
     @Inject
     protected RequestContext requestContext;
-    @Inject
-    private CookieContext cookieContext;
+
+    public boolean isLogin() {
+        Boolean isLogin = sessionContext.get(SessionConstants.ACCOUNT_IS_LOGIN);
+        return isLogin != null && isLogin;
+    }
+
+    public AccountInfo getAdminInfo() {
+        String adminInfoValue = sessionContext.get(SessionConstants.ACCOUNT_LOGIN);
+        if (!StringUtils.hasText(adminInfoValue)) {
+            return null;
+        }
+        return JSONBinder.binder(AccountInfo.class).fromJSON(adminInfoValue);
+    }
+
+    public void login(AccountInfo accountInfo) {
+        String adminInfoValue = JSONBinder.binder(AccountInfo.class).toJSON(accountInfo);
+        sessionContext.set(SessionConstants.ACCOUNT_IS_LOGIN, true);
+        sessionContext.set(SessionConstants.ACCOUNT_LOGIN, adminInfoValue);
+    }
 
     public void logout() {
-        sessionContext.set(SessionConstants.ADMIN_INFO, "");
-    }
-
-    public void setLoginCookie(String name, String pwd) {
-        cookieContext.setCookie(CookieConstants.ADMIN_NAME, name);
-        cookieContext.setCookie(CookieConstants.ADMIN_PWD, pwd);
-    }
-
-    public void deleteLoginCookie() {
-        cookieContext.deleteCookie(CookieConstants.ADMIN_NAME);
-        cookieContext.deleteCookie(CookieConstants.ADMIN_PWD);
-    }
-
-    public void setErrInfo(String type, String msg) {
-        sessionContext.set(SessionConstants.ERR_REFER, type);
-        sessionContext.set(SessionConstants.ERR_MSG, msg);
-    }
-
-
-    public String getErrRefer() {
-        return sessionContext.get(SessionConstants.ERR_REFER);
-    }
-
-    public String getErrMsg() {
-        return sessionContext.get(SessionConstants.ERR_MSG);
-    }
-
-    public void deleteErrInfo() {
-        sessionContext.set(SessionConstants.ERR_REFER, null);
-        sessionContext.set(SessionConstants.ERR_MSG, null);
+        sessionContext.invalidate();
     }
 
     public Map<String, Object> getModel() {
         Map<String, Object> map = new HashMap<>();
-        map.put("keep", "");
+        AccountInfo accountInfo = getAdminInfo();
+        if (accountInfo != null)
+            map.put("account", accountInfo);
         return map;
     }
-}
 
+    public <T> void addSession(Key<T> key, T value) {
+        sessionContext.set(key, value);
+    }
+
+    public <T> T getSession(Key<T> key) {
+        return sessionContext.get(key);
+    }
+
+    public <T> void removeSession(Key<T> key) {
+        sessionContext.set(key, null);
+    }
+}

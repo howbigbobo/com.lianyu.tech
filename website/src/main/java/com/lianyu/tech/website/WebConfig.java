@@ -1,7 +1,5 @@
 package com.lianyu.tech.website;
 
-import com.lianyu.tech.website.web.interceptor.MasterLayout;
-import com.lianyu.tech.website.web.interceptor.MasterTemplateModelBuilder;
 import com.lianyu.tech.common.DefaultDBConfig;
 import com.lianyu.tech.core.platform.DefaultSiteConfig;
 import com.lianyu.tech.core.platform.PlatformScopeResolver;
@@ -14,6 +12,9 @@ import com.lianyu.tech.core.platform.web.site.session.SessionProviderType;
 import com.lianyu.tech.core.platform.web.site.view.DefaultFreemarkerView;
 import com.lianyu.tech.core.platform.web.site.view.DefaultFreemarkerViewResolver;
 import com.lianyu.tech.core.util.TimeLength;
+import com.lianyu.tech.website.web.interceptor.LoginInterceptor;
+import com.lianyu.tech.website.web.interceptor.MasterLayout;
+import com.lianyu.tech.website.web.interceptor.MasterTemplateModelBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -106,6 +107,7 @@ public class WebConfig extends DefaultSiteConfig {
         registry.addInterceptor(httpSchemeEnforceInterceptor());
         registry.addInterceptor(cookieInterceptor());
         registry.addInterceptor(sessionInterceptor());
+        registry.addInterceptor(loginInterceptor());
         registry.addInterceptor(modelBuilderInterceptor());
     }
 
@@ -136,5 +138,10 @@ public class WebConfig extends DefaultSiteConfig {
         ModelBuilderInterceptor interceptor = new ModelBuilderInterceptor();
         interceptor.registerModelBuilder(MasterLayout.class, MasterTemplateModelBuilder.class);
         return interceptor;
+    }
+
+    @Bean
+    public LoginInterceptor loginInterceptor() {
+        return new LoginInterceptor();
     }
 }
