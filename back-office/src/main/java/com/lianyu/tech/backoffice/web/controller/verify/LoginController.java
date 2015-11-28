@@ -34,7 +34,7 @@ public class LoginController extends SiteController {
     }
 
 //    @RequestMapping(value = "/addUser", method = RequestMethod.GET)
-//    public String addUser(@RequestParam("name") String name, @RequestParam("name") String pwd) {
+//    public String addUser(@RequestParam("name") String name, @RequestParam("pwd") String pwd) {
 //        Account account = new Account();
 //        account.setName(name);
 //        account.setPwd(pwd);

@@ -14,7 +14,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Properties;
 
-public class EnvironmentConfigurationTest {
+public class EnvironmentConfigurationTest extends SpringTest {
     private static final String ENV_ROOT_DIR = "conf";
     private static final String RESOURCE_DIR = "resources";
     private static final String MAIN_RESOURCE_DIR = "src/main/resources";

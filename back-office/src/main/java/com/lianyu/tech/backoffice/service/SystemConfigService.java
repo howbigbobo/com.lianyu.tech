@@ -89,19 +89,6 @@ public class SystemConfigService {
         systemConfigRepository.update(config);
     }
 
-    private void add(String key, String value) {
-        String[] groupKey = key.split("\\.");
-        SystemConfig config = new SystemConfig();
-        config.setUpdateUser("");
-        config.setUpdateTime(new Date());
-        config.setCreateTime(new Date());
-        config.setCreateUser("");
-        config.setContent(value);
-        config.setGroupName(groupKey[0]);
-        config.setKeyName(groupKey[1]);
-        systemConfigRepository.create(config);
-    }
-
     @Transactional
     public void saveConfig(SystemConfigGroup group) {
         SystemConfigView configView = get();
@@ -129,18 +116,6 @@ public class SystemConfigService {
             configs.add(config);
         }
         return configs;
-    }
-
-    private void updateConfig(SystemConfig existConfig, SystemConfig config) {
-        existConfig.setGroupName(config.getGroupName());
-        existConfig.setGroupText(config.getGroupText());
-        existConfig.setGroupOrder(config.getGroupOrder());
-        existConfig.setKeyName(config.getKeyName());
-        existConfig.setKeyText(config.getKeyText());
-        existConfig.setKeyOrder(config.getKeyOrder());
-        existConfig.setUpdateUser("");
-        existConfig.setUpdateTime(new Date());
-        systemConfigRepository.update(existConfig);
     }
 
     private void addConfig(SystemConfig config) {

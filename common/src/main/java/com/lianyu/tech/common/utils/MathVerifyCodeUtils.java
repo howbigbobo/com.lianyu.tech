@@ -74,7 +74,8 @@ public class MathVerifyCodeUtils {
         ThreadLocalRandom random = ThreadLocalRandom.current();
         int y = fontHeight > (height - marginY) ? fontHeight : random.nextInt(fontHeight, height - marginY);
 
-        int totalFontWidth = 0, totalChar = 0;
+        int totalFontWidth = 0;
+        int totalChar = 0;
         for (String text : texts) {
             totalChar += text.length();
             totalFontWidth += fontMetrics.stringWidth(text);

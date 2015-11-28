@@ -77,7 +77,7 @@ public class AccountService {
             throw new UserAuthorizationException("用户名不存在.");
         }
         String encryptPwd = encrypt(pwd);
-        if (!encryptPwd.equals(encryptPwd)) {
+        if (!encryptPwd.equals(existAccount.getPwd())) {
             throw new UserAuthorizationException("密码不正确.");
         }
         if (!Account.Status.active.equals(existAccount.getStatus())) {

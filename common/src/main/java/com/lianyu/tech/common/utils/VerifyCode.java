@@ -3,13 +3,13 @@ package com.lianyu.tech.common.utils;
 import java.awt.image.BufferedImage;
 
 /**
-* @author bowen
-*/
+ * @author bowen
+ */
 public class VerifyCode {
-    private BufferedImage image;
-    private String result;
+    private final BufferedImage image;
+    private final String result;
 
-    VerifyCode(BufferedImage image, String result) {
+    public VerifyCode(BufferedImage image, String result) {
         this.image = image;
         this.result = result;
     }

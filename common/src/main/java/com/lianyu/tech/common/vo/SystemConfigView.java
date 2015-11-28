@@ -13,8 +13,8 @@ import java.util.Map;
 public class SystemConfigView implements Serializable {
     private static final long serialVersionUID = 3606379366237106079L;
 
-    private Map<String, SystemConfig> configMap;
-    private int size;
+    private final Map<String, SystemConfig> configMap;
+    private final int size;
 
     public SystemConfigView(List<SystemConfig> systemConfigs) {
         size = systemConfigs.size();

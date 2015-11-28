@@ -1,10 +1,12 @@
 package com.lianyu.tech.common.utils;
 
+import com.lianyu.tech.core.util.StringUtils;
+
 /**
  * @author bowen
  */
 public class ByteUtils {
-    
+
     public static String bytesToHex(byte[] src) {
         StringBuilder stringBuilder = new StringBuilder("");
         if (src == null || src.length <= 0) {
@@ -22,12 +24,12 @@ public class ByteUtils {
     }
 
     public static byte[] hexToBytes(String hexString) {
-        if (hexString == null || hexString.equals("")) {
-            return null;
+        if (!StringUtils.hasText(hexString)) {
+            return new byte[0];
         }
-        hexString = hexString.toUpperCase();
-        int length = hexString.length() / 2;
-        char[] hexChars = hexString.toCharArray();
+        String hexStringUpper = hexString.toUpperCase();
+        int length = hexStringUpper.length() / 2;
+        char[] hexChars = hexStringUpper.toCharArray();
         byte[] d = new byte[length];
         for (int i = 0; i < length; i++) {
             int pos = i * 2;

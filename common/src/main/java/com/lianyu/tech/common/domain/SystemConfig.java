@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -11,8 +12,10 @@ import java.util.Date;
  */
 
 @Entity(name = "system_config")
-public class SystemConfig {
+public class SystemConfig implements Serializable {
 
+    private static final long serialVersionUID = 9054630811711962291L;
+    
     @Id
     @GeneratedValue
     @Column(name = "id")
