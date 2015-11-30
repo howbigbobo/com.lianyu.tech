@@ -6,7 +6,7 @@ import com.lianyu.tech.common.utils.ImageIOUtil;
 import com.lianyu.tech.core.util.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.util.WebUtils;
+import org.springframework.beans.factory.annotation.Value;
 
 import java.io.File;
 import java.nio.file.Files;
@@ -16,7 +16,9 @@ import java.nio.file.Files;
  */
 public class FileImageHandler implements ImageHandler {
     private static final Logger LOGGER = LoggerFactory.getLogger(FileImageHandler.class);
-    private static final String IMAGE_PATH = "images";
+
+    @Value("${image.file.path}")
+    private String imageFileRootPath;
 
     @Override
     public String save(ImageEntity imageEntity) {
@@ -35,8 +37,8 @@ public class FileImageHandler implements ImageHandler {
 
     public File getFile(String fileName) {
         try {
-            String rootPath = System.getProperty(WebUtils.DEFAULT_WEB_APP_ROOT_KEY);
-            String fullPath = ImagePathUtil.combinePath(rootPath, IMAGE_PATH, fileName);
+            String rootPath = imageFileRootPath;
+            String fullPath = ImagePathUtil.combinePath(rootPath, fileName);
             return new File(fullPath);
         } catch (Exception ie) {
             LOGGER.warn("get file error: " + fileName, ie);

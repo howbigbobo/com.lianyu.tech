@@ -32,7 +32,6 @@ import org.springframework.web.util.WebAppRootListener;
 import javax.inject.Inject;
 import javax.persistence.EntityManagerFactory;
 import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
 
 @Configuration
 @EnableTransactionManagement(proxyTargetClass = true)
@@ -45,12 +44,6 @@ public class WebConfig extends DefaultSiteConfig {
     @Inject
     ServletContext servletContext;
 
-    @Override
-    public void onStartup(ServletContext servletContext) throws ServletException {
-        super.onStartup(servletContext);
-        servletContext.addListener(WebAppRootListener.class);
-    }
-
     @Bean
     public SiteSettings siteSettings() {
         SiteSettings siteSettings = new SiteSettings();
@@ -62,6 +55,8 @@ public class WebConfig extends DefaultSiteConfig {
         siteSettings.setSessionTimeOut(TimeLength.minutes(env.getProperty("site.sessionTimeOut", int.class, 30)));
         siteSettings.setSessionProviderType(env.getProperty("site.sessionProvider", SessionProviderType.class, SessionProviderType.LOCAL));
         siteSettings.setRemoteSessionServers(env.getProperty("site.remoteSessionServer"));
+
+        servletContext.addListener(WebAppRootListener.class);
         return siteSettings;
     }
 
