@@ -42,7 +42,7 @@ public class ImageViewController {
         if (image != null && image.getImageBytes() != null && image.getImageBytes().length > 0) {
             return image.getImageBytes();
         } else {
-            return imageHandlerService.get404();
+            return new byte[0];
         }
     }
 

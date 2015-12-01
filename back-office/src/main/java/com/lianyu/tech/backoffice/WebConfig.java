@@ -27,7 +27,6 @@ import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
-import org.springframework.web.util.WebAppRootListener;
 
 import javax.inject.Inject;
 import javax.persistence.EntityManagerFactory;
@@ -55,8 +54,6 @@ public class WebConfig extends DefaultSiteConfig {
         siteSettings.setSessionTimeOut(TimeLength.minutes(env.getProperty("site.sessionTimeOut", int.class, 30)));
         siteSettings.setSessionProviderType(env.getProperty("site.sessionProvider", SessionProviderType.class, SessionProviderType.LOCAL));
         siteSettings.setRemoteSessionServers(env.getProperty("site.remoteSessionServer"));
-
-        servletContext.addListener(WebAppRootListener.class);
         return siteSettings;
     }
 

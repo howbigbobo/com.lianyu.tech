@@ -1,14 +1,10 @@
 package com.lianyu.tech.backoffice.image;
 
 
-import com.lianyu.tech.common.utils.ImageIOUtil;
-import com.lianyu.tech.backoffice.image.file.ImagePathUtil;
-import com.lianyu.tech.core.platform.exception.ResourceNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
-import org.springframework.web.util.WebUtils;
 
 import javax.imageio.ImageIO;
 import javax.inject.Inject;
@@ -16,7 +12,6 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.File;
 
 /**
  * @author bowen.zhang
@@ -101,17 +96,5 @@ public class ImageHandlerService {
         newSize.setWidth(size.getWidth());
         newSize.setHeight((int) Math.ceil(size.getWidth() * scale));
         return newSize;
-    }
-
-    public byte[] get404() {
-        String rootPath = System.getProperty(WebUtils.DEFAULT_WEB_APP_ROOT_KEY);
-        File file = new File(rootPath);
-        String img404 = ImagePathUtil.combinePath(file.getPath(), "static", "img", "404.jpg");
-        File f = new File(img404);
-        if (f.exists()) {
-            return ImageIOUtil.readImageBytes(f);
-        } else {
-            throw new ResourceNotFoundException("404.jpg not exist");
-        }
     }
 }
