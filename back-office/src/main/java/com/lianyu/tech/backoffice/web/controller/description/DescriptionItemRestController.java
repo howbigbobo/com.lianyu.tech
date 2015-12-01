@@ -6,15 +6,15 @@ import com.lianyu.tech.backoffice.service.DescriptionItemService;
 import com.lianyu.tech.backoffice.service.ImageFacadeService;
 import com.lianyu.tech.backoffice.service.ImageService;
 import com.lianyu.tech.backoffice.web.controller.BackOfficeRestController;
-import com.lianyu.tech.common.vo.converter.DescriptionItemConverter;
-import com.lianyu.tech.common.vo.converter.ImageConverter;
 import com.lianyu.tech.backoffice.web.request.DescriptionItemRequest;
 import com.lianyu.tech.backoffice.web.response.DescriptionItemListResponse;
-import com.lianyu.tech.common.vo.DescriptionItemView;
 import com.lianyu.tech.common.domain.DescriptionItem;
 import com.lianyu.tech.common.domain.Image;
 import com.lianyu.tech.common.utils.Converter;
 import com.lianyu.tech.common.utils.ListUtils;
+import com.lianyu.tech.common.vo.DescriptionItemView;
+import com.lianyu.tech.common.vo.converter.DescriptionItemConverter;
+import com.lianyu.tech.common.vo.converter.ImageConverter;
 import com.lianyu.tech.core.platform.exception.InvalidRequestException;
 import com.lianyu.tech.core.util.StringUtils;
 import org.springframework.stereotype.Controller;
@@ -124,8 +124,7 @@ public class DescriptionItemRestController extends BackOfficeRestController {
         });
         List<Image> images = imageService.findByIds(imageIds);
         imageConverter.buildImageFullUrl(images);
-        List<DescriptionItemView> itemViews = DescriptionItemConverter.convert(items, images);
-        return itemViews;
+        return DescriptionItemConverter.convert(items, images);
     }
 
     private List<ImageEntity> getImageEntity(MultipartHttpServletRequest request) throws IOException {
