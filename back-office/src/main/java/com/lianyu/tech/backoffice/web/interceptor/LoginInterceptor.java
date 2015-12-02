@@ -38,7 +38,7 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
             response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
             response.flushBuffer();
         } else {
-            response.sendRedirect(adminLoginAddress);
+            response.sendRedirect(request.getContextPath() + adminLoginAddress);
         }
     }
 
