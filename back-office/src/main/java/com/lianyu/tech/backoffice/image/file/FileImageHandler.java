@@ -39,6 +39,7 @@ public class FileImageHandler implements ImageHandler {
         try {
             String rootPath = imageFileRootPath;
             String fullPath = ImagePathUtil.combinePath(rootPath, fileName);
+            LOGGER.info("imageFile={}", fullPath);
             return new File(fullPath);
         } catch (Exception ie) {
             LOGGER.warn("get file error: " + fileName, ie);
