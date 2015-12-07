@@ -1,35 +1,48 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<configuration scan="true">
-    <appender name="info" class="ch.qos.logback.core.ConsoleAppender">
+<configuration>
+    <property name="app.name" value="website"/>
+
+    <appender name="info" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-            <level>debug</level>
+            <level>INFO</level>
         </filter>
-        <layout>
+        <encoding>UTF-8</encoding>
+        <file>/opt/app/logs/${tomcat.instance.name}/${app.name}.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>/opt/app/logs/${tomcat.instance.name}/${app.name}.%d{yyyy-MM-dd_HH}.log.gz</fileNamePattern>
+        </rollingPolicy>
+        <encoder class="com.lianyu.tech.core.log.FilterMessagePatternLayoutEncoder">
             <pattern>%d [%thread] %-5level %logger{36} - %msg%n</pattern>
-        </layout>
+        </encoder>
     </appender>
 
     <appender name="trace" class="com.lianyu.tech.core.log.TraceAppender">
-        <layout>
+        <layout class="com.lianyu.tech.core.log.FilterMessagePatternLayout">
             <pattern>%d [%thread] %-5level %logger{36} - %msg%n</pattern>
         </layout>
+        <logFolder>/opt/app/logs/${tomcat.instance.name}</logFolder>
     </appender>
 
-    <appender name="action" class="ch.qos.logback.core.ConsoleAppender">
-        <layout>
+    <appender name="action" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <encoding>UTF-8</encoding>
+        <file>/opt/app/logs/${tomcat.instance.name}/${app.name}-action.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>/opt/app/logs/${tomcat.instance.name}/${app.name}-action.%d{yyyy-MM-dd_HH}.log.gz</fileNamePattern>
+        </rollingPolicy>
+        <encoder class="com.lianyu.tech.core.log.FilterMessagePatternLayoutEncoder">
             <pattern>%message%n</pattern>
-        </layout>
+        </encoder>
     </appender>
 
-    <logger name="action" additivity="false" level="INFO">
+    <logger name="com.lianyu.tech.core.log.ActionLogger" additivity="false" level="INFO">
         <appender-ref ref="action"/>
     </logger>
 
     <logger name="org.springframework" level="INFO"/>
-    <logger name="org.hibernate" level="INFO"/>
     <logger name="org.apache.http" level="INFO"/>
-    <logger name="com.lianyu.tech.shop.web.site.view.MallFreemarkerView" level="INFO"/>
-    <logger name="core.framework" level="INFO"/>
+    <logger name="com.lianyu.tech.core.platform.web.site.view.DefaultFreemarkerView" level="INFO"/>
+    <logger name="com.lianyu.tech.core.http" level="INFO"/>
+    <logger name="org.hibernate" level="INFO"/>
 
     <root level="debug">
         <appender-ref ref="info"/>

@@ -23,6 +23,6 @@
 <div id="mpf-slider">
 
 </div>
-<div id="" class="mfp-container" style="">
+<div id="" class="mfp-container" style="display: none;">
 
 </div>
