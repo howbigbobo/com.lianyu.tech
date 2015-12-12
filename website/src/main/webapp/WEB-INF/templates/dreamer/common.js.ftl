@@ -58,8 +58,8 @@
 
 <!-- Portfolio Filter JS FIles -->
 <@js src="dreamer/jquery.easing.min.js"/>
-<@js src="dreamer/portfolio.js"/>
-<@js src="dreamer/jquery.quicksand.js"/>
+<!--<@js src="dreamer/portfolio.js"/>-->
+<!--<@js src="dreamer/jquery.quicksand.js"/>-->
 <@js src="dreamer/jquery-css-transform.js"/>
 
 <!-- Supersized JS Files -->
@@ -111,21 +111,3 @@
 
 <!-- Initialize JS Plugins -->
 <@js src="dreamer/app.js"/>
-<@js src="dreamer/jquery.foundation.tooltips.js"/>
-<@js src="dreamer/jquery.foundation.reveal.js"/>
-<@js src="dreamer/jquery.foundation.tabs.js"/>
-
-<!-- Initialize Orbit -->
-<@js src="dreamer/jquery.foundation.orbit.js"/>
-
-<script type="text/javascript" charset="utf-8">
-    $(document).ready(function () {
-        $("a[rel^='prettyPhoto']").prettyPhoto();
-    });
-</script>
-
-<!-- Initialize FitVids Script -->
-<@js src="dreamer/jquery.fitvids.js"/>
-<script>
-    $(".single-project-image-video").fitVids();
-</script>
