@@ -117,7 +117,6 @@
 
 <!-- Initialize Orbit -->
 <@js src="dreamer/jquery.foundation.orbit.js"/>
-<@js src="dreamer/jssor.slider.mini.js"/>
 
 <script type="text/javascript" charset="utf-8">
     $(document).ready(function () {

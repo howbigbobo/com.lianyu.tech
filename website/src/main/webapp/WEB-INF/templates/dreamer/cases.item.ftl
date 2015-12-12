@@ -1,5 +1,3 @@
-<@css href="dreamer/css/jssor.slider.css"/>
-<@js src="dreamer/slider.js"/>
 <div id="single-project-photo" class="reveal-modal large">
     <a class="close-reveal-modal">&#215;</a>
 </div>
