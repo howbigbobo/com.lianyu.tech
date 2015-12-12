@@ -67,43 +67,6 @@
     z-index: 100;
 }
 
-a.facebook-header, a.twitter-header {
-    width: 14px;
-    height: 14px;
-    display: block;
-    position: absolute;
-}
-
-a.facebook-header {
-    background: url(images/facebook.jpg) no-repeat;
-    right: 15px;
-    top: 18px;
-}
-
-a.twitter-header {
-    background: url(images/twitter.jpg) no-repeat;
-    right: 35px;
-    top: 18px;
-}
-
-a.facebook-header, a.twitter-header {
-    background-position: 0 0;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    -ms-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-}
-
-a.facebook-header:hover, a.twitter-header:hover {
-    background-position: 0 -14px;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    -ms-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-}
-
 .copyrights {
     text-indent: -9999px;
     height: 0;
@@ -1121,7 +1084,7 @@ p.by-numbers-text span {
 }
 
 .services-top {
-    margin-top: 40px !important;
+    /*margin-top: 40px !important;*/
 }
 
 .services {
@@ -4081,4 +4044,10 @@ p.footer-right {
         margin-top: 75px;
         background: none;
     }
+}
+
+#head-phone {
+    font-size: 26px;
+    color: #e44d26;
+    font-weight: bolder;
 }

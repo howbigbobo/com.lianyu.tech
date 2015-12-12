@@ -12,8 +12,7 @@
     </div>
 
     <div class="twelve columns news">
-        <div id="news-slider">
-
+        <div>
             <!-- News -->
             <div class="news-section" data-thumb="<@url value='/static/css/dreamer/images/our-news.png'/>">
                 <#if news??>

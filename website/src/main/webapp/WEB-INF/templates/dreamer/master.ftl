@@ -902,8 +902,7 @@
             </div>
 
             <div class="twelve columns news">
-                <div id="news-slider">
-
+                <div>
                     <!-- News -->
                     <div class="news-section" data-thumb="images/our-news.png">
 

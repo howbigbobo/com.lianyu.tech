@@ -17,6 +17,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes"/>
 
+    <link rel="shortcut icon" href="<@url value='/static/img/favicon.ico'/>"/>
+
     <#include "mobile.spec.ftl"/>
 
     <#include "common.css.ftl"/>
@@ -40,43 +42,11 @@
 <div class="triangle-top"></div>
 <div class="triangle-bottom"></div>
 
-<div class="header-container">
-
-    <!-- Basic Needs -->
-    <div class="row">
-
-        <nav class="top-bar">
-
-            <ul>
-                <li class="name"><a href="#homepage"><img src="<@url value='/static/img/logo_full.png'/>" alt="${company.name}"></a></li>
-            </ul>
-
-            <section class="hide-for-small">
-                <ul class="right">
-                    <li><a href="#homepage">首页</a></li>
-                    <li><a href="#introduction">公司简介</a></li>
-                    <li><a href="#portfolio">成功案例</a></li>
-                    <li><a href="#services">服务项目</a></li>
-                    <li><a href="#news">新闻动态</a></li>
-                    <li><a href="#contact">联系我们</a></li>
-                </ul>
-            </section>
-
-            <select class="responsive-nav show-for-small" onChange="moveTo(this.value)" onFocus="moveTo(this.value)">
-                <option value="#homepage">首页</option>
-                <option value="#introduction">公司简介</option>
-                <option value="#portfolio">成功案例</option>
-                <option value="#services">服务项目</option>
-                <option value="#news">新闻动态</option>
-                <option value="#contact">联系我们</option>
-            </select>
-        </nav>
-    </div>
-</div>
+<#include "home.nav.ftl"/>
 
 <div class="homepage-text">
     <div class="top-icon">
-        <img src="<@url value='/static/img/logo.png'/>" alt="${company.name}">
+        <img src="<@url value='/static/img/logo_white.png'/>" alt="${company.name}">
     </div>
     <div class="top-divider"></div>
     <h1>${config.get("landing.title")!}</h1>
@@ -86,9 +56,6 @@
 
     <h3>${config.get("landing.subSlogan")!}</h3>
 
-    <div class="bottom-icon">
-        <a href="#introduction"><img src="<@url value='/static/css/dreamer/images/homepage-text-bottom-icon.png'/>" alt="${company.name}"></a>
-    </div>
 </div>
 
 <div class="content-container">
@@ -225,6 +192,5 @@
 
 <#include "common.js.ftl"/>
 
-include "slider.ftl"
 </body>
 </html>

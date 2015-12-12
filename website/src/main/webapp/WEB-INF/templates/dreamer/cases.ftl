@@ -11,10 +11,7 @@
             </div>
         </div>
     </div>
-
-    <div class="twelve columns portfolio-filter hide-for-760">
-
-    </div>
+    
     <div class="twelve columns portfolio">
         <ul class="ourHolder">
             <#if cases??>

@@ -118,55 +118,6 @@
 <!-- Initialize Orbit -->
 <@js src="dreamer/jquery.foundation.orbit.js"/>
 <@js src="dreamer/jssor.slider.mini.js"/>
-<script type='text/javascript'>
-    $(window).load(function () {
-        var windowsize = $(window).width();
-
-        $(window).resize(function () {
-            var windowsize = $(window).width();
-        });
-
-        if (windowsize > 1024) {
-            //if the window is greater than 1024px wide then load one orbit settings
-            $('#contact-slider').orbit({
-                fluid: '16x5',
-                timer: false,
-                directionalNav: false,
-                bullets: true,
-                bulletThumbs: true,
-                bulletThumbLocation: ''
-            });
-            $('#news-slider').orbit({
-                fluid: '16x12',
-                timer: false,
-                directionalNav: false,
-                bullets: true,
-                bulletThumbs: true,
-                bulletThumbLocation: ''
-            });
-        }
-        else {
-            if (windowsize > 765) {
-                $('#contact-slider').orbit({
-                    fluid: '16x6',
-                    timer: false,
-                    directionalNav: false,
-                    bullets: true,
-                    bulletThumbs: true,
-                    bulletThumbLocation: ''
-                });
-                $('#news-slider').orbit({
-                    fluid: '16x23',
-                    timer: false,
-                    directionalNav: false,
-                    bullets: true,
-                    bulletThumbs: true,
-                    bulletThumbLocation: ''
-                });
-            }
-        }
-    });
-</script>
 
 <script type="text/javascript" charset="utf-8">
     $(document).ready(function () {

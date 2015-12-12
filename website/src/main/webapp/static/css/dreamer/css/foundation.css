@@ -182,7 +182,7 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
 	-webkit-transition: all 0.15s linear;
 	-moz-transition: all 0.15s linear;
 	-o-transition: all 0.15s linear;
-	transition: all 0.15s linear; 
+	transition: all 0.15s linear;
 }
 input[type="text"].oversize, input[type="password"].oversize, input[type="date"].oversize, input[type="datetime"].oversize, input[type="email"].oversize, input[type="number"].oversize, input[type="search"].oversize, input[type="tel"].oversize, input[type="time"].oversize, input[type="url"].oversize, textarea.oversize { font-size: 17px; padding: 4px 6px; }
 input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="time"]:focus, input[type="url"]:focus, textarea:focus { background: #fafafa; border-color: #b3b3b3; }
@@ -640,7 +640,7 @@ div.orbit, div.orbit-wrapper { width: 100% !important; }
 
 @media print { div:not(.reveal-modal) { display: none; }
   .reveal-modal { border: solid 1px #000; background: #fff; } }
-  
+
 /* Tabs ---------------------- */
 .tabs { list-style: none; border-bottom: solid 1px #e6e6e6; display: block; height: 40px; padding: 0; margin-bottom: 20px; }
 .tabs.contained { margin-bottom: 0; margin-left: 0; }
@@ -902,7 +902,7 @@ div.progress.round .meter { -webkit-border-radius: 1000px; -moz-border-radius: 1
 	font-size: 17px !important;
 }
 .top-bar > ul .name img {
-	margin-top: 5px;
+	margin-top: 9px;
 	max-width:200px;
 	max-height:40px;
 }
