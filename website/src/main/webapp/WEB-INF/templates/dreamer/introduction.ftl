@@ -4,6 +4,12 @@
         <h1 class="page-title">${config.get("introduce.secondHead")!}</h1>
 
         <h2 class="page-subtitle">${config.get("introduce.secondSubHead")!}</h2>
+
+        <div class="twelve columns">
+            <div class="section-divider testimonial-margin">
+                <img src="<@url value='/static/css/dreamer/images/crown.png'/>" alt="Read More About Us">
+            </div>
+        </div>
     </div>
     <#if introduces??>
         <#list introduces as introduce>
@@ -47,11 +53,11 @@
 
         <div class="six columns testimonial-content mobile-four">
             <div class="testimonial-content-inner">
-                <h4 class="testimonial-title mobile-four">${config.get("introduce.bottomRightTitle")!}</h4>
+                <p class="testimonial-title mobile-four">${config.get("introduce.bottomRightTitle")!}</p>
 
-                <p class="testimonial-content mobile-four">${config.get("introduce.bottomRightContent")!}</p>
+                <p class="testimonial-title mobile-four">${config.get("introduce.bottomRightContent")!}</p>
 
-                <p class="testimonial-signature mobile-four">${config.get("introduce.bottomRightSub")!}</p>
+                <p class="testimonial-title mobile-four">${config.get("introduce.bottomRightSub")!}</p>
             </div>
         </div>
 
@@ -59,7 +65,7 @@
 
     </div>
 
-    <div class="twelve columns testimonial-bottom">
+    <div class="twelve columns">
 
         <div class="two columns hide-for-small"></div>
 
@@ -75,11 +81,11 @@
 
         <div class="six columns testimonial-content mobile-four">
             <div class="testimonial-content-inner">
-                <h4 class="testimonial-title mobile-four">${config.get("introduce.bottomRightTitle2")!}</h4>
+                <p class="testimonial-title mobile-four">${config.get("introduce.bottomRightTitle2")!}</p>
 
-                <p class="testimonial-content mobile-four">${config.get("introduce.bottomRightContent2")!}</p>
+                <p class="testimonial-title mobile-four">${config.get("introduce.bottomRightContent2")!}</p>
 
-                <p class="testimonial-signature mobile-four">${config.get("introduce.bottomRightSub2")!}</p>
+                <p class="testimonial-title mobile-four">${config.get("introduce.bottomRightSub2")!}</p>
             </div>
         </div>
     </div>

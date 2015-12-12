@@ -3,8 +3,13 @@
     <div class="twelve columns page-content">
         <h1 class="page-title">${config.get("aboutus.secondHead")!}</h1>
 
-        <h2 class="page-subtitle">${config.get("aboutus.secondSubHead")!}
-        </h2>
+        <h2 class="page-subtitle">${config.get("aboutus.secondSubHead")!} </h2>
+
+        <div class="twelve columns">
+            <div class="section-divider testimonial-margin">
+                <img src="<@url value='/static/css/dreamer/images/crown.png'/>" alt="Read More About Us">
+            </div>
+        </div>
     </div>
 
     <div class="four columns about mobile-three-one">
@@ -33,7 +38,7 @@
     </div>
 
     <div class="twelve columns page-section hide-for-760">
-        <h1 class="page-title">${config.get("aboutus.thirdHead")!}</h1>
+        <p>${config.get("aboutus.thirdHead")!}</p>
 
         <h2 class="page-subtitle">${config.get("aboutus.thirdSubhead")!}
         </h2>

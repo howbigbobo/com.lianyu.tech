@@ -1,5 +1,7 @@
 package com.lianyu.tech.website.web.interceptor;
 
+import com.lianyu.tech.core.platform.runtime.RuntimeEnvironment;
+import com.lianyu.tech.core.platform.runtime.RuntimeSettings;
 import com.lianyu.tech.core.platform.web.ControllerHelper;
 import com.lianyu.tech.core.util.StringUtils;
 import com.lianyu.tech.website.web.SiteContext;
@@ -14,6 +16,8 @@ import java.io.IOException;
 public class LoginInterceptor extends HandlerInterceptorAdapter {
     @Inject
     SiteContext siteContext;
+    @Inject
+    RuntimeSettings runtimeSettings;
 
     private static final String REST_HEADER = "x-requested-with";
     private static final String REST_IDENTITY = "XMLHttpRequest";
@@ -22,6 +26,10 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+        if (RuntimeEnvironment.DEV.equals(runtimeSettings.getEnvironment())) {
+            return super.preHandle(request, response, handler);
+        }
+
         if (handler instanceof HandlerMethod) {
             LoginRequired loginRequired = ControllerHelper.findMethodOrClassLevelAnnotation(handler, LoginRequired.class);
             if (loginRequired != null && !siteContext.isLogin()) {

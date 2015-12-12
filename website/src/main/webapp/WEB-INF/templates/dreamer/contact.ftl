@@ -2,8 +2,13 @@
     <div class="twelve columns page-content">
         <h1 class="page-title">${config.get("contact.secondHead")!}</h1>
 
-        <h2 class="page-subtitle">${config.get("contact.secondSubHead")!}
-        </h2>
+        <h2 class="page-subtitle">${config.get("contact.secondSubHead")!} </h2>
+
+        <div class="twelve columns">
+            <div class="section-divider testimonial-margin">
+                <img src="<@url value='/static/css/dreamer/images/crown.png'/>" alt="Read More About Us">
+            </div>
+        </div>
     </div>
 </div>
 
@@ -11,7 +16,7 @@
 
     <div class="twelve columns contact">
         <div id="contact-slider1">
-            
+
             <#if address?? &&address.defaultAddress??>
                 <div class="six columns first-column mobile-two contact-margin">
                     <h3 class="contact-title">公司地址</h3>
