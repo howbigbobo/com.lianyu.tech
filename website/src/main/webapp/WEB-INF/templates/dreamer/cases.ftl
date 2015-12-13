@@ -11,7 +11,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="twelve columns portfolio">
         <ul class="ourHolder">
             <#if cases??>
@@ -20,17 +20,16 @@
                         <div class="portfolio-item">
                             <div class="portfolio-hover-details hide-for-small">
                                 <div class="open-portfolio">
-                                    <a href="${(case.defaultItem.imageUrl)!}" class="open-portfolio-large" rel="prettyPhoto"></a>
-                                    <a href="#" data-reveal-id="single-project-photo" class="open-portfolio-link"></a>
+                                    <a href="javascript:void(0);" class="open-portfolio-large"></a>
                                 </div>
                             </div>
-                            <a href="${(case.defaultItem.imageUrl)!}" class="photo-link" rel="prettyPhoto"><img
+                            <a href="${(case.defaultItem.imageUrl)!}" title="123" class="photo-link" rel="prettyPhoto[pp]"><img
                                     src="${(case.defaultItem.imageThumbUrl)!}"
                                     alt="${(case.info.head)!}"
                                     class="wide-image"></a>
 
                             <div class="portfolio-details">
-                                <h4 class="portfolio-title"><a href="#" data-reveal-id="single-project-photo">${(case.info.head)!}</a></h4>
+                                <h4 class="portfolio-title"><a href="#">${(case.info.head)!}</a></h4>
 
                                 <div class="portfolio-divider"></div>
                                 <p class="portfolio-categories">${(case.info.subhead)!}</p>

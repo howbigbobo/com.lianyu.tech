@@ -9,7 +9,7 @@
     $(document).ready(function () {
         $('.parallax-one').css("margin-top", $(window).height());
 
-        $("a[rel^='prettyPhoto']").prettyPhoto();
+        $("a[rel^='prettyPhoto']").prettyPhoto({theme: 'facebook', slideshow: 4000, autoplay_slideshow: false});
 
         var windowsize = $(window).width();
 
@@ -30,7 +30,11 @@
             $('.parallax-five').parallax("50%", 0.5);
             $('.parallax-six').parallax("50%", 0.5);
         }
-    })
+
+        $('body').on('click', '.portfolio-hover-details', function () {
+            $(this).next("a[rel^='prettyPhoto']:first").click();
+        });
+    });
 </script>
 
 <!-- Hook up the Loader -->

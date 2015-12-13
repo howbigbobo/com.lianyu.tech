@@ -1415,10 +1415,11 @@ p.contact-text span {
     -o-transition: all 0.4s ease-in-out;
     -ms-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
+    cursor: pointer;
 }
 
 .open-portfolio {
-    width: 90px;
+    width: 40px;
     height: 40px;
     margin: 0 auto;
     margin-top: 100px;

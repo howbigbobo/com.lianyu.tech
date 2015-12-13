@@ -15,7 +15,7 @@ import java.util.Map;
  * @author bowen
  */
 @Controller
-public class DescriptionController extends WebsiteRestController {
+public class DescriptionRestController extends WebsiteRestController {
 
     @Inject
     private DescriptionBuilder descriptionBuilder;
