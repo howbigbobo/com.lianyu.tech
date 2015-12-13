@@ -24,9 +24,13 @@
                             <#if (cNew.info.beginTime)??>
                                 <span class="news-date">${cNew.info.beginTime?string("yyyy-MM-dd")}</span>
                             </#if>
-                            <a href="#" class="photo-link" data-reveal-id="single-news"><img src="${(cNew.defaultItem.imageThumbUrl)!}" alt="${(cNew.info.head)!}" class="wide-image"></a>
+                            <a href="<@url value='/description/${(cNew.info.id)!}'/>" data-id="${(cNew.info.id)!}" class="photo-link description-link" title="${(cNew.info.head)!}">
+                                <img src="${(cNew.defaultItem.imageThumbUrl)!}" alt="${(cNew.info.head)!}" class="wide-image"/>
+                            </a>
                             <section class="news-details">
-                                <h3 class="news-title"><a href="#" data-reveal-id="single-news">${(cNew.info.head)!}</a></h3>
+                                <h3 class="news-title">
+                                    <a href="<@url value='/description/${(cNew.info.id)!}'/>" onclick="javascript:return false;">${(cNew.info.head)!}</a>
+                                </h3>
 
                                 <div class="news-title-divider"></div>
                                 <p class="news-content">${(cNew.info.subhead)!}
@@ -36,7 +40,8 @@
                             </section>
                             <section class="news-hover hide-for-small">
                                 <div class="open-news-item">
-                                    <a href="#" data-reveal-id="single-news" class="news-link"></a>
+                                    <a href="<@url value='/description/${(cNew.info.id)!}'/>" data-id="${(cNew.info.id)!}" class="news-link description-link" title="${(cNew.info.head)!}">
+                                    </a>
                                 </div>
                             </section>
                         </div>

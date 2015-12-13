@@ -1881,6 +1881,7 @@ p.single-project-content {
     -o-transition: all 0.4s ease-in-out;
     -ms-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
+    cursor: pointer;
 }
 
 .news-item:hover .news-hover {
@@ -1976,7 +1977,7 @@ p.news-content {
 a.news-link {
     height: 40px;
     width: 40px;
-    background: url(images/icons/40px/white/7.png) top center no-repeat;
+    background: url(images/icons/40px/white/5.png) top center no-repeat;
     float: left;
     opacity: 0;
     margin-top: 40px;
@@ -1991,6 +1992,7 @@ a.news-link {
     -o-transition: all 0.4s ease-in-out;
     -ms-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
+    cursor: pointer;
 }
 
 .news-item:hover a.news-link {

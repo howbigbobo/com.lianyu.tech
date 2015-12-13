@@ -27,9 +27,9 @@ function appendRadon(url) {
     return url + "?" + r;
 }
 
-function postJson(url, data, success) {
+function postJson(url, data, success, withGlobal) {
     $.ajax({
-        url: globalRootUrl + url,
+        url: !!withGlobal ? url : globalRootUrl + url,
         type: 'post',
         data: JSON.stringify(data || {}),
         contentType: "application/json",

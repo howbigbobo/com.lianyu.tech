@@ -188,8 +188,6 @@
     </div>
 </div>
 
-<#include "cases.item.ftl"/>
-
 <#include "common.js.ftl"/>
 
 </body>

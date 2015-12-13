@@ -4,12 +4,11 @@
 <@js src="dreamer/custom.js"/>
 <@js src="dreamer/raphael.js"/>
 <@js src="dreamer/init.js"/>
+<@js src="ajax.common.js"/>
 
 <script type="text/javascript">
     $(document).ready(function () {
         $('.parallax-one').css("margin-top", $(window).height());
-
-        $("a[rel^='prettyPhoto']").prettyPhoto({theme: 'facebook', slideshow: 4000, autoplay_slideshow: false});
 
         var windowsize = $(window).width();
 
@@ -31,8 +30,16 @@
             $('.parallax-six').parallax("50%", 0.5);
         }
 
-        $('body').on('click', '.portfolio-hover-details', function () {
-            $(this).next("a[rel^='prettyPhoto']:first").click();
+        $('#nothing-only-to-init-prettyPhoto').prettyPhoto();
+
+        $('body').on('click', '.description-link', function () {
+            var id = $(this).data('id');
+            openDescription(id);
+            return false;
+        });
+
+        $('body').on('click', '.portfolio-hover-details,.news-hover', function () {
+            $(this).parent().find(".description-link:first").click();
         });
     });
 </script>

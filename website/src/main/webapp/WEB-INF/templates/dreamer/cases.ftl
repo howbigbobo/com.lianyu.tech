@@ -23,10 +23,9 @@
                                     <a href="javascript:void(0);" class="open-portfolio-large"></a>
                                 </div>
                             </div>
-                            <a href="${(case.defaultItem.imageUrl)!}" title="123" class="photo-link" rel="prettyPhoto[pp]"><img
-                                    src="${(case.defaultItem.imageThumbUrl)!}"
-                                    alt="${(case.info.head)!}"
-                                    class="wide-image"></a>
+                            <a href="<@url value='/description/${(case.info.id)!}'/>" data-id="${(case.info.id)!}" title="${(case.info.head)!}" class="photo-link description-link">
+                                <img src="${(case.defaultItem.imageThumbUrl)!}" alt="${(case.info.head)!}" class="wide-image">
+                            </a>
 
                             <div class="portfolio-details">
                                 <h4 class="portfolio-title"><a href="#">${(case.info.head)!}</a></h4>
