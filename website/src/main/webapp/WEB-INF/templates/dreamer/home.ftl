@@ -45,8 +45,8 @@
 <#include "home.nav.ftl"/>
 
 <div class="homepage-text">
-    <div class="top-icon">
-        <img src="<@url value='/static/img/logo_white.png'/>" alt="${company.name}">
+    <div style="text-align: center;">
+        <img src="<@url value='/static/img/logo_w.png'/>" alt="${company.name}">
     </div>
     <div class="top-divider"></div>
     <h1>${config.get("landing.title")!}</h1>

@@ -6,7 +6,7 @@
         <nav class="top-bar">
 
             <ul>
-                <li class="name"><a href="#homepage"><img src="<@url value='/static/img/logo_full_white.png'/>" alt="${company.name}"></a></li>
+                <li class="name"><a href="#homepage"><img src="<@url value='/static/img/logo_w.png'/>" alt="${company.name}"></a></li>
             </ul>
 
             <section class="hide-for-small">

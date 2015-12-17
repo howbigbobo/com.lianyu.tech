@@ -53,6 +53,7 @@ CREATE TABLE IF NOT EXISTS description
   `type`     	TINYINT		  	NOT NULL COMMENT '类型：1:案例,2:介绍,3:动态',
   head			VARCHAR(200)	NOT NULL COMMENT '标题',
   subhead     	VARCHAR(400)  	NULL COMMENT '副标题',
+  `order` 		INT(11) 		NOT NULL DEFAULT '99999' COMMENT '显示顺序',
   begin_time   	DATETIME 		NULL COMMENT '开始时间',
   end_time   	DATETIME 		NULL COMMENT '结束时间',
   location		VARCHAR(200) 	NULL COMMENT '地点',
