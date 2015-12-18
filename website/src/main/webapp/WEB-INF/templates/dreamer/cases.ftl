@@ -24,7 +24,7 @@
                                 </div>
                             </div>
                             <a href="<@url value='/description/${(case.info.id)!}'/>" data-id="${(case.info.id)!}" title="${(case.info.head)!}" class="photo-link description-link">
-                                <img src="${(case.defaultItem.imageThumbUrl)!}" alt="${(case.info.head)!}" class="wide-image">
+                                <img src_lazy="${(case.defaultItem.imageThumbUrl)!}" src="<@url value='/static/css/dreamer/images/loader.gif'/>" alt="${(case.info.head)!}" class="wide-image">
                             </a>
 
                             <div class="portfolio-details">

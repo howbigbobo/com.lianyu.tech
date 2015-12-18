@@ -36,6 +36,8 @@
             $('#loading').css("background", "none");
             $('#loading').css("width", "0");
             $('#loading').css("height", "0");
+
+            setTimeout(500, loadLazyImg());
         });
     });
 </script>

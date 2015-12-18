@@ -128,3 +128,12 @@ function openDescription(descriptionId) {
         $.prettyPhoto.open(api_images, api_titles, api_descriptions);
     });
 }
+
+function loadLazyImg() {
+    var images = $('img[src_lazy]');
+    if (images.length > 0) {
+        $.each(images, function (i, e) {
+            $(e).attr('src', $(e).attr('src_lazy'));
+        });
+    }
+}

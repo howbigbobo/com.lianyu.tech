@@ -14,7 +14,7 @@
     <#if introduces??>
         <#list introduces as introduce>
             <div class="three columns padding-four-columns team-member mobile-two">
-                <img src="${(introduce.defaultItem.imageThumbUrl)!}" alt="${(introduce.info.head)!}">
+                <img src_lazy="${(introduce.defaultItem.imageThumbUrl)!}" src="<@url value='/static/css/dreamer/images/loader.gif'/>" alt="${(introduce.info.head)!}">
 
                 <h3 class="our-team-title">${(introduce.info.head)!}</h3>
 

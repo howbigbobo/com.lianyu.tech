@@ -25,7 +25,7 @@
                                 <span class="news-date">${cNew.info.beginTime?string("yyyy-MM-dd")}</span>
                             </#if>
                             <a href="<@url value='/description/${(cNew.info.id)!}'/>" data-id="${(cNew.info.id)!}" class="photo-link description-link" title="${(cNew.info.head)!}">
-                                <img src="${(cNew.defaultItem.imageThumbUrl)!}" alt="${(cNew.info.head)!}" class="wide-image"/>
+                                <img src_lazy="${(cNew.defaultItem.imageThumbUrl)!}" src="<@url value='/static/css/dreamer/images/loader.gif'/>" alt="${(cNew.info.head)!}" class="wide-image"/>
                             </a>
                             <section class="news-details">
                                 <h3 class="news-title">
