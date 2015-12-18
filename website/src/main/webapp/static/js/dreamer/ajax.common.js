@@ -1,8 +1,10 @@
 $(document).ajaxError(function (event, req, setting, msg) {
-    console.log(event);
-    console.log(req);
-    console.log(setting);
-    console.log(msg);
+    if (typeof console != undefined && console && console.log) {
+        console.log(event);
+        console.log(req);
+        console.log(setting);
+        console.log(msg);
+    }
     alert('ajax error');
 });
 

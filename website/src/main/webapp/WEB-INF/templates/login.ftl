@@ -73,7 +73,7 @@
 </div>
 <@js src="jquery-1.9.1.min.js"/>
 <@js src="jquery.dialog.js"/>
-<@js src="ajax.common.js"/>
+<@js src="dreamer/ajax.common.js"/>
 <@js src="jquery.formdata.js"/>
 <@js src="login.js"/>
 </body>

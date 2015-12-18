@@ -1,6 +1,8 @@
 package com.lianyu.tech.website.web.interceptor;
 
 
+import com.lianyu.tech.core.platform.runtime.RuntimeEnvironment;
+import com.lianyu.tech.core.platform.runtime.RuntimeSettings;
 import com.lianyu.tech.core.platform.web.site.layout.ModelBuilder;
 import com.lianyu.tech.website.builder.AddressBuilder;
 import com.lianyu.tech.website.builder.CompanyBuilder;
@@ -24,6 +26,8 @@ public class MasterTemplateModelBuilder implements ModelBuilder {
     private ContactBuilder contactBuilder;
     @Inject
     private SystemConfigBuilder systemConfigBuilder;
+    @Inject
+    private RuntimeSettings runtimeSettings;
 
     @Override
     public void build(Map<String, Object> model) {
@@ -31,6 +35,7 @@ public class MasterTemplateModelBuilder implements ModelBuilder {
         model.put("address", addressBuilder.find());
         model.put("contacts", contactBuilder.getContact());
         model.put("config", systemConfigBuilder.get());
+        model.put("PROD", RuntimeEnvironment.PROD.equals(runtimeSettings.getEnvironment()));
         model.putAll(siteContext.getModel());
     }
 }

@@ -17,24 +17,53 @@ var gulp = require('gulp'),
     livereload = require('gulp-livereload');
 // Styles
 gulp.task('styles', function() {
-    return gulp.src('stylesheets/main.scss')
-    .pipe(sass())
-    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-    .pipe(gulp.dest('stylesheets'))
+	var cssFiles = [];
+	cssFiles.push("portfolio.css");
+	cssFiles.push("foundation.css");
+	cssFiles.push("normalize.css");
+	cssFiles.push("supersized.css");
+	cssFiles.push("supersized.shutter.css");
+	cssFiles.push("prettyPhoto.css");
+	cssFiles.push("style.css");
+	for(var i = 0;i<cssFiles.length;i++){
+		cssFiles[i] = 'static/css/dreamer/css/'+cssFiles[i];
+	}
+	
+    return gulp.src(cssFiles)
+    .pipe(concat('lianyu-web.css'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(minifycss())
-    .pipe(gulp.dest('assets'))
+    .pipe(gulp.dest('static/css/dreamer/css/'))
     .pipe(notify({ message: 'Styles task complete' }));
 });
 // Scripts
 gulp.task('scripts', function() {
-  return gulp.src('static/js/dreamer/*.js')
+	var jsFiles =[];
+	jsFiles.push("modernizr.foundation.js");
+	jsFiles.push("foundation.min.js");
+	jsFiles.push("jquery.parallax-1.1.3.js");
+	jsFiles.push("jquery.prettyPhoto.js");
+	jsFiles.push("jquery.easing.min.js");
+	jsFiles.push("jquery-css-transform.js");
+	jsFiles.push("supersized.3.2.7.min.js");
+	jsFiles.push("supersized.shutter.min.js");
+	jsFiles.push("custom.js");
+	jsFiles.push("raphael.js");
+	jsFiles.push("init.js");
+	jsFiles.push("app.js");
+	jsFiles.push("ajax.common.js");
+	
+	for(var i = 0;i<jsFiles.length;i++){
+		jsFiles[i] = 'static/js/dreamer/'+jsFiles[i];
+	}
+	
+  return gulp.src(jsFiles)
     .pipe(jshint())
     .pipe(jshint.reporter('default'))
-    .pipe(concat('all.js'))
+    .pipe(concat('lianyu-web.js'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(uglify())
-    .pipe(gulp.dest('assets'))
+    .pipe(gulp.dest('static/js'))
     .pipe(notify({ message: 'Scripts task complete' }));
 });
 // Images
@@ -46,7 +75,7 @@ gulp.task('images', function() {
 });
 // Default task
 gulp.task('default', function() {
-    gulp.start('styles', 'scripts', 'images');
+    gulp.start('styles', 'scripts');
 });
 // Watch
 gulp.task('watch', function() {

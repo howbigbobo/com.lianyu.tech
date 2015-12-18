@@ -24,7 +24,7 @@
     height: 100%;
     display: block;
     position: fixed;
-    background: url(images/patterns/slideshow.png) repeat;
+    background: url(../images/patterns/slideshow.png) repeat;
     z-index: 0;
 }
 
@@ -43,7 +43,7 @@
     height: 100%;
     display: block;
     position: fixed;
-    background: url(images/triangle-top.png) top left no-repeat;
+    background: url(../images/triangle-top.png) top left no-repeat;
     z-index: -1;
 }
 
@@ -52,14 +52,14 @@
     height: 100%;
     display: block;
     position: fixed;
-    background: url(images/triangle-bottom.png) top left no-repeat;
+    background: url(../images/triangle-bottom.png) top left no-repeat;
     z-index: -1;
 }
 
 .header-container {
     width: 100% !important;
     height: 50px;
-    background: #01414e url(images/header-background.png) top center no-repeat;
+    background: #01414e url(../images/header-background.png) top center no-repeat;
     position: fixed;
     -moz-box-shadow: 0px 1px 5px #000;
     -webkit-box-shadow: 0px 1px 5px #000;
@@ -212,27 +212,27 @@
 }
 
 .parallax-one {
-    background: #000 url(images/parallax/1.jpg) 50% 0 no-repeat fixed;
+    background: #000 url(../images/parallax/1.jpg) 50% 0 no-repeat fixed;
 }
 
 .parallax-two {
-    background: #000 url(images/parallax/2.jpg) 50% 0 no-repeat fixed;
+    background: #000 url(../images/parallax/2.jpg) 50% 0 no-repeat fixed;
 }
 
 .parallax-three {
-    background: #000 url(images/parallax/3.jpg) 50% 0 no-repeat fixed;
+    background: #000 url(../images/parallax/3.jpg) 50% 0 no-repeat fixed;
 }
 
 .parallax-four {
-    background: #000 url(images/parallax/4.jpg) 50% 0 no-repeat fixed;
+    background: #000 url(../images/parallax/4.jpg) 50% 0 no-repeat fixed;
 }
 
 .parallax-five {
-    background: #000 url(images/parallax/5.jpg) 50% 0 no-repeat fixed;
+    background: #000 url(../images/parallax/5.jpg) 50% 0 no-repeat fixed;
 }
 
 .parallax-six {
-    background: #000 url(images/parallax/6.jpg) 50% 0 no-repeat fixed;
+    background: #000 url(../images/parallax/6.jpg) 50% 0 no-repeat fixed;
 }
 
 .quote1-pattern, .quote2-pattern, .quote3-pattern, .quote4-pattern, .quote5-patter, .quote6-pattern {
@@ -246,15 +246,15 @@
 }
 
 .quote1-pattern, .quote4-pattern {
-    background: url(images/parallax/pattern-1.png);
+    background: url(../images/parallax/pattern-1.png);
 }
 
 .quote2-pattern, .quote4-pattern {
-    background: url(images/parallax/pattern-1.png);
+    background: url(../images/parallax/pattern-1.png);
 }
 
 .quote3-pattern, .quote6-pattern {
-    background: url(images/parallax/pattern-1.png);
+    background: url(../images/parallax/pattern-1.png);
 }
 
 .parallax-container {
@@ -285,7 +285,7 @@
     width: 100%;
     height: 64px;
     float: left;
-    background: url(images/parallax-divider.png) center no-repeat;
+    background: url(../images/parallax-divider.png) center no-repeat;
     text-align: center;
 }
 
@@ -385,7 +385,7 @@
     width: 100%;
     height: 64px;
     float: left;
-    background: url(images/section-divider.png) center no-repeat;
+    background: url(../images/section-divider.png) center no-repeat;
     text-align: center;
 }
 
@@ -528,12 +528,12 @@
 }
 
 .pattern-1 {
-    background: #FFF url(images/patterns/lines-left.png) repeat;
+    background: #FFF url(../images/patterns/lines-left.png) repeat;
     text-align: center;
 }
 
 .pattern-2 {
-    background: #FFF url(images/patterns/groovepaper.png) repeat;
+    background: #FFF url(../images/patterns/groovepaper.png) repeat;
     text-align: center;
 }
 
@@ -767,7 +767,7 @@ p.testimonial-signature span {
 ----------------------------------------- */
 
 .page-our-team {
-    background: #FFF url(images/patterns/about-us.png) repeat;
+    background: #FFF url(../images/patterns/about-us.png) repeat;
 }
 
 h3.our-team-title {
@@ -843,7 +843,7 @@ p.our-team-text {
     display: block;
     top: 0;
     opacity: 0;
-    background: url(images/team-hover.png) no-repeat;
+    background: url(../images/team-hover.png) no-repeat;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
@@ -863,7 +863,7 @@ a.team-facebook {
     height: 40px;
     width: 40px;
     display: block;
-    background: url(images/icons/40px/white/28.png) top center no-repeat;
+    background: url(../images/icons/40px/white/28.png) top center no-repeat;
     float: left;
     opacity: 0;
     margin-right: 10px;
@@ -885,7 +885,7 @@ a.team-twitter {
     height: 40px;
     width: 40px;
     display: block;
-    background: url(images/icons/40px/white/27.png) top center no-repeat;
+    background: url(../images/icons/40px/white/27.png) top center no-repeat;
     float: left;
     opacity: 0;
     margin-right: 10px;
@@ -907,7 +907,7 @@ a.team-linkedin {
     height: 40px;
     width: 40px;
     display: block;
-    background: url(images/icons/40px/white/29.png) top center no-repeat;
+    background: url(../images/icons/40px/white/29.png) top center no-repeat;
     float: right;
     opacity: 0;
     margin-right: 0px;
@@ -977,7 +977,7 @@ a.team-linkedin {
 
 .tweet-numbers {
     margin-top: 60px;
-    background: url(images/icons/40px/26.png) -10px 6px no-repeat;
+    background: url(../images/icons/40px/26.png) -10px 6px no-repeat;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
@@ -986,27 +986,27 @@ a.team-linkedin {
 }
 
 .projects-numbers {
-    background: url(images/icons/40px/154.png) -10px 6px no-repeat;
+    background: url(../images/icons/40px/154.png) -10px 6px no-repeat;
 }
 
 .clients-numbers {
-    background: url(images/icons/40px/62.png) -10px 6px no-repeat;
+    background: url(../images/icons/40px/62.png) -10px 6px no-repeat;
 }
 
 .code-numbers {
-    background: url(images/icons/40px/89.png) -10px 6px no-repeat;
+    background: url(../images/icons/40px/89.png) -10px 6px no-repeat;
 }
 
 .iphone-numbers {
-    background: url(images/icons/40px/10.png) -10px 6px no-repeat;
+    background: url(../images/icons/40px/10.png) -10px 6px no-repeat;
 }
 
 .facebook-numbers {
-    background: url(images/icons/40px/28.png) -10px 6px no-repeat;
+    background: url(../images/icons/40px/28.png) -10px 6px no-repeat;
 }
 
 .coffee-numbers {
-    background: url(images/icons/40px/165.png) -10px 6px no-repeat;
+    background: url(../images/icons/40px/165.png) -10px 6px no-repeat;
 }
 
 p.by-numbers-text {
@@ -1064,7 +1064,7 @@ p.by-numbers-text span {
 ----------------------------------------- */
 
 .services-wide-banner {
-    background: #fff url(images/patterns/services-banner.png);
+    background: #fff url(../images/patterns/services-banner.png);
     width: 100% !important;
     height: 486px;
     display: block;
@@ -1324,12 +1324,12 @@ p.contact-text span {
 /* Dimensions and position of the status messages */
 
 .hightlight {
-    background: #f4f4f4 url(images/icons/40px/157.png) no-repeat center right !important;
+    background: #f4f4f4 url(../images/icons/40px/157.png) no-repeat center right !important;
     border: 1px solid #e44d26 !important;
 }
 
 .hightlight-message {
-    background: #f4f4f4 url(images/icons/40px/157.png) no-repeat top right !important;
+    background: #f4f4f4 url(../images/icons/40px/157.png) no-repeat top right !important;
     border: 1px solid #e44d26 !important;
 }
 
@@ -1429,7 +1429,7 @@ p.contact-text span {
 a.open-portfolio-large {
     height: 40px;
     width: 40px;
-    background: url(images/icons/40px/white/5.png) top center no-repeat;
+    background: url(../images/icons/40px/white/5.png) top center no-repeat;
     float: left;
     opacity: 0;
     margin-right: 10px;
@@ -1450,7 +1450,7 @@ a.open-portfolio-large {
 a.open-portfolio-link {
     width: 40px;
     height: 40px;
-    background: url(images/icons/40px/white/7.png) top center no-repeat;
+    background: url(../images/icons/40px/white/7.png) top center no-repeat;
     float: left;
     opacity: 0;
     margin-top: -40px;
@@ -1487,7 +1487,7 @@ a.open-portfolio-link {
     position: absolute;
     right: 10px;
     top: 0;
-    background: url(images/cat-image.png) top right;
+    background: url(../images/cat-image.png) top right;
     opacity: 1;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
@@ -1628,7 +1628,7 @@ p.portfolio-categories {
 .portfolio-item:hover a.open-portfolio-large {
     height: 40px;
     width: 40px;
-    background: url(images/icons/40px/white/5.png) top center no-repeat;
+    background: url(../images/icons/40px/white/5.png) top center no-repeat;
     float: left;
     margin-right: 10px;
     margin-top: 0;
@@ -1645,7 +1645,7 @@ p.portfolio-categories {
 .portfolio-item:hover a.open-portfolio-link {
     width: 40px;
     height: 40px;
-    background: url(images/icons/40px/white/7.png) top center no-repeat;
+    background: url(../images/icons/40px/white/7.png) top center no-repeat;
     float: left;
     margin-top: 0;
     opacity: 1;
@@ -1819,7 +1819,7 @@ p.single-project-content {
     right: 10px;
     z-index: 50;
     top: 0;
-    background: url(images/cat-image.png) top right;
+    background: url(../images/cat-image.png) top right;
     opacity: 1;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
@@ -1977,7 +1977,7 @@ p.news-content {
 a.news-link {
     height: 40px;
     width: 40px;
-    background: url(images/icons/40px/white/5.png) top center no-repeat;
+    background: url(../images/icons/40px/white/5.png) top center no-repeat;
     float: left;
     opacity: 0;
     margin-top: 40px;
@@ -2026,7 +2026,7 @@ a.news-link {
     width: 100%;
     height: 150px;
     border: 1px solid #bcbec0;
-    background: url(images/icons/40px/white/26.png) top left no-repeat;
+    background: url(../images/icons/40px/white/26.png) top left no-repeat;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 400;
     font-size: 14px;
@@ -2227,242 +2227,242 @@ p.single-news-content {
 }
 
 .behance-button {
-    background: url(images/social-media/behance.png) no-repeat;
+    background: url(../images/social-media/behance.png) no-repeat;
     background-position: 0 0;
 }
 
 .behance-button:hover {
-    background: url(images/social-media/behance.png) no-repeat;
+    background: url(../images/social-media/behance.png) no-repeat;
     background-position: 0 -32px;
 }
 
 .blogger-button {
-    background: url(images/social-media/blogger.png) no-repeat;
+    background: url(../images/social-media/blogger.png) no-repeat;
     background-position: 0 0;
 }
 
 .blogger-button:hover {
-    background: url(images/social-media/blogger.png) no-repeat;
+    background: url(../images/social-media/blogger.png) no-repeat;
     background-position: 0 -32px;
 }
 
 .digg-button {
-    background: url(images/social-media/digg.png) no-repeat;
+    background: url(../images/social-media/digg.png) no-repeat;
     background-position: 0 0;
 }
 
 .digg-button:hover {
-    background: url(images/social-media/digg.png) no-repeat;
+    background: url(../images/social-media/digg.png) no-repeat;
     background-position: 0 -32px;
 }
 
 .dribbble-button {
-    background: url(images/social-media/dribbble.png) no-repeat;
+    background: url(../images/social-media/dribbble.png) no-repeat;
     background-position: 0 0;
 }
 
 .dribbble-button:hover {
-    background: url(images/social-media/dribbble.png) no-repeat;
+    background: url(../images/social-media/dribbble.png) no-repeat;
     background-position: 0 -32px;
 }
 
 .email-button {
-    background: url(images/social-media/email.png) no-repeat;
+    background: url(../images/social-media/email.png) no-repeat;
     background-position: 0 0;
 }
 
 .email-button:hover {
-    background: url(images/social-media/email.png) no-repeat;
+    background: url(../images/social-media/email.png) no-repeat;
     background-position: 0 -32px;
 }
 
 .facebook-button {
-    background: url(images/social-media/facebook.png) no-repeat;
+    background: url(../images/social-media/facebook.png) no-repeat;
     background-position: 0 0;
 }
 
 .facebook-button:hover {
-    background: url(images/social-media/facebook.png) no-repeat;
+    background: url(../images/social-media/facebook.png) no-repeat;
     background-position: 0 -32px;
 }
 
 .flickr-button {
-    background: url(images/social-media/flickr.png) no-repeat;
+    background: url(../images/social-media/flickr.png) no-repeat;
     background-position: 0 0;
 }
 
 .flickr-button:hover {
-    background: url(images/social-media/flickr.png) no-repeat;
+    background: url(../images/social-media/flickr.png) no-repeat;
     background-position: 0 -32px;
 }
 
 .gplus-button {
-    background: url(images/social-media/gplus.png) no-repeat;
+    background: url(../images/social-media/gplus.png) no-repeat;
     background-position: 0 0;
 }
 
 .gplus-button:hover {
-    background: url(images/social-media/gplus.png) no-repeat;
+    background: url(../images/social-media/gplus.png) no-repeat;
     background-position: 0 -32px;
 }
 
 .instagram-button {
-    background: url(images/social-media/instagram.png) no-repeat;
+    background: url(../images/social-media/instagram.png) no-repeat;
     background-position: 0 0;
 }
 
 .instagram-button:hover {
-    background: url(images/social-media/instagram.png) no-repeat;
+    background: url(../images/social-media/instagram.png) no-repeat;
     background-position: 0 -32px;
 }
 
 .lastfm-button {
-    background: url(images/social-media/lastfm.png) no-repeat;
+    background: url(../images/social-media/lastfm.png) no-repeat;
     background-position: 0 0;
 }
 
 .lastfm-button:hover {
-    background: url(images/social-media/lastfm.png) no-repeat;
+    background: url(../images/social-media/lastfm.png) no-repeat;
     background-position: 0 -32px;
 }
 
 .linkedin-button {
-    background: url(images/social-media/linkedin.png) no-repeat;
+    background: url(../images/social-media/linkedin.png) no-repeat;
     background-position: 0 0;
 }
 
 .linkedin-button:hover {
-    background: url(images/social-media/linkedin.png) no-repeat;
+    background: url(../images/social-media/linkedin.png) no-repeat;
     background-position: 0 -32px;
 }
 
 .livejournal-button {
-    background: url(images/social-media/livejournal.png) no-repeat;
+    background: url(../images/social-media/livejournal.png) no-repeat;
     background-position: 0 0;
 }
 
 .livejournal-button:hover {
-    background: url(images/social-media/livejournal.png) no-repeat;
+    background: url(../images/social-media/livejournal.png) no-repeat;
     background-position: 0 -32px;
 }
 
 .myspace-button {
-    background: url(images/social-media/myspace.png) no-repeat;
+    background: url(../images/social-media/myspace.png) no-repeat;
     background-position: 0 0;
 }
 
 .myspace-button:hover {
-    background: url(images/social-media/myspace.png) no-repeat;
+    background: url(../images/social-media/myspace.png) no-repeat;
     background-position: 0 -32px;
 }
 
 .paypal-button {
-    background: url(images/social-media/paypal.png) no-repeat;
+    background: url(../images/social-media/paypal.png) no-repeat;
     background-position: 0 0;
 }
 
 .paypal-button:hover {
-    background: url(images/social-media/paypal.png) no-repeat;
+    background: url(../images/social-media/paypal.png) no-repeat;
     background-position: 0 -32px;
 }
 
 .pinterest-button {
-    background: url(images/social-media/pinterest.png) no-repeat;
+    background: url(../images/social-media/pinterest.png) no-repeat;
     background-position: 0 0;
 }
 
 .pinterest-button:hover {
-    background: url(images/social-media/pinterest.png) no-repeat;
+    background: url(../images/social-media/pinterest.png) no-repeat;
     background-position: 0 -32px;
 }
 
 .reddit-button {
-    background: url(images/social-media/reddit.png) no-repeat;
+    background: url(../images/social-media/reddit.png) no-repeat;
     background-position: 0 0;
 }
 
 .reddit-button:hover {
-    background: url(images/social-media/reddit.png) no-repeat;
+    background: url(../images/social-media/reddit.png) no-repeat;
     background-position: 0 -32px;
 }
 
 .soundcloud-button {
-    background: url(images/social-media/soundcloud.png) no-repeat;
+    background: url(../images/social-media/soundcloud.png) no-repeat;
     background-position: 0 0;
 }
 
 .soundcloud-button:hover {
-    background: url(images/social-media/soundcloud.png) no-repeat;
+    background: url(../images/social-media/soundcloud.png) no-repeat;
     background-position: 0 -32px;
 }
 
 .spotify-button {
-    background: url(images/social-media/spotify.png) no-repeat;
+    background: url(../images/social-media/spotify.png) no-repeat;
     background-position: 0 0;
 }
 
 .spotify-button:hover {
-    background: url(images/social-media/spotify.png) no-repeat;
+    background: url(../images/social-media/spotify.png) no-repeat;
     background-position: 0 -32px;
 }
 
 .stumbleupon-button {
-    background: url(images/social-media/stumbleupon.png) no-repeat;
+    background: url(../images/social-media/stumbleupon.png) no-repeat;
     background-position: 0 0;
 }
 
 .stumbleupon-button:hover {
-    background: url(images/social-media/stumbleupon.png) no-repeat;
+    background: url(../images/social-media/stumbleupon.png) no-repeat;
     background-position: 0 -32px;
 }
 
 .tumblr-button {
-    background: url(images/social-media/tumblr.png) no-repeat;
+    background: url(../images/social-media/tumblr.png) no-repeat;
     background-position: 0 0;
 }
 
 .tumblr-button:hover {
-    background: url(images/social-media/tumblr.png) no-repeat;
+    background: url(../images/social-media/tumblr.png) no-repeat;
     background-position: 0 -32px;
 }
 
 .twitter-button {
-    background: url(images/social-media/twitter.png) no-repeat;
+    background: url(../images/social-media/twitter.png) no-repeat;
     background-position: 0 0;
 }
 
 .twitter-button:hover {
-    background: url(images/social-media/twitter.png) no-repeat;
+    background: url(../images/social-media/twitter.png) no-repeat;
     background-position: 0 -32px;
 }
 
 .vimeo-button {
-    background: url(images/social-media/vimeo.png) no-repeat;
+    background: url(../images/social-media/vimeo.png) no-repeat;
     background-position: 0 0;
 }
 
 .vimeo-button:hover {
-    background: url(images/social-media/vimeo.png) no-repeat;
+    background: url(../images/social-media/vimeo.png) no-repeat;
     background-position: 0 -32px;
 }
 
 .wordpress-button {
-    background: url(images/social-media/wordpress.png) no-repeat;
+    background: url(../images/social-media/wordpress.png) no-repeat;
     background-position: 0 0;
 }
 
 .wordpress-button:hover {
-    background: url(images/social-media/wordpress.png) no-repeat;
+    background: url(../images/social-media/wordpress.png) no-repeat;
     background-position: 0 -32px;
 }
 
 .youtube-button {
-    background: url(images/social-media/youtube.png) no-repeat;
+    background: url(../images/social-media/youtube.png) no-repeat;
     background-position: 0 0;
 }
 
 .youtube-button:hover {
-    background: url(images/social-media/youtube.png) no-repeat;
+    background: url(../images/social-media/youtube.png) no-repeat;
     background-position: 0 -32px;
 }
 
@@ -2499,7 +2499,7 @@ h3.sharing-buttons {
 .facebook-share-button {
     width: 150px;
     height: 45px;
-    background: #3b5998 url(images/icons/40px/white/28.png) left center no-repeat;
+    background: #3b5998 url(../images/icons/40px/white/28.png) left center no-repeat;
     margin-left: 3px;
     margin-right: 3px;
     margin-top: 5px;
@@ -2559,7 +2559,7 @@ h3.sharing-buttons {
 .twitter-tweet-button {
     width: 150px;
     height: 45px;
-    background: #00aced url(images/icons/40px/white/27.png) left center no-repeat;
+    background: #00aced url(../images/icons/40px/white/27.png) left center no-repeat;
     margin-left: 3px;
     margin-right: 3px;
     margin-top: 5px;
@@ -2619,7 +2619,7 @@ h3.sharing-buttons {
 .linkedin-share-button {
     width: 150px;
     height: 45px;
-    background: #4875B4 url(images/icons/40px/white/29.png) left center no-repeat;
+    background: #4875B4 url(../images/icons/40px/white/29.png) left center no-repeat;
     margin-left: 3px;
     margin-right: 3px;
     margin-top: 5px;
@@ -2683,7 +2683,7 @@ h3.sharing-buttons {
 .footer-container {
     width: 100% !important;
     height: 50px;
-    background: #01414e url(images/header-background.png) top center no-repeat;
+    background: #01414e url(../images/header-background.png) top center no-repeat;
     position: relative;
     float: left;
     -moz-box-shadow: 0px -1px 5px #777;
@@ -2773,7 +2773,7 @@ p.footer-right {
     .header-container {
         width: 100% !important;
         height: 50px;
-        background: #01414e url(images/header-background-1024.png) top left no-repeat;
+        background: #01414e url(../images/header-background-1024.png) top left no-repeat;
         position: fixed;
         -moz-box-shadow: 0px 1px 5px #000;
         -webkit-box-shadow: 0px 1px 5px #000;
@@ -2784,7 +2784,7 @@ p.footer-right {
     select.responsive-nav {
         display: block;
         background: rgba(255, 255, 255, 0.9);
-        background-image: url(images/responsive-nav-bg.png);
+        background-image: url(../images/responsive-nav-bg.png);
         background-position: center right;
         background-repeat: no-repeat;
         width: 50%;
@@ -3063,7 +3063,7 @@ p.footer-right {
     a.team-facebook {
         height: 40px;
         width: 40px;
-        background: url(images/icons/40px/28.png) top center no-repeat;
+        background: url(../images/icons/40px/28.png) top center no-repeat;
         opacity: 1;
         float: left;
         margin: 0 auto;
@@ -3081,7 +3081,7 @@ p.footer-right {
         position: relative;
         height: 40px;
         width: 40px;
-        background: url(images/icons/40px/27.png) top center no-repeat;
+        background: url(../images/icons/40px/27.png) top center no-repeat;
         opacity: 1;
         float: left;
         margin: 0 auto;
@@ -3098,7 +3098,7 @@ p.footer-right {
     a.team-linkedin {
         height: 40px;
         width: 40px;
-        background: url(images/icons/40px/29.png) top center no-repeat;
+        background: url(../images/icons/40px/29.png) top center no-repeat;
         opacity: 1;
         float: left;
         margin: 0 auto;
@@ -3113,7 +3113,7 @@ p.footer-right {
     }
 
     .services-wide-banner {
-        background: #fff url(images/patterns/services-banner.png);
+        background: #fff url(../images/patterns/services-banner.png);
         width: 100% !important;
         height: auto;
         display: block;
@@ -3252,31 +3252,31 @@ p.footer-right {
 
     .tweet-numbers {
         margin-top: 0px;
-        background: url(images/icons/40px/26.png) top center no-repeat;
+        background: url(../images/icons/40px/26.png) top center no-repeat;
     }
 
     .projects-numbers {
-        background: url(images/icons/40px/154.png) top center no-repeat;
+        background: url(../images/icons/40px/154.png) top center no-repeat;
     }
 
     .clients-numbers {
-        background: url(images/icons/40px/62.png) top center no-repeat;
+        background: url(../images/icons/40px/62.png) top center no-repeat;
     }
 
     .code-numbers {
-        background: url(images/icons/40px/89.png) top center no-repeat;
+        background: url(../images/icons/40px/89.png) top center no-repeat;
     }
 
     .iphone-numbers {
-        background: url(images/icons/40px/10.png) top center no-repeat;
+        background: url(../images/icons/40px/10.png) top center no-repeat;
     }
 
     .facebook-numbers {
-        background: url(images/icons/40px/28.png) top center no-repeat;
+        background: url(../images/icons/40px/28.png) top center no-repeat;
     }
 
     .coffee-numbers {
-        background: url(images/icons/40px/165.png) top center no-repeat;
+        background: url(../images/icons/40px/165.png) top center no-repeat;
     }
 
     p.by-numbers-text {
@@ -3396,7 +3396,7 @@ p.footer-right {
         position: absolute;
         right: 15px;
         top: 0;
-        background: url(images/cat-image.png) top right;
+        background: url(../images/cat-image.png) top right;
         opacity: 1;
         -webkit-transition: all 0.4s ease-in-out;
         -moz-transition: all 0.4s ease-in-out;
@@ -3535,27 +3535,27 @@ p.footer-right {
     }
 
     .parallax-one {
-        background: #000 url(images/parallax/1.jpg) center no-repeat;
+        background: #000 url(../images/parallax/1.jpg) center no-repeat;
     }
 
     .parallax-two {
-        background: #000 url(images/parallax/2.jpg) center no-repeat;
+        background: #000 url(../images/parallax/2.jpg) center no-repeat;
     }
 
     .parallax-three {
-        background: #000 url(images/parallax/3.jpg) center no-repeat;
+        background: #000 url(../images/parallax/3.jpg) center no-repeat;
     }
 
     .parallax-four {
-        background: #000 url(images/parallax/4.jpg) center no-repeat;
+        background: #000 url(../images/parallax/4.jpg) center no-repeat;
     }
 
     .parallax-five {
-        background: #000 url(images/parallax/5.jpg) center no-repeat;
+        background: #000 url(../images/parallax/5.jpg) center no-repeat;
     }
 
     .parallax-six {
-        background: #000 url(images/parallax/6.jpg) center no-repeat;
+        background: #000 url(../images/parallax/6.jpg) center no-repeat;
     }
 
     .show-for-760 {
@@ -3585,7 +3585,7 @@ p.footer-right {
         height: 100%;
         display: block;
         position: fixed;
-        background: url(images/triangle-top-760.png) top left no-repeat;
+        background: url(../images/triangle-top-760.png) top left no-repeat;
         z-index: -1;
     }
 
@@ -3594,14 +3594,14 @@ p.footer-right {
         height: 100%;
         display: block;
         position: fixed;
-        background: url(images/triangle-bottom-760.png) top left no-repeat;
+        background: url(../images/triangle-bottom-760.png) top left no-repeat;
         z-index: -1;
     }
 
     .header-container {
         width: 100% !important;
         height: 50px;
-        background: #01414e url(images/header-background-760.png) top right no-repeat;
+        background: #01414e url(../images/header-background-760.png) top right no-repeat;
         position: fixed;
         -moz-box-shadow: 0px 1px 5px #000;
         -webkit-box-shadow: 0px 1px 5px #000;
@@ -3612,7 +3612,7 @@ p.footer-right {
     select.responsive-nav {
         display: block;
         background: rgba(255, 255, 255, 0.9);
-        background-image: url(images/icons/40px/123.png);
+        background-image: url(../images/icons/40px/123.png);
         background-position: center;
         background-repeat: no-repeat;
         width: 30px;
@@ -3821,27 +3821,27 @@ p.footer-right {
     }
 
     .parallax-one {
-        background: #000 url(images/parallax/1.jpg) center no-repeat;
+        background: #000 url(../images/parallax/1.jpg) center no-repeat;
     }
 
     .parallax-two {
-        background: #000 url(images/parallax/2.jpg) center no-repeat;
+        background: #000 url(../images/parallax/2.jpg) center no-repeat;
     }
 
     .parallax-three {
-        background: #000 url(images/parallax/3.jpg) center no-repeat;
+        background: #000 url(../images/parallax/3.jpg) center no-repeat;
     }
 
     .parallax-four {
-        background: #000 url(images/parallax/4.jpg) center no-repeat;
+        background: #000 url(../images/parallax/4.jpg) center no-repeat;
     }
 
     .parallax-five {
-        background: #000 url(images/parallax/5.jpg) center no-repeat;
+        background: #000 url(../images/parallax/5.jpg) center no-repeat;
     }
 
     .parallax-six {
-        background: #000 url(images/parallax/6.jpg) center no-repeat;
+        background: #000 url(../images/parallax/6.jpg) center no-repeat;
     }
 
     .parallax-title {
@@ -3867,7 +3867,7 @@ p.footer-right {
         width: 100%;
         height: 64px;
         float: left;
-        background: url(images/parallax-divider.png) center no-repeat;
+        background: url(../images/parallax-divider.png) center no-repeat;
         text-align: center;
     }
 
