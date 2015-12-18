@@ -68,8 +68,8 @@ gulp.task('scripts', function() {
 });
 // Images
 gulp.task('images', function() {
-  return gulp.src('images/*')
-    .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
+  return gulp.src('static/css/dreamer/images/parallax/*')
+    .pipe(cache(imagemin({ optimizationLevel: 8, progressive: true, interlaced: true })))
     .pipe(gulp.dest('images'))
     .pipe(notify({ message: 'Images task complete' }));
 });

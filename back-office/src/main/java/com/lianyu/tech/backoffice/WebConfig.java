@@ -5,7 +5,6 @@ import com.lianyu.tech.backoffice.web.interceptor.MasterLayout;
 import com.lianyu.tech.backoffice.web.interceptor.MasterTemplateModelBuilder;
 import com.lianyu.tech.common.DefaultDBConfig;
 import com.lianyu.tech.core.platform.DefaultSiteConfig;
-import com.lianyu.tech.core.platform.PlatformScopeResolver;
 import com.lianyu.tech.core.platform.runtime.RuntimeEnvironment;
 import com.lianyu.tech.core.platform.runtime.RuntimeSettings;
 import com.lianyu.tech.core.platform.web.DeploymentSettings;
@@ -34,7 +33,7 @@ import javax.servlet.ServletContext;
 
 @Configuration
 @EnableTransactionManagement(proxyTargetClass = true)
-@ComponentScan(basePackageClasses = {WebConfig.class, DefaultDBConfig.class}, scopeResolver = PlatformScopeResolver.class)
+@ComponentScan(basePackageClasses = {WebConfig.class, DefaultDBConfig.class})
 public class WebConfig extends DefaultSiteConfig {
     @Inject
     Environment env;
