@@ -5,10 +5,7 @@ import com.lianyu.tech.common.utils.MathVerifyCodeUtils;
 import com.lianyu.tech.common.utils.VerifyCode;
 import com.lianyu.tech.common.utils.VerifyCodeUtils;
 import com.lianyu.tech.core.platform.web.rest.RESTController;
-import com.lianyu.tech.core.platform.web.site.cookie.RequireCookie;
-import com.lianyu.tech.core.platform.web.site.session.RequireSession;
 import org.springframework.http.MediaType;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -19,9 +16,9 @@ import java.util.concurrent.ThreadLocalRandom;
 /**
  * @author bowen
  */
-@Controller
-@RequireCookie
-@RequireSession
+//@Controller
+//@RequireCookie
+//@RequireSession
 public class VerifyCodeRestController extends RESTController {
 
     @Inject

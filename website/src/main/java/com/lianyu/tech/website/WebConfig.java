@@ -95,10 +95,10 @@ public class WebConfig extends DefaultSiteConfig {
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(exceptionInterceptor());
         registry.addInterceptor(requestContextInterceptor());
-        registry.addInterceptor(httpSchemeEnforceInterceptor());
-        registry.addInterceptor(cookieInterceptor());
-        registry.addInterceptor(sessionInterceptor());
-        registry.addInterceptor(loginInterceptor());
+        //registry.addInterceptor(httpSchemeEnforceInterceptor());
+        //registry.addInterceptor(cookieInterceptor());
+        //registry.addInterceptor(sessionInterceptor());
+        //registry.addInterceptor(loginInterceptor());
         registry.addInterceptor(modelBuilderInterceptor());
     }
 

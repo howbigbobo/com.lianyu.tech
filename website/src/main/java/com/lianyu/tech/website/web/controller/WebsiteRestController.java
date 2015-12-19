@@ -3,11 +3,7 @@ package com.lianyu.tech.website.web.controller;
 import com.lianyu.tech.core.platform.web.rest.RESTController;
 import com.lianyu.tech.core.platform.web.rest.exception.ErrorResponse;
 import com.lianyu.tech.core.platform.web.rest.exception.ErrorResponseBuilder;
-import com.lianyu.tech.core.platform.web.site.cookie.RequireCookie;
-import com.lianyu.tech.core.platform.web.site.session.RequireSession;
 import com.lianyu.tech.website.web.SiteContext;
-import com.lianyu.tech.website.web.interceptor.LoginRequired;
-import com.lianyu.tech.website.web.interceptor.MasterLayout;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -18,10 +14,7 @@ import org.springframework.web.multipart.MaxUploadSizeExceededException;
 import javax.inject.Inject;
 
 @RestController
-@RequireCookie
-@RequireSession
-@LoginRequired
-@MasterLayout
+//@RequireCookie
 public class WebsiteRestController extends RESTController {
     @Inject
     private SiteContext siteContext;

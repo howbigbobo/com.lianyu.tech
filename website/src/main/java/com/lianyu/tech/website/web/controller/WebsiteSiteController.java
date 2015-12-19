@@ -1,10 +1,7 @@
 package com.lianyu.tech.website.web.controller;
 
 import com.lianyu.tech.core.platform.web.site.SiteController;
-import com.lianyu.tech.core.platform.web.site.cookie.RequireCookie;
-import com.lianyu.tech.core.platform.web.site.session.RequireSession;
 import com.lianyu.tech.website.web.SiteContext;
-import com.lianyu.tech.website.web.interceptor.LoginRequired;
 import com.lianyu.tech.website.web.interceptor.MasterLayout;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
@@ -17,9 +14,7 @@ import javax.inject.Inject;
 import java.util.Map;
 
 @Controller
-@RequireCookie
-@RequireSession
-@LoginRequired
+//@RequireCookie
 @MasterLayout
 public class WebsiteSiteController extends SiteController {
     @Inject
