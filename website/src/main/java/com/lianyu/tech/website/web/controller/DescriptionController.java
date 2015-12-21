@@ -25,7 +25,7 @@ public class DescriptionController extends WebsiteSiteController {
         return "dreamer/cases.item";
     }
 
-    @RequestMapping(value = "/description/{type}", method = RequestMethod.GET)
+    @RequestMapping(value = "/d/{type}", method = RequestMethod.GET)
     public String getDescriptionPage(@PathVariable("type") String type, @RequestParam(value = "page", required = false) Integer page, Map<String, Object> model) {
         //model.put("descriptionVo", descriptionBuilder.get(descriptionId));
         return "dreamer/cases.item";

@@ -30,7 +30,7 @@ public class DescriptionRestController extends WebsiteRestController {
         return descriptionBuilder.get(descriptionId);
     }
 
-    @RequestMapping(value = "/description/{type}", method = RequestMethod.POST)
+    @RequestMapping(value = "/d/{type}", method = RequestMethod.POST)
     public ModelAndView getDescriptionPage(@PathVariable("type") String type, @RequestParam(value = "page", required = false) Integer page, Map<String, Object> model) {
         DescriptionType descriptionType = DescriptionType.fromName(type);
         int pageNumber = page == null || page <= 0 ? 1 : page;
