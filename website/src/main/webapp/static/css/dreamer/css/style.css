@@ -126,7 +126,7 @@
 }
 
 .homepage-text h1 {
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Microsoft YaHei', sans-serif;
     font-weight: 700;
     font-size: 64px;
     line-height: 64px;
@@ -140,7 +140,7 @@
 }
 
 .homepage-text h2 {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Microsoft YaHei', sans-serif;
     font-weight: 500;
     font-size: 32px;
     line-height: 40px;
@@ -154,7 +154,7 @@
 }
 
 .homepage-text h3 {
-    font-family: 'Gentium Book Basic', serif;
+    font-family: 'Microsoft YaHei', serif;
     font-weight: 500;
     font-style: italic;
     font-size: 28px;
@@ -266,7 +266,7 @@
 
 .parallax-title {
     width: 100%;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Microsoft YaHei', sans-serif;
     font-weight: 700;
     font-size: 58px;
     line-height: 58px;
@@ -303,7 +303,7 @@
 
 .parallax-subtitle {
     width: 100%;
-    font-family: 'Gentium Book Basic', serif;
+    font-family: 'Microsoft YaHei', serif;
     font-weight: 500;
     font-style: italic;
     font-size: 28px;
@@ -338,7 +338,7 @@
 }
 
 .page-title {
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Microsoft YaHei', sans-serif;
     font-weight: 700;
     font-size: 58px;
     line-height: 58px;
@@ -353,7 +353,7 @@
 }
 
 .page-subtitle {
-    font-family: 'Gentium Book Basic', serif;
+    font-family: 'Microsoft YaHei', serif;
     font-weight: 500;
     font-style: italic;
     font-size: 28px;
@@ -552,7 +552,7 @@
 }
 
 h3.about-us-title {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Microsoft YaHei', sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 24px;
@@ -584,7 +584,7 @@ h3.about-us-title {
 }
 
 p.about-us-text {
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Microsoft YaHei', sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 18px;
@@ -633,7 +633,7 @@ p.about-us-text {
 }
 
 .testimonial-day {
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Microsoft YaHei', sans-serif;
     font-weight: 700;
     font-size: 200px;
     line-height: 140px;
@@ -649,7 +649,7 @@ p.about-us-text {
 }
 
 .testimonial-month {
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Microsoft YaHei', sans-serif;
     font-weight: 700;
     font-size: 20px;
     text-transform: uppercase;
@@ -673,7 +673,7 @@ p.about-us-text {
     -webkit-border-radius: 40px;
     -moz-border-radius: 40px;
     border-radius: 40px;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Microsoft YaHei', sans-serif;
     font-weight: 700;
     font-size: 40px;
     text-transform: lowercase;
@@ -717,7 +717,7 @@ h4.testimonial-title {
 }
 
 p.testimonial-content {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Microsoft YaHei', sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
@@ -735,7 +735,7 @@ p.testimonial-content {
 }
 
 p.testimonial-signature {
-    font-family: 'Gentium Book Basic', serif;
+    font-family: 'Microsoft YaHei', serif;
     font-weight: 700;
     font-style: italic;
     font-size: 22px;
@@ -752,7 +752,7 @@ p.testimonial-signature {
 }
 
 p.testimonial-signature span {
-    font-family: 'Gentium Book Basic', serif;
+    font-family: 'Microsoft YaHei', serif;
     font-weight: 700;
     font-style: italic;
     font-size: 16px;
@@ -771,7 +771,7 @@ p.testimonial-signature span {
 }
 
 h3.our-team-title {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Microsoft YaHei', sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 24px;
@@ -794,7 +794,7 @@ h3.our-team-title {
 }
 
 h3.our-team-subtitle {
-    font-family: 'Gentium Book Basic', serif;
+    font-family: 'Microsoft YaHei', serif;
     font-weight: 700;
     font-style: italic;
     font-size: 16px;
@@ -820,7 +820,7 @@ h3.our-team-subtitle {
 }
 
 p.our-team-text {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Microsoft YaHei', sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
@@ -1011,7 +1011,7 @@ a.team-linkedin {
 
 p.by-numbers-text {
     cursor: pointer;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Microsoft YaHei', sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 18px;
@@ -1093,7 +1093,7 @@ p.by-numbers-text span {
 }
 
 h3.services-title {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Microsoft YaHei', sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 24px;
@@ -1169,7 +1169,7 @@ h3.services-title {
 }
 
 p.services-text {
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Microsoft YaHei', sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 18px;
@@ -1234,7 +1234,7 @@ p.services-text {
 }
 
 h3.contact-title {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Microsoft YaHei', sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 24px;
@@ -1282,7 +1282,7 @@ h3.contact-title {
 }
 
 p.contact-text {
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Microsoft YaHei', sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 18px;
@@ -1340,7 +1340,7 @@ p.contact-text span {
     position: absolute;
     background: #f4f4f4;
     border: 1px solid #bcbec0;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Microsoft YaHei', sans-serif;
     text-align: center;
     font-weight: 400;
     font-style: normal;
@@ -1508,7 +1508,7 @@ a.open-portfolio-link {
 }
 
 h4.portfolio-title {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Microsoft YaHei', sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 26px;
@@ -1528,7 +1528,7 @@ h4.portfolio-title {
 }
 
 h4.portfolio-title a {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Microsoft YaHei', sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 26px;
@@ -1546,7 +1546,7 @@ h4.portfolio-title a {
 }
 
 p.portfolio-categories {
-    font-family: 'Gentium Book Basic', serif;
+    font-family: 'Microsoft YaHei', serif;
     font-weight: 700;
     font-style: italic;
     font-size: 16px;
@@ -1670,7 +1670,7 @@ p.portfolio-categories {
 }
 
 h3.single-project-title {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Microsoft YaHei', sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 28px;
@@ -1692,7 +1692,7 @@ p.single-project-details {
     height: 40px;
     border-top: 1px solid #CCC;
     border-bottom: 1px solid #CCC;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Microsoft YaHei', sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 13px;
@@ -1722,7 +1722,7 @@ p.single-project-details span.category, p.single-project-details span.tags {
 }
 
 p.single-project-content {
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Microsoft YaHei', sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
@@ -1739,7 +1739,7 @@ p.single-project-content {
 }
 
 .tabs-content {
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Microsoft YaHei', sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 18px !important;
@@ -1852,7 +1852,7 @@ p.single-project-content {
     height: 30px;
     z-index: 22;
     padding: 10px;
-    font-family: 'Gentium Book Basic', serif;
+    font-family: 'Microsoft YaHei', serif;
     font-weight: 700;
     font-style: italic;
     font-size: 16px;
@@ -1908,7 +1908,7 @@ p.single-project-content {
 }
 
 h3.news-title {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Microsoft YaHei', sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
@@ -1950,7 +1950,7 @@ h3.news-title a {
 }
 
 p.news-content {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Microsoft YaHei', sans-serif;
     font-weight: 400;
     font-size: 15px;
     line-height: 24px;
@@ -2027,7 +2027,7 @@ a.news-link {
     height: 150px;
     border: 1px solid #bcbec0;
     background: url(../images/icons/40px/white/26.png) top left no-repeat;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Microsoft YaHei', sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
@@ -2095,7 +2095,7 @@ a.news-link {
 }
 
 h3.single-news-title {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Microsoft YaHei', sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 28px;
@@ -2117,7 +2117,7 @@ p.single-news-details {
     height: 40px;
     border-top: 1px solid #CCC;
     border-bottom: 1px solid #CCC;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Microsoft YaHei', sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 13px;
@@ -2147,7 +2147,7 @@ p.single-news-details span.category, p.single-news-details span.tags {
 }
 
 p.single-news-content {
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Microsoft YaHei', sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
@@ -2472,7 +2472,7 @@ p.single-news-content {
 }
 
 h3.sharing-buttons {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Microsoft YaHei', sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 24px;
@@ -2519,7 +2519,7 @@ h3.sharing-buttons {
     border-left: 1px dotted #FFF;
     margin-left: 40px;
     margin-top: 10px;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Microsoft YaHei', sans-serif;
     font-weight: 500;
     font-style: normal;
     font-size: 16px;
@@ -2579,7 +2579,7 @@ h3.sharing-buttons {
     border-left: 1px dotted #FFF;
     margin-left: 40px;
     margin-top: 10px;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Microsoft YaHei', sans-serif;
     font-weight: 500;
     font-style: normal;
     font-size: 16px;
@@ -2639,7 +2639,7 @@ h3.sharing-buttons {
     border-left: 1px dotted #FFF;
     margin-left: 40px;
     margin-top: 10px;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Microsoft YaHei', sans-serif;
     font-weight: 500;
     font-style: normal;
     font-size: 16px;
@@ -2703,7 +2703,7 @@ h3.sharing-buttons {
 
 p.footer-left {
     width: 100%;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Microsoft YaHei', sans-serif;
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;
@@ -2720,7 +2720,7 @@ p.footer-left {
 
 p.footer-right {
     width: 100%;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Microsoft YaHei', sans-serif;
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;
@@ -3140,7 +3140,7 @@ p.footer-right {
         height: 30px;
         z-index: 22;
         padding: 10px;
-        font-family: 'Gentium Book Basic', serif;
+        font-family: 'Microsoft YaHei', serif;
         font-weight: 700;
         font-style: italic;
         font-size: 16px;
@@ -3198,7 +3198,7 @@ p.footer-right {
     }
 
     h3.sharing-buttons {
-        font-family: 'Ubuntu', sans-serif;
+        font-family: 'Microsoft YaHei', sans-serif;
         font-weight: 700;
         font-style: normal;
         font-size: 24px;
@@ -3282,7 +3282,7 @@ p.footer-right {
     p.by-numbers-text {
         width: 100%;
         cursor: pointer;
-        font-family: 'PT Sans', sans-serif;
+        font-family: 'Microsoft YaHei', sans-serif;
         font-weight: 400;
         font-style: normal;
         font-size: 18px;
@@ -3324,7 +3324,7 @@ p.footer-right {
     }
 
     .testimonial-day {
-        font-family: 'PT Sans', sans-serif;
+        font-family: 'Microsoft YaHei', sans-serif;
         font-weight: 700;
         font-size: 20px;
         line-height: 20px;
@@ -3761,7 +3761,7 @@ p.footer-right {
     }
 
     .homepage-text h1 {
-        font-family: 'PT Sans', sans-serif;
+        font-family: 'Microsoft YaHei', sans-serif;
         font-weight: 700;
         font-size: 32px;
         line-height: 32px;
@@ -3775,7 +3775,7 @@ p.footer-right {
     }
 
     .homepage-text h2 {
-        font-family: 'Ubuntu', sans-serif;
+        font-family: 'Microsoft YaHei', sans-serif;
         font-weight: 500;
         font-size: 16px;
         line-height: 20px;
@@ -3789,7 +3789,7 @@ p.footer-right {
     }
 
     .homepage-text h3 {
-        font-family: 'Gentium Book Basic', serif;
+        font-family: 'Microsoft YaHei', serif;
         font-weight: 500;
         font-style: italic;
         font-size: 16px;
@@ -3857,7 +3857,7 @@ p.footer-right {
         width: 90% !important;
         margin-left: 5% !important;
         margin-right: 5% !important;
-        font-family: 'PT Sans', sans-serif;
+        font-family: 'Microsoft YaHei', sans-serif;
         font-weight: 700;
         font-size: 36px;
         line-height: 36px;
@@ -3884,7 +3884,7 @@ p.footer-right {
         width: 90% !important;
         margin-left: 5% !important;
         margin-right: 5% !important;
-        font-family: 'Gentium Book Basic', serif;
+        font-family: 'Microsoft YaHei', serif;
         font-weight: 500;
         font-style: italic;
         font-size: 22px;
@@ -3931,7 +3931,7 @@ p.footer-right {
     }
 
     p.testimonial-signature span {
-        font-family: 'Gentium Book Basic', serif;
+        font-family: 'Microsoft YaHei', serif;
         font-weight: 700;
         font-style: italic;
         font-size: 16px;
