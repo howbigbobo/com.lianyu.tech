@@ -1364,8 +1364,8 @@ p.contact-text span {
 .portfolio-filter {
     width: 100%;
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 5px;
+    margin-bottom: 25px;
 }
 
 .portfolio-item {
@@ -3420,12 +3420,12 @@ p.footer-right {
         padding-left: 2%;
         padding-right: 2%;
         text-align: center;
-        margin-top: 50px;
-        margin-bottom: 50px;
+        margin-top: 5px;
+        margin-bottom: 25px;
     }
 
     ul.filterOptions li {
-        width: 196px;
+        width: 96px;
         height: 50px;
         background: #f4f4f4;
         border: 1px solid #bcbec0;
@@ -3434,6 +3434,15 @@ p.footer-right {
         float: none !important;
         text-align: center;
         margin: 5px;
+        cursor: pointer;
+    }
+
+    ul.filterOptions li:hover {
+        background-color: #bcbec0;
+    }
+
+    ul.filterOptions li.active {
+        background-color: #bcbec0;
     }
 
     ul.filterOptions li:nth-child(n+2) {

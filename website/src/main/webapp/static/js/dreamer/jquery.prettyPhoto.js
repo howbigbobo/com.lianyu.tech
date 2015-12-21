@@ -10,7 +10,7 @@
     $.fn.prettyPhoto = function (pp_settings) {
         pp_settings = jQuery.extend({
             hook: 'rel', /* the attribute tag to use for prettyPhoto hooks. default: 'rel'. For HTML5, use "data-rel" or similar. */
-            animation_speed: 'fast', /* fast/slow/normal */
+            animation_speed: 'normal', /* fast/slow/normal */
             ajaxcallback: function () {
             },
             slideshow: 5000, /* false OR interval time in ms */
@@ -18,7 +18,7 @@
             opacity: 0.80, /* Value between 0 and 1 */
             show_title: true, /* true/false */
             allow_resize: true, /* Resize the photos bigger than viewport. true/false */
-            allow_expand: true, /* Allow the user to expand a resized image. true/false */
+            allow_expand: false, /* Allow the user to expand a resized image. true/false */
             default_width: 800,
             default_height: 600,
             counter_separator_label: '/', /* The separator for the gallery counter 1 "of" 2 */
@@ -616,10 +616,10 @@
                 resized = true, fitting = false;
                 while (!fitting) {
                     if ((pp_containerWidth > windowWidth)) {
-                        imageWidth = (windowWidth - 25);
+                        imageWidth = (windowWidth - 50);
                         imageHeight = (height / width) * imageWidth;
                     } else if ((pp_containerHeight > windowHeight)) {
-                        imageHeight = (windowHeight - 25);
+                        imageHeight = (windowHeight - 50);
                         imageWidth = (width / height) * imageHeight;
                     } else {
                         fitting = true;

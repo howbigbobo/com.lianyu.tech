@@ -137,3 +137,10 @@ function loadLazyImg() {
         });
     }
 }
+
+// pagination
+function loadCases(ctrl) {
+    $(ctrl).closest('ul').find('.page-number-li').removeClass('active');
+    $(ctrl).closest('li').addClass('active');
+    return false;
+}

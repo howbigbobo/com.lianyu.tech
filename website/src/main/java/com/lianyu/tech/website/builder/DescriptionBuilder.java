@@ -48,14 +48,24 @@ public class DescriptionBuilder {
         return CollectionUtils.isEmpty(vos) ? new DescriptionVo() : vos.get(0);
     }
 
-    public List<DescriptionVo> findByType(DescriptionType descriptionType, int width, int height) {
-        List<Description> descriptions = descriptionRepository.findByType(descriptionType);
-        return getDescriptionVos(descriptions, width, height);
+    public int count(DescriptionType descriptionType) {
+        return descriptionRepository.countByType(descriptionType);
     }
 
-    public List<DescriptionVo> findByType(DescriptionType descriptionType, int size, int width, int height) {
-        List<Description> descriptions = descriptionRepository.findByType(descriptionType, 0, size);
-        return getDescriptionVos(descriptions, width, height);
+    public List<DescriptionVo> findAllByType(DescriptionType descriptionType) {
+        List<Description> descriptions = descriptionRepository.findByType(descriptionType);
+        return getDescriptionVos(descriptions, DescriptionConfigFactory.getImageWidth(descriptionType), 0);
+    }
+
+    public List<DescriptionVo> findByType(DescriptionType descriptionType) {
+        return findByType(descriptionType, 1);
+    }
+
+    public List<DescriptionVo> findByType(DescriptionType descriptionType, int page) {
+        int size = DescriptionConfigFactory.getPageSize(descriptionType);
+        int offset = (page - 1) * size;
+        List<Description> descriptions = descriptionRepository.findByType(descriptionType, offset, size);
+        return getDescriptionVos(descriptions, DescriptionConfigFactory.getImageWidth(descriptionType), 0);
     }
 
     private List<DescriptionVo> getDescriptionVos(List<Description> descriptions, int width, int height) {
@@ -103,4 +113,6 @@ public class DescriptionBuilder {
             item.setImageThumbUrl(imageConverter.getThumbUrl(item.getImageUrl(), width, height));
         }
     }
+
+
 }

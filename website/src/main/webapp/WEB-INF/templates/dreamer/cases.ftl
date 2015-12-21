@@ -12,9 +12,9 @@
         </div>
     </div>
 
-    <div class="twelve columns portfolio">
-        <ul class="ourHolder">
-            <#if cases??>
+    <div class="twelve columns portfolio" id="cases-content">
+        <#if cases??>
+            <ul class="ourHolder description-page-content page-1">
                 <#list cases as case>
                     <li class="four columns item mobile-two" data-id="id-1" data-type="photography">
                         <div class="portfolio-item">
@@ -36,8 +36,11 @@
                         </div>
                     </li>
                 </#list>
-            </#if>
-        </ul>
+            </ul>
+        </#if>
     </div>
-
+    <#import "pager.ftl" as page>
+        <#if cases??>
+            <@page.pager pageNumber=3 pageUrl="/a/b" callback="loadCases"/>
+        </#if>
 </div>
