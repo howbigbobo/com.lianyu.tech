@@ -6,7 +6,6 @@
     ];
 </script>
 
-<@js src="dreamer/jquery.js"/>
 
 <#if PROD?? && PROD>
     <@js src="lianyu-web.min.js"/>

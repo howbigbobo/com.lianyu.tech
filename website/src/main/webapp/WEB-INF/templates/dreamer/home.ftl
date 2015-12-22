@@ -22,7 +22,7 @@
     <#include "mobile.spec.ftl"/>
 
     <#include "common.css.ftl"/>
-
+    <script src="http://libs.baidu.com/jquery/1.8.2/jquery.min.js"></script>
     <script>
         var globalRootUrl = "<@url value='/'/>";
     </script>
