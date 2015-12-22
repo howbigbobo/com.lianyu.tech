@@ -139,8 +139,24 @@ function loadLazyImg() {
 }
 
 // pagination
+var CASES_LIST_CACHE = {};
 function loadCases(ctrl) {
-    $(ctrl).closest('ul').find('.page-number-li').removeClass('active');
-    $(ctrl).closest('li').addClass('active');
+    var $ctrl = $(ctrl);
+    if ($ctrl.closest('li').hasClass('active')) return false;
+    $ctrl.closest('ul').find('.page-number-li').removeClass('active');
+    $ctrl.closest('li').addClass('active');
+    var url = $ctrl.attr('href');
+
+    if (CASES_LIST_CACHE[url] && CASES_LIST_CACHE[url].length > 0) {
+        $('#cases-content').html(CASES_LIST_CACHE[url]);
+        loadLazyImg();
+        return false;
+    }
+    postPage(url, {}, function (html) {
+        CASES_LIST_CACHE[url] = html;
+        $('#cases-content').html(html);
+        loadLazyImg();
+    });
+
     return false;
 }

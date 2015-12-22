@@ -30,6 +30,7 @@ public class DescriptionRestController extends WebsiteRestController {
         return descriptionBuilder.get(descriptionId);
     }
 
+    @ResponseBody
     @RequestMapping(value = "/d/{type}", method = RequestMethod.POST)
     public ModelAndView getDescriptionPage(@PathVariable("type") String type, @RequestParam(value = "page", required = false) Integer page, Map<String, Object> model) {
         DescriptionType descriptionType = DescriptionType.fromName(type);
@@ -37,7 +38,7 @@ public class DescriptionRestController extends WebsiteRestController {
         List<DescriptionVo> descriptionVos = descriptionBuilder.findByType(descriptionType, pageNumber);
         int count = descriptionBuilder.count(descriptionType);
         model.put("descriptionVos", descriptionVos);
-        model.put("count", count);
+        model.put("pageNumber", pageNumber);
         return new ModelAndView("dreamer/cases.item", model);
     }
 }

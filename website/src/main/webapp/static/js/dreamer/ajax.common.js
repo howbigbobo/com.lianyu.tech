@@ -5,12 +5,11 @@ $(document).ajaxError(function (event, req, setting, msg) {
         console.log(setting);
         console.log(msg);
     }
-    alert('ajax error');
 });
 
 function getJson(url, data, success) {
     $.ajax({
-        url: globalRootUrl + appendRadon(url),
+        url: globalRootUrl + appendRandom(url),
         type: 'get',
         data: JSON.stringify(data || {}),
         contentType: "application/json",
@@ -21,7 +20,7 @@ function getJson(url, data, success) {
     });
 }
 
-function appendRadon(url) {
+function appendRandom(url) {
     var r = "r=" + Math.random();
     if (url.lastIndexOf('?') > 0) {
         return url + "&" + r;
@@ -54,25 +53,14 @@ function post(url, data, success) {
     });
 }
 
-function postPage(paginationCtrl, url, data, success) {
-    $(paginationCtrl).myPagination({
-        currPage: 1,
-        pageNumber: 5,
-        currSize: 10,
-        panel: {
-            tipInfo_on: true,
-            tipInfo: '<span class="skipPage">共 {sumPage} 页 到第{input}页{button}</span>'
-        },
-        ajax: {
-            on: true,
-            type: "POST",
-            url: url,
-            async: true,
-            pageCountId: "totalPage",
-            contentType: "application/json",
-            dataType: "json",
-            param: data || {},
-            callback: success
+function postPage(url, data, success) {
+    $.ajax({
+        type: "POST",
+        url: url,
+        contentType: "application/json",
+        param: JSON.stringify(data || {}),
+        success: function (response) {
+            if (success) success(response);
         }
     });
 }

@@ -3425,7 +3425,7 @@ p.footer-right {
     }
 
     ul.filterOptions li {
-        width: 96px;
+        width: 66px;
         height: 50px;
         background: #f4f4f4;
         border: 1px solid #bcbec0;
@@ -4062,4 +4062,8 @@ p.footer-right {
     font-size: 26px;
     color: #e44d26;
     font-weight: bolder;
+}
+
+.description-page-content {
+    position: relative;
 }

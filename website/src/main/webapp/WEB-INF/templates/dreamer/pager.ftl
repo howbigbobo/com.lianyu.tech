@@ -9,7 +9,7 @@
                         <#assign active = "active"/>
                     </#if>
                     <li class="${active} page-number-li">
-                        <a href="${pageUrl}?page=${page}" class="page-number" onclick="return ${callback}(this);">
+                        <a href="${pageUrl}?page=${page}" class="page-number" onclick="return ${callback}(this);" page="${page}">
                             <img src="<@url value='/static/css/dreamer/images/icons/40px/121.png'/>" alt="Website Design">
                             <span>${page}</span>
                         </a>
