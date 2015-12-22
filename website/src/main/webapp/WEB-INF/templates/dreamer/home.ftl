@@ -172,11 +172,14 @@
         <#include "contact.ftl"/>
     </div>
 
+    <div class="page-container pattern-1" id="foot-content">
+        <#include "footer.ftl"/>
+    </div>
 
     <div class="footer-container">
         <div class="row">
             <div class="four columns first-column hide-for-small">
-                <p class="footer-left">版权所有&copy; ${.now?string("yyyy")} </p>
+                <p class="footer-left">版权所有&copy; 2008-${.now?string("yyyy")} </p>
             </div>
             <div class="four columns middle-column back-to-top hide-for-small">
                 <a href="#homepage"><img src="<@url value='/static/css/dreamer/images/back-to-top.png'/>" alt="Go Back To Top"></a>
