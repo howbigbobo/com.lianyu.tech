@@ -7,8 +7,9 @@
 <head>
     <meta charset="utf-8"/>
 
-    <title>${company.name!}</title>
-    <meta name="description" content="${company.slogan!}">
+    <title>${company.name!}${config.get("seo.homeTitle")!}</title>
+    <meta name="keywords" content="${config.get('seo.homeKeywords')!}"/>
+    <meta name="description" content="${config.get('seo.homeDescription')!}"/>
 
     <!-- Set the viewport width to device width for mobile -->
     <meta name="viewport" content="width=device-width"/>

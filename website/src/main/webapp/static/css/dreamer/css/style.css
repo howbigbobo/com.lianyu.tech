@@ -216,7 +216,7 @@
 }
 
 .parallax-two {
-    background: #000 url(../images/parallax/2.jpg) 50% 0 no-repeat fixed;
+    background: #000 url(../images/parallax/6.jpg) 50% 0 no-repeat fixed;
 }
 
 .parallax-three {
@@ -224,7 +224,7 @@
 }
 
 .parallax-four {
-    background: #000 url(../images/parallax/2.jpg) 50% 0 no-repeat fixed;
+    background: #000 url(../images/parallax/6.jpg) 50% 0 no-repeat fixed;
 }
 
 .parallax-five {
@@ -232,7 +232,7 @@
 }
 
 .parallax-six {
-    background: #000 url(../images/parallax/2.jpg) 50% 0 no-repeat fixed;
+    background: #000 url(../images/parallax/6.jpg) 50% 0 no-repeat fixed;
 }
 
 .quote1-pattern, .quote2-pattern, .quote3-pattern, .quote4-pattern, .quote5-patter, .quote6-pattern {
@@ -3544,23 +3544,23 @@ p.footer-right {
     }
 
     .parallax-one {
-        background: #000 url(../images/parallax/1.jpg) center no-repeat;
+        background: #000 url(../images/parallax/6.jpg) center no-repeat;
     }
 
     .parallax-two {
-        background: #000 url(../images/parallax/2.jpg) center no-repeat;
+        background: #000 url(../images/parallax/6.jpg) center no-repeat;
     }
 
     .parallax-three {
-        background: #000 url(../images/parallax/3.jpg) center no-repeat;
+        background: #000 url(../images/parallax/6.jpg) center no-repeat;
     }
 
     .parallax-four {
-        background: #000 url(../images/parallax/4.jpg) center no-repeat;
+        background: #000 url(../images/parallax/6.jpg) center no-repeat;
     }
 
     .parallax-five {
-        background: #000 url(../images/parallax/5.jpg) center no-repeat;
+        background: #000 url(../images/parallax/6.jpg) center no-repeat;
     }
 
     .parallax-six {

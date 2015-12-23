@@ -1,8 +1,12 @@
 <script type="text/javascript">
     var main_sliders = [			// Slideshow Images
-        {image: '<@url value="/static/css/dreamer/images/homepage-slideshow/1.jpg"/>', title: '联娱传媒'},
-        {image: '<@url value="/static/css/dreamer/images/homepage-slideshow/2.jpg"/>', title: '联娱传媒'},
-        {image: '<@url value="/static/css/dreamer/images/homepage-slideshow/3.jpg"/>', title: '联娱传媒'}
+        {image: '<@url value="/static/css/dreamer/images/homepage-slideshow/h1.jpg"/>', title: '联娱传媒'}
+    ];
+    var main_sliders2 = [			// Slideshow Images
+        {image: '<@url value="/static/css/dreamer/images/homepage-slideshow/h1.jpg"/>', title: '联娱传媒'},
+        {image: '<@url value="/static/css/dreamer/images/homepage-slideshow/h2.jpg"/>', title: '联娱传媒'},
+        {image: '<@url value="/static/css/dreamer/images/homepage-slideshow/h3.jpg"/>', title: '联娱传媒'},
+        {image: '<@url value="/static/css/dreamer/images/homepage-slideshow/h31.jpg"/>', title: '联娱传媒'}
     ];
 </script>
 
@@ -36,7 +40,7 @@
             $('#loading').css("width", "0");
             $('#loading').css("height", "0");
 
-            setTimeout(500, loadLazyImg());
+            setTimeout(500, afterLoaded());
         });
     });
 </script>
