@@ -17,7 +17,6 @@
     <@js src="lianyu-web.min.js"/>
     <#else>
         <@js src="dreamer/modernizr.foundation.js"/>
-        <@js src="dreamer/foundation.min.js"/>
         <@js src="dreamer/jquery.parallax-1.1.3.js"/>
         <@js src="dreamer/jquery.prettyPhoto.js"/>
         <@js src="dreamer/jquery.easing.min.js"/>

@@ -40,7 +40,6 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
 	var jsFiles =[];
 	jsFiles.push("modernizr.foundation.js");
-	jsFiles.push("foundation.min.js");
 	jsFiles.push("jquery.parallax-1.1.3.js");
 	jsFiles.push("jquery.prettyPhoto.js");
 	jsFiles.push("jquery.easing.min.js");
