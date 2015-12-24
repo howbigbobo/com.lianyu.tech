@@ -134,17 +134,25 @@ function openDescription(descriptionId) {
 }
 
 function afterLoaded() {
-    loadLazyImg();
     initSupersized(main_sliders2);
+    setTimeout(loadLazyImg, 400);
+    setTimeout(setParallaxBack, 800);
 }
 
 function loadLazyImg() {
     var images = $('img[src_lazy]');
     if (images.length > 0) {
         $.each(images, function (i, e) {
-            $(e).attr('src', $(e).attr('src_lazy'));
+            $(e).attr('src', $(e).attr('src_lazy')).removeAttr('src_lazy');
         });
     }
+}
+
+function setParallaxBack() {
+    var parallax = $('.parallax-one,.parallax-two,.parallax-three,.parallax-four,.parallax-five,.parallax-six');
+    $.each(parallax, function (i, e) {
+        $(e).css({'background-image': "url(" + parallax_img.replace('{number}', i + 1) + ")"});
+    });
 }
 
 // pagination

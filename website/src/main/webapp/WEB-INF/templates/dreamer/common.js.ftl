@@ -8,6 +8,8 @@
         {image: '<@url value="/static/css/dreamer/images/homepage-slideshow/h3.jpg"/>', title: '联娱传媒'},
         {image: '<@url value="/static/css/dreamer/images/homepage-slideshow/h31.jpg"/>', title: '联娱传媒'}
     ];
+
+    var parallax_img = '<@url value="/static/css/dreamer/images/parallax/p{number}.jpg"/>';
 </script>
 
 
@@ -40,7 +42,7 @@
             $('#loading').css("width", "0");
             $('#loading').css("height", "0");
 
-            setTimeout(500, afterLoaded());
+            setTimeout(300, afterLoaded());
         });
     });
 </script>
