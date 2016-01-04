@@ -1,5 +1,5 @@
 <@master template="master/master">
-<#list configGroups as group>
+    <#list configGroups as group>
     <div class="row-fluid sortable ui-sortable">
         <div class="box span12">
             <div class="box-header" data-original-title="">
@@ -17,12 +17,15 @@
                                 <label class="control-label">${key.text}</label>
 
                                 <div class="controls">
-                                    <input type="text" name="${group.name}.${key.name}" class="large" value="${key.content!}">
+                                    <textarea rows="1" cols="400" type="text" name="${group.name}.${key.name}"
+                                              class="large">${key.content!}</textarea>
                                 </div>
                             </div>
                         </#list>
                         <div class="form-actions">
-                            <button type="button" class="btn btn-primary" onclick="saveSystemConfig(this); return false;"> &nbsp;保 &nbsp;&nbsp;存&nbsp;&nbsp;</button>
+                            <button type="button" class="btn btn-primary"
+                                    onclick="saveSystemConfig(this); return false;"> &nbsp;保
+                                &nbsp;&nbsp;存&nbsp;&nbsp;</button>
                             <label class="label-warning" class="message"></label>
                         </div>
                     </fieldset>
@@ -31,6 +34,6 @@
         </div>
         <!--/span-->
     </div>
-</#list>
+    </#list>
 </@master>
 <@js src = "systemconfig.js"/>

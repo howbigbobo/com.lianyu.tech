@@ -156,7 +156,6 @@
 .homepage-text h3 {
     font-family: 'Microsoft YaHei', serif;
     font-weight: 500;
-    font-style: italic;
     font-size: 28px;
     line-height: 36px;
     text-transform: none;
@@ -212,27 +211,27 @@
 }
 
 .parallax-one {
-    background: #000 url(../images/parallax/p5.jpg) 50% 0 no-repeat fixed;
+    background: #000 url(../images/parallax/p0.jpg) 50% 0 no-repeat fixed;
 }
 
 .parallax-two {
-    background: #000 url(../images/parallax/p5.jpg) 50% 0 no-repeat fixed;
+    background: #000 url(../images/parallax/p0.jpg) 50% 0 no-repeat fixed;
 }
 
 .parallax-three {
-    background: #000 url(../images/parallax/p5.jpg) 50% 0 no-repeat fixed;
+    background: #000 url(../images/parallax/p0.jpg) 50% 0 no-repeat fixed;
 }
 
 .parallax-four {
-    background: #000 url(../images/parallax/p5.jpg) 50% 0 no-repeat fixed;
+    background: #000 url(../images/parallax/p0.jpg) 50% 0 no-repeat fixed;
 }
 
 .parallax-five {
-    background: #000 url(../images/parallax/p5.jpg) 50% 0 no-repeat fixed;
+    background: #000 url(../images/parallax/p0.jpg) 50% 0 no-repeat fixed;
 }
 
 .parallax-six {
-    background: #000 url(../images/parallax/p5.jpg) 50% 0 no-repeat fixed;
+    background: #000 url(../images/parallax/p0.jpg) 50% 0 no-repeat fixed;
 }
 
 .quote1-pattern, .quote2-pattern, .quote3-pattern, .quote4-pattern, .quote5-patter, .quote6-pattern {
@@ -796,7 +795,6 @@ h3.our-team-title {
 h3.our-team-subtitle {
     font-family: 'Microsoft YaHei', serif;
     font-weight: 700;
-    font-style: italic;
     font-size: 16px;
     line-height: 24px;
     text-transform: none;
@@ -1548,7 +1546,6 @@ h4.portfolio-title a {
 p.portfolio-categories {
     font-family: 'Microsoft YaHei', serif;
     font-weight: 700;
-    font-style: italic;
     font-size: 16px;
     line-height: 28px;
     text-transform: none;
@@ -3544,27 +3541,27 @@ p.footer-right {
     }
 
     .parallax-one {
-        background: #000 url(../images/parallax/6.jpg) center no-repeat;
+        background: #000 url(../images/parallax/p0.jpg) center no-repeat;
     }
 
     .parallax-two {
-        background: #000 url(../images/parallax/6.jpg) center no-repeat;
+        background: #000 url(../images/parallax/p0.jpg) center no-repeat;
     }
 
     .parallax-three {
-        background: #000 url(../images/parallax/6.jpg) center no-repeat;
+        background: #000 url(../images/parallax/p0.jpg) center no-repeat;
     }
 
     .parallax-four {
-        background: #000 url(../images/parallax/6.jpg) center no-repeat;
+        background: #000 url(../images/parallax/p0.jpg) center no-repeat;
     }
 
     .parallax-five {
-        background: #000 url(../images/parallax/6.jpg) center no-repeat;
+        background: #000 url(../images/parallax/p0.jpg) center no-repeat;
     }
 
     .parallax-six {
-        background: #000 url(../images/parallax/6.jpg) center no-repeat;
+        background: #000 url(../images/parallax/p0.jpg) center no-repeat;
     }
 
     .show-for-760 {
@@ -3791,7 +3788,6 @@ p.footer-right {
     .homepage-text h3 {
         font-family: 'Microsoft YaHei', serif;
         font-weight: 500;
-        font-style: italic;
         font-size: 16px;
         line-height: 24px;
         text-transform: none;

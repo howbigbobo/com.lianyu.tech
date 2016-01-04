@@ -20,19 +20,20 @@
 
     <link rel="shortcut icon" href="<@url value='/static/img/favicon.ico'/>"/>
 
-    <#include "mobile.spec.ftl"/>
+<#include "mobile.spec.ftl"/>
 
-    <#include "common.css.ftl"/>
+<#include "common.css.ftl"/>
     <script src="http://libs.baidu.com/jquery/1.8.2/jquery.min.js"></script>
     <script>
         var globalRootUrl = "<@url value='/'/>";
     </script>
 
+<#include "baidu.statistics.ftl"/>
 </head>
 <body>
 
 <!-- Loader -->
-<div id="loading">
+<div id="loading" style="display:none;">
     <img src="<@url value='/static/css/dreamer/images/loader.gif'/>" alt="Website Loader"/>
 </div>
 
@@ -72,7 +73,8 @@
                 <h1 class="parallax-title">${config.get("introduce.firstHead")!}</h1>
 
                 <div class="parallax-divider">
-                    <img src="<@url value='/static/css/dreamer/images/icons/60px/white/appbar.people.multiple.png'/>" alt="更多">
+                    <img src="<@url value='/static/css/dreamer/images/icons/60px/white/appbar.people.multiple.png'/>"
+                         alt="更多">
                 </div>
                 <h2 class="parallax-subtitle">${config.get("introduce.firstSubHead")!}</h2>
             </div>
@@ -80,7 +82,7 @@
     </div>
     <!-- Our Team Page -->
     <div class="page-container pattern-2" id="introduction">
-        <#include "introduction.ftl"/>
+    <#include "introduction.ftl"/>
 
         <#include "aboutus.ftl"/>
     </div>
@@ -95,7 +97,8 @@
                 <h1 class="parallax-title">${config.get("cases.firstHead")!}</h1>
 
                 <div class="parallax-divider">
-                    <img src="<@url value='/static/css/dreamer/images/icons/60px/white/appbar.camera.png'/>" alt='${config.get("cases.firstHead")!}'>
+                    <img src="<@url value='/static/css/dreamer/images/icons/60px/white/appbar.camera.png'/>"
+                         alt='${config.get("cases.firstHead")!}'>
                 </div>
                 <h2 class="parallax-subtitle">${config.get("cases.firstSubHead")!}</h2>
             </div>
@@ -104,7 +107,7 @@
 
     <!-- Our Portfolio Page -->
     <div class="page-container pattern-2" id="portfolio">
-        <#include "cases.ftl"/>
+    <#include "cases.ftl"/>
     </div>
 
     <!-- Parallax Four - Content -->
@@ -117,7 +120,8 @@
                 <h1 class="parallax-title">${config.get("services.firstHead")!}</h1>
 
                 <div class="parallax-divider">
-                    <img src="<@url value='/static/css/dreamer/images/icons/60px/white/appbar.cogs.png'/>" alt='${config.get("services.firstHead")!}'>
+                    <img src="<@url value='/static/css/dreamer/images/icons/60px/white/appbar.cogs.png'/>"
+                         alt='${config.get("services.firstHead")!}'>
                 </div>
                 <h2 class="parallax-subtitle">${config.get("services.firstSubHead")!}</h2>
             </div>
@@ -126,7 +130,7 @@
 
     <!-- Our Services Page -->
     <div class="page-container pattern-1" id="services">
-        <#include "services.ftl"/>
+    <#include "services.ftl"/>
     </div>
 
     <!-- Parallax Five - Content -->
@@ -139,7 +143,8 @@
                 <h1 class="parallax-title">${config.get("news.firstHead")!}</h1>
 
                 <div class="parallax-divider">
-                    <img src="<@url value='/static/css/dreamer/images/icons/60px/white/appbar.globe.png'/>" alt="Read More About Us">
+                    <img src="<@url value='/static/css/dreamer/images/icons/60px/white/appbar.globe.png'/>"
+                         alt="Read More About Us">
                 </div>
                 <h2 class="parallax-subtitle">${config.get("news.firstSubHead")!}</h2>
             </div>
@@ -148,7 +153,7 @@
 
     <!-- Our Latest News Page -->
     <div class="page-container pattern-2" id="news">
-        <#include "news.ftl"/>
+    <#include "news.ftl"/>
     </div>
 
     <!-- Parallax Six - Content -->
@@ -161,7 +166,8 @@
                 <h1 class="parallax-title">${config.get("contact.firstHead")!}</h1>
 
                 <div class="parallax-divider">
-                    <img src="<@url value='/static/css/dreamer/images/icons/60px/white/appbar.email.png'/>" alt='${config.get("contact.firstHead")!}'>
+                    <img src="<@url value='/static/css/dreamer/images/icons/60px/white/appbar.email.png'/>"
+                         alt='${config.get("contact.firstHead")!}'>
                 </div>
                 <h2 class="parallax-subtitle">${config.get("contact.firstSubHead")!}</h2>
             </div>
@@ -170,11 +176,11 @@
 
     <!-- Contact Page -->
     <div class="page-container pattern-1" id="contact">
-        <#include "contact.ftl"/>
+    <#include "contact.ftl"/>
     </div>
 
     <div class="page-container pattern-1" id="foot-content">
-        <#include "footer.ftl"/>
+    <#include "footer.ftl"/>
     </div>
 
     <div class="footer-container">
@@ -183,7 +189,8 @@
                 <p class="footer-left">版权所有&copy; 2008-${.now?string("yyyy")} </p>
             </div>
             <div class="four columns middle-column back-to-top hide-for-small">
-                <a href="#homepage"><img src="<@url value='/static/css/dreamer/images/back-to-top.png'/>" alt="Go Back To Top"></a>
+                <a href="#homepage"><img src="<@url value='/static/css/dreamer/images/back-to-top.png'/>"
+                                         alt="Go Back To Top"></a>
             </div>
             <div class="four columns last-column mobile-four">
                 <p class="footer-right"><a href="<@url value='/'/>" target="_blank">${company.name}</a></p>

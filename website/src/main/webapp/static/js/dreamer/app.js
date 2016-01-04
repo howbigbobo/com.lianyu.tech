@@ -136,7 +136,6 @@ function openDescription(descriptionId) {
 function afterLoaded() {
     initSupersized(main_sliders2);
     setTimeout(loadLazyImg, 400);
-    setTimeout(setParallaxBack, 800);
 }
 
 function loadLazyImg() {
@@ -146,13 +145,6 @@ function loadLazyImg() {
             $(e).attr('src', $(e).attr('src_lazy')).removeAttr('src_lazy');
         });
     }
-}
-
-function setParallaxBack() {
-    var parallax = $('.parallax-one,.parallax-two,.parallax-three,.parallax-four,.parallax-five,.parallax-six');
-    $.each(parallax, function (i, e) {
-        $(e).css({'background-image': "url(" + parallax_img.replace('{number}', i + 1) + ")"});
-    });
 }
 
 // pagination

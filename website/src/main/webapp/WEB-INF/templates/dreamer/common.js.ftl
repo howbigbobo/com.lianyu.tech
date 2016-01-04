@@ -8,30 +8,28 @@
         {image: '<@url value="/static/css/dreamer/images/homepage-slideshow/h3.jpg"/>', title: '联娱传媒'},
         {image: '<@url value="/static/css/dreamer/images/homepage-slideshow/h31.jpg"/>', title: '联娱传媒'}
     ];
-
-    var parallax_img = '<@url value="/static/css/dreamer/images/parallax/p{number}.jpg"/>';
 </script>
 
 
 <#if PROD?? && PROD>
     <@js src="lianyu-web.min.js"/>
-    <#else>
-        <@js src="dreamer/modernizr.foundation.js"/>
-        <@js src="dreamer/jquery.parallax-1.1.3.js"/>
-        <@js src="dreamer/jquery.prettyPhoto.js"/>
-        <@js src="dreamer/jquery.easing.min.js"/>
-        <@js src="dreamer/jquery-css-transform.js"/>
-        <@js src="dreamer/supersized.3.2.7.min.js"/>
-        <@js src="dreamer/supersized.shutter.min.js"/>
-        <@js src="dreamer/custom.js"/>
-        <@js src="dreamer/raphael.js"/>
-        <@js src="dreamer/init.js"/>
-        <@js src="dreamer/app.js"/>
-        <@js src="dreamer/ajax.common.js"/>
+<#else>
+    <@js src="dreamer/modernizr.foundation.js"/>
+    <@js src="dreamer/jquery.parallax-1.1.3.js"/>
+    <@js src="dreamer/jquery.prettyPhoto.js"/>
+    <@js src="dreamer/jquery.easing.min.js"/>
+    <@js src="dreamer/jquery-css-transform.js"/>
+    <@js src="dreamer/supersized.3.2.7.min.js"/>
+    <@js src="dreamer/supersized.shutter.min.js"/>
+    <@js src="dreamer/custom.js"/>
+    <@js src="dreamer/raphael.js"/>
+    <@js src="dreamer/init.js"/>
+    <@js src="dreamer/app.js"/>
+    <@js src="dreamer/ajax.common.js"/>
 </#if>
 
-<!-- Hook up the Loader -->
 <script type="text/javascript">
+    $('#loading img').show();
     $(window).load(function () {
         $("#loading").fadeOut("500", function () {
             // Animation complete
